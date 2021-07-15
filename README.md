@@ -1,102 +1,443 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SneakrHeads - Sneakers and Sport Shoes E-commerce Store
 
-Welcome USER_NAME,
+"SneakerHeads" is...
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+## Table of Contents
 
-## Gitpod Reminders
+* [User Experience Design (UX)](#User-Experience-Design)
+    * [The Strategy Plane](#The-Strategy-Plane)
+        * [Site Goals](#Site-Goals)
+        * [User stories](#User-Stories)
+    * [The Scope Plane](#The-Scope-Plane)
+    * [The Structure Plane](#The-Structure-Plane)
+    * [The Skeleton Plane](#The-Skeleton-Plane)
+        * [Wireframes](#Wireframes)
+        * [Database Design](#Database-Design)
+        * [Database Security](#Security)
+    * [The Surface Plane](#The-Surface-Plane)
+        * [Design](#Design)
+            * [Colour Scheme](#Colour-Scheme)
+            * [Typography](#Typography)
+            * [Imagery](#Imagery)
+    * [Differences to Wireframes](#Differences-to-Wireframes)
+* [Features](#Features)
+    * [Existing Features](#Existing-Features)
+    * [Future Features](#Features-Left-to-Implement)
+* [Technologies](#Technologies)
+* [Testing](#Testing)
+    * [Test Strategy](#Test-Strategy)
+    * [Test Results](#Test-Results)
+* [Deployment](#Deployment)
+    * [Deployment to Heroku](#Project-Creation)
+    * [GitHub Pages](#Deployment-To-Heroku)
+    * [Local Clone](#Local-Clone)
+    * [Fork Project](#Fork-Project)
+* [Credits](#Credits)
+  * [Content](#Content)
+  * [Media](#Media)
+  * [Code](#Code)
+  * [Acknowledgements](#Acknowledgements)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+****
 
-`python3 -m http.server`
+## User Experience Design
 
-A blue button should appear to click: _Make Public_,
+### **The Strategy Plane**
 
-Another blue button should appear to click: _Open Browser_.
+- 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- 
 
-A blue button should appear to click: _Make Public_,
+#### Site Goals
 
-Another blue button should appear to click: _Open Browser_.
+- 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### User stories
 
-To log into the Heroku toolbelt CLI:
+- 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Admin/SuperUser
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- 
 
-------
+### **The Scope Plane**
 
-## Release History
+**Features planned:**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Responsive design.
+- 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### **The Structure Plane**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### User stories
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+User Story:
+> 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Criteria:
+- 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Implementation:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+User Story:
+> 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Criteria:
+- 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Implementation:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The following main pages will be implemented:
 
-------
+- Base Page - base.html
+    - Will contain components such as navigation bar, headers
+    - allAuth
+- Sign Up Page - register.html
+- Sign In Page - login.html
+- Home page - index.html
+    - Displays all products - products.html
+- Product Details - product_detail.html
+- Member Profile Page - profile.html
+    - Edit User's Profile Page - edit_profile.html
+- User's bag - bag.html
+    - Requires templatetags - bagtools
+- Add Product Page - add_product.html
+- Remove Product Page - remove_product.html
+- Checkout Page - checkout.html
+    - With order summary if checkout successful - checkout_success.html
+- Error 404 - 404.html (error 404 handling)
+- Error 500 - 500.html (error 500 handling)
 
-## FAQ about the uptime script
+User Story:
+> 
 
-**Why have you added this script?**
+Criteria:
+- 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Implementation:
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+User Story:
+> 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Criteria:
+- 
 
-**So….?**
+Implementation:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+User Story:
+> 
+
+Criteria:
+- 
+
+Implementation:
+
+
+
+User Story:
+> 
+
+Criteria:
+- 
+
+Implementation:
+
+
+
+User Story:
+> 
+
+Criteria:
+- 
+
+User Story:
+> 
+
+Criteria:
+- 
+
+Implementation:
+
+
+
+#### Admin User Stories
+
+User Story:
+> 
+
+Criteria:
+- 
+
+Implementation:
+
+
+User Story:
+> 
+
+Criteria:
+- 
+
+Implementation:
+
+
+User Story:
+> 
+
+Criteria:
+- 
+
+Implementation:
+
+
+### **The Skeleton Plane**
+#### Wireframes
+
+- Main/Home Page: <br>
+![Home](readme_Img/wireframes/)<br>
+
+- Register: <br>
+![Register](readme_Img/wireframes/)
+
+- Log In: <br>
+![LogIn](readme_Img/wireframes/) 
+
+- User Profile: <br>
+![Profile](readme_Img/wireframes/)
+
+- Stripe Form: <br>
+![Update_Profile](readme_Img/wireframes/)
+
+- Product Details: <br>
+![Latest_Posts](readme_Img/wireframes/)
+
+- Add Product/Remove Product: <br>
+![Add_Post](readme_Img/wireframes/)
+
+#### Database Design (SQLite 3)
+
+Sample Object Format:
+
+EDIT!
+
+#### Database Security
+
+EDIT! - Speak about superuser, sql, csrf tokens
+
+Database security is maintained through the "env.py" file which ensures that the configuration files are not stored in github via .gitignore. For production, the configuration details are placed into the app settings within...
+
+### **The Surface Plane**
+### Design
+
+#### Colour Scheme
+
+EDIT!- remember to Add image for color scheme
+
+#### Typography
+
+
+
+#### Imagery
+
+All images used within the website were all taken from [unsplash](https://unsplash.com/).
+
+## Differences to Wireframes
+
+- 
+
+****
+## Features
+
+### Existing Features
+
+- 
+
+### Features Left to Implement
+
+
+****
+## Technologies
+
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+    - The website incorporates HTML as the base structure for the pages.
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+    - The project uses CSS to style and design the website.
+
+- [Bootstrap](https://getbootstrap.com/) 
+    - Bootstrap was used for website design and website responsiveness.
+
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - Used for overall site interactivity.
+
+- [jQuery](https://jquery.com/)
+    - Used for overall site interactivity and animation.
+
+- [Python](https://www.python.org/)
+    - Python was used to create and run the back-end logic of the website.
+    - Python modules used (as stated in requirements.txt):
+        - 
+
+- [Django](https://www.djangoproject.com/)
+    - Django was the web framework used for rapid development, security and scalability.
+
+- [Google Fonts](https://fonts.google.com/)
+    - 
+
+- [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - This was used to inspect the website and help debug styling issues and test for grid layouts.
+
+- [GitHub](https://github.com/)
+    - This was used to store the scource code for the website.
+
+- [Git](https://git-scm.com/)
+    - Git was used for version control during development where code was committed and pushed to the project's Github repository.
+
+- [Heroku](https://dashboard.heroku.com/apps)
+    - 
+
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
+    - This was used to create wireframes prior to the project having been developed.
+
+- [TinyPNG](https://tinypng.com/)
+    - This was used to reduce the file sizes of the images used in the project.
+
+****
+## Testing
+
+### Test Strategy
+#### **Summary**
+Testing is to be made to ensure all features of the website is working as intended and that the links lead to the appropriate pages. Tests must be made to judge the websites responsiveness. Additionally, that all inputs done through the forms will submit the data to the appropriate collections. It is also there to ensure the project's code structure abides the universal best practices for programming. 
+
+HTML Code must pass through the [W3C HTML Validator](https://validator.w3.org/#validate_by_uri).
+
+CSS Code must pass through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+JavaScript code must pass through the [JSHint Validator](https://jshint.com/).
+
+Python Code must pass through [PEP8 Validator](http://pep8online.com/)
+
+### Test Results
+
+Test Results are documented through [this link](TESTING.md)
+
+## Deployment
+
+### Project Creation
+
+- Project started using Github and Gitpod.
+
+1. First I signed into Github and created a new repository. There will be a drop down menu when looking to use a template
+    so I chose to use Code Institute's Template. Alternatively, you can [navigate here](https://github.com/Code-Institute-Org/gitpod-full-template)
+    and there will be an option button called "Use this template".
+
+2. I then clicked the use this template button. Where I was directed to create a new repository name and create a new 
+    repository which I could open using Gitpod.
+
+3. It creates a Gitpod workspace of which I could start developing the project.
+
+### Local Deployment
+
+To deploy the project locally, the following commands were used:
+
+1. 
+
+### Version Control 
+
+In the terminal, I utilised the following commands in the following order:
+
+- git add . (git add <em>filename</em>) - command to add all files or a specific file 
+- git commit -m <em>commit message</em> - command to commit the changes locally with a message to describe the changes briefly
+- git push - command to push changes to remote Github repository
+
+### Deployment to Heroku
+**Create application:**
+
+1. I signed into Heroku 
+2. I created a new app by clicking the "new" button.
+3. Select the new app 
+4. Create an app project name 
+5. Selected Europe as the region
+
+**Set up connection to Github Repository:**
+
+1. A requirements.txt needs to be created, this can be done through the following terminal command
+    >  pip3 freeze --local > requirements.txt
+
+2. Then a Procfile for Heroku is needs to be created, here is the terminal command used
+    >  echo web: python app.py > Procfile
+
+3. Ensure there the Procfile begins with a capital letter 'P' and that there are no unecessary spaces 
+
+4. Click the deploy tab and select Github - connect to Github
+
+5. There will be an empty input field where you can type the name of your repository. Write the repo name there and 
+    click search
+
+6. Once the repository has been found, click the connect button
+
+**Set environment variables:**
+
+- 
+
+<strong>Example:</strong>
+
+- 
+
+**Enable Automatic Deployment & Manual Deployment:**
+
+- Ensure your Procfile and requirements.txt are in your repository as Heroku will not be able to deploy without these
+- Click the Deploy tab
+- Click Enable Automatic deploys in 'Automatic Deploys' section
+- Choose the branch you would like to deploy and click "Deploy Branch"
+
+### Local Clone
+
+**Note: To run this project locally...**
+
+This is used when you would like to make changes to the project code
+
+1. Should you wish to use a different IDE like VSCode. You first log in to Github and locate the required repository. Here is the link for this [repository](https://github.com/wyne-ybanez/SneakrHead)
+2. Open a new terminal on Git Bash
+3. Type `git clone`, and then paste the URL you copied 
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/wyne-ybanez/SneakrHead
 ```
 
-**Anything more?**
+ Here is a link that can explain this process further. [Click Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Fork Project 
 
----
+You can fork the repository through the following steps. Forking the repository means you will have a copy of the repository and any changes you make will not affect the original repository.
 
-Happy coding!
+1. Log in to GitHub and locate the GitHub Repository. Here is a link for the [repository](https://github.com/wyne-ybanez/SneakrHead)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu. Looking towards the right of the page. Locate the button "Fork" then click 
+3. You should now have a copy of the original repository in your GitHub account
+
+****
+## Credits
+
+### Content
+
+- 
+
+### Media 
+
+- 
+
+### Code
+
+- 
+
+### Acknowledgements
+
+I would to express my gratitude to the Code Institute tutors and community for helping get this far.
+
+
