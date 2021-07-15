@@ -1,6 +1,6 @@
 # SneakrHeads - Sneakers and Sport Shoes E-commerce Store
 
-"SneakerHeads" is...
+"SneakrHeads" is...
 
 ## Table of Contents
 
