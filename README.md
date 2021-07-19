@@ -44,21 +44,62 @@
 
 ### **The Strategy Plane**
 
-- 
+The main target audience of the website are online shoppers particularly those who are into sports brands, trainers and sneakers. 
+The site will implement a header image of a popular sports brand's trainers and this will communicate what the site is about, an e-commerce store for sneakers. The website allows like minded sneaker fans to search, purchase and create an account. 
 
-- 
+The store will utilise and effective navigation and search functionality so as to assist potential buyers with viewing and browsing. This strategy will also allow established users to easily view products they may want to purchase. The site will also utilise a shopping cart functionality. Where the user will be notified every time they add an item to their cart. This cart will also be easily accessible so as to allow the user to find out what they have placed in their cart and encourage them to checkout. 
 
 #### Site Goals
 
-- 
+- To bring together 'Sneaker Heads', shoppers and users who are fanatic about getting branded and popular trainers/sneakers.
+- To help these users/shoppers browse for and purchase sneakers.
+- To allow the shop owner to gain profits, edit their listings and scale their business.
 
-#### User stories
+### User stories
 
-- 
+#### Shopper
+##### View and Navigation
 
-#### Admin/SuperUser
+- As a shopper, I would like to view a list of Products
+- As a shopper, I would like to view a specific category of products
+- As a shopper, I would view inidividual product details
+- As a shopper, I would like to quickly identify deals, clearance items and special offers
+- As a shopper, I would like to easily view the total of my purchases at any time
 
-- 
+##### Sorting and Searching
+
+- As a shopper, I would like to sort the list of available products 
+- As a shopper, I would like to sort a specific category of products
+- As a shopper, I would like to sort multiple categories of products simultaneously
+- As a shopper, I would like to search for a product by name or description 
+- As a shopper, I would like to easily see what I’ve searched for and the number of results
+
+##### Purchasing and Checkout 
+
+- As a shopper, I would like to easily select the size and quantity of a product when purchasing it
+- As a shopper, I would like to view items in my bag to be purchased
+- As a shopper, I would like to adjust the quantity of individual items in my bag
+- As a shopper, I would like to easily enter my payment information
+- As a shopper, I would like to feel my personal and payment information is safe and secure
+- As a shopper, I would like to view an order confirmation after checkout
+- As a shopper, I would like to receive an email confirmation after checking out
+
+#### Site User
+##### Registration and User Accounts
+
+- As a User, I would like to easily register for an account
+- As a User, I would like to easily login or logout 
+- As a User, I would like to easily recover my password in case I forget it
+- As a User, I would like to receive an email confirmation after registering
+- As a User, I would like to have a personalised user profile
+
+#### Shop Owner/Admin
+##### Admin and Store Management
+
+- As the site owner, I would like to add products to the store
+- As the site owner, I would like to edit/update a product
+- As the site owner, I would like to delete a product 
+- As the site owner, I would like to have the ability to delete a user's account
 
 ### **The Scope Plane**
 
