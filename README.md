@@ -1,6 +1,8 @@
 # SneakrHeads - Sneakers and Sport Shoes E-commerce Store
 
-"SneakrHeads" is...
+"SneakrHeads" is a sports-fashion e-commerce website that allows shoppers to browse, search for and purchase the most popular sneakers and trainers. 
+
+The project aims to build a website on the Django Framework for improved security and speedy development. It allows user's to register an account and log in to review their orders. Additionally, the website will record the the customer's cart so as to allow them to view their next potential purchases. Furthermore, the site will also utilise the stripe API in order to assist customer's with finalising their purchase and securely save their payment information for future orders.
 
 ## Table of Contents
 
@@ -105,8 +107,17 @@ The store will utilise and effective navigation and search functionality so as t
 
 **Features planned:**
 
-- Responsive design.
-- 
+- Responsive UI/UX
+- Website purpose immediately communicated and understood
+- Navigation bar 
+- Side-Nav Sorting functionality
+- Registration & Login functionality 
+- Search functionality
+- Log out functionality 
+- Sorting functionality
+- Product details 
+- Checkout functionality 
+- Contact form
 
 ### **The Structure Plane**
 
@@ -311,7 +322,7 @@ All images used within the website were all taken from [unsplash](https://unspla
 - [CSS](https://en.wikipedia.org/wiki/CSS)
     - The project uses CSS to style and design the website.
 
-- [Bootstrap](https://getbootstrap.com/) 
+- [Bootstrap v5.0](https://getbootstrap.com/) 
     - Bootstrap was used for website design and website responsiveness.
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -322,8 +333,7 @@ All images used within the website were all taken from [unsplash](https://unspla
 
 - [Python](https://www.python.org/)
     - Python was used to create and run the back-end logic of the website.
-    - Python modules used (as stated in requirements.txt):
-        - 
+    - Python modules used (as stated in requirements.txt)
 
 - [Django](https://www.djangoproject.com/)
     - Django was the web framework used for rapid development, security and scalability.
