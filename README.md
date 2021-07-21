@@ -4,6 +4,8 @@
 
 The project aims to build a website on the Django Framework for improved security and speedy development. It allows user's to register an account and log in to review their orders. Additionally, the website will record the the customer's cart so as to allow them to view their next potential purchases. Furthermore, the site will also utilise the stripe API in order to assist customer's with finalising their purchase and securely save their payment information for future orders.
 
+** <strong>Educational Purposes Only</strong> **
+
 ## Table of Contents
 
 * [User Experience Design (UX)](#User-Experience-Design)
