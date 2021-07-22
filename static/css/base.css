@@ -52,8 +52,18 @@ body {
     box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
 }
 
+.user-options.dropdown-menu.show {
+    border-block-start: 2px solid grey;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
+}
+
 .main-logo-link {
     width: fit-content;
+    text-decoration: none;
+}
+
+.navbar {
+    padding: .2rem .5rem;
 }
 
 .shop-now-btn {
@@ -104,3 +114,21 @@ body {
         padding-top: 164px;
     }
 }
+
+/* Ipad/Tablet Media Queries
+@media only screen and (min-device-width: 768px) {
+    .ipad-margin { 
+        margin-right: 12rem !important;
+    }
+} */
+
+/* Mobiles */
+/* Media query from: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .mobile-padding {
+        padding-right: 5rem;
+    }
+} 

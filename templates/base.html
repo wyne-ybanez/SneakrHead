@@ -49,12 +49,12 @@
     <div id="navbar" class="row bg-white pt-lg-2 pb-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <h2 class="text-dark my-0 fs-5">Sneak'rHeads</h2>
+          <h2 class="text-secondary my-0 fs-5">Sneak'rHeads</h2>
         </a>
       </div>
       <!-- Products Dropdown -->
       <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-        <a class="text-dark nav-link dropdown" href="#" id="product-options" data-bs-toggle="dropdown"
+        <a class="text-secondary nav-link dropdown" href="#" id="product-options" data-bs-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
             <p class="my-0 dropdown-toggle">Products</p>
@@ -67,7 +67,7 @@
         <form method="GET" action="">
           <div class="input-group w-100">
             <input class="form-control border product-search" type="text" name="q" placeholder="Browse Products">
-            <button class="btn" type="submit" id="button-addon2">
+            <button class="btn text-secondary" type="submit" id="button-addon2">
               <i class="fas fa-search"></i>
             </button>
           </div>
@@ -77,13 +77,13 @@
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <!-- Account Dropdown -->
           <li class="list-inline-item dropdown">
-            <a class="text-dark nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
+            <a class="text-secondary nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
                 <div><i class="fas fa-user-circle fa-lg"></i></div>
               </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="user-options dropdown-menu border-rounded" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product Management</a>
@@ -98,7 +98,7 @@
           </li>
           <!-- Grand Total -->
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-secondary{% endif %} nav-link" href="">
               <div class="text-center">
                 <div><i class="fas fa-shopping-basket fa-lg pr-3"></i>{% if grand_total %}
                   €{{ grand_total|floatformat:2 }}
@@ -119,6 +119,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         {% include 'includes/mobile-top-header.html' %}
+        {% include 'includes/mobile-nav.html' %}
       </nav>
     </div>
   </header>

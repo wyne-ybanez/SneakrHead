@@ -1,12 +1,12 @@
-<ul class="mt-4 position-absolute end-0">
-    <!-- Logo -->
-    <li class="list-inline-item">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-dark my-0 fs-5">Sneak'rHeads</h2>
-        </a>
-    </li>
+<!-- Logo -->
+<div class="mx-auto text-center">
+    <a href="{% url 'home' %}" class="main-logo-link">
+        <h2 class="text-dark my-0 fs-6 mobile-padding">Sneak'rHeads</h2>
+    </a>
+</div>
 
-    <!-- Drop down -->
+<ul class="mt-4 position-absolute end-0">
+    <!-- Account Drop down -->
     <li class="list-inline-item dropdown">
         <a class="text-dark nav-link d-block d-lg-none px-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -31,7 +31,7 @@
     <li class="list-inline-item">
         <div class="position-relative">
             <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none
-                py-0 end-0" href="">
+                py-0 end-0 text-center" href="">
                 <div class="text-center pr-3">
                     <i class="fas fa-shopping-basket fa-lg"></i>
                 </div>
