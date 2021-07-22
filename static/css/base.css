@@ -63,7 +63,7 @@ body {
 }
 
 .navbar {
-    padding: .2rem .5rem;
+    padding: 0rem .5rem;
 }
 
 .shop-now-btn {
@@ -129,6 +129,6 @@ body {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .mobile-padding {
-        padding-right: 5rem;
+        margin-left: 3rem;
     }
 } 
