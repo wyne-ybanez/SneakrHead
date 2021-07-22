@@ -1,0 +1,41 @@
+<ul class="mt-4 position-absolute end-0">
+    <!-- Logo -->
+    <li class="list-inline-item">
+        <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h2 class="logo-font text-dark my-0 fs-5">Sneak'rHeads</h2>
+        </a>
+    </li>
+
+    <!-- Drop down -->
+    <li class="list-inline-item dropdown">
+        <a class="text-dark nav-link d-block d-lg-none px-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <i class="fas fa-user-circle fa-lg"></i>
+            </div>
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="#" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">Logout</a>
+            {% else %}
+                <a href="#" class="dropdown-item">Register</a>
+                <a href="#" class="dropdown-item">Login</a>
+            {% endif %}
+        </div>
+    </li>
+
+    <!-- Shopping bag -->
+    <li class="list-inline-item">
+        <div class="position-relative">
+            <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none
+                py-0 end-0" href="">
+                <div class="text-center pr-3">
+                    <i class="fas fa-shopping-basket fa-lg"></i>
+                </div>
+            </a>
+        </div>
+    </li>
+</ul>

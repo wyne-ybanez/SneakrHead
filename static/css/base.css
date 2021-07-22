@@ -21,15 +21,22 @@ body {
     width: 1.5rem;
 }
 
+.fas.fa-search:hover {
+    color: white !important;
+}
+
 #button-addon2 {
     width: 70px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     background: white;
+    border: 1px solid #dee2e6!important;
+    border-left: hidden;
 }
 
 #button-addon2:hover {
     background: #6c757d!important;
+    color: white !important; 
 }
 
 .product-search {
@@ -39,11 +46,10 @@ body {
 
 .products.dropdown-menu.show {
     width: 65vw !important; 
-    background-color: whitesmoke !important;
-}
-
-.logo-font {
-    text-transform: uppercase;
+    background-color: white !important;
+    writing-mode: horizontal-tb;
+    border-block-start: 2px solid grey;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
 }
 
 .main-logo-link {
