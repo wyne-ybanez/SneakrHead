@@ -488,9 +488,11 @@ You can fork the repository through the following steps. Forking the repository 
 ### Code
 
 - Rotate Code for chevrons in navigation bar: https://codepen.io/rezk/pen/PegNRY 
+- 
 
 ### Acknowledgements
 
 I would to express my gratitude to the Code Institute tutors and community for helping get this far.
+FP vision project 
 
 

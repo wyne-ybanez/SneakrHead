@@ -56,7 +56,6 @@ body {
 .navbar-nav {
     border-block-start: 2px solid grey;
     box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
-    height: 100vh;
 }
 
 .dropdown-item {
@@ -83,6 +82,15 @@ body {
 .navbar {
     padding: 0rem .5rem;
     height: 60px;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.25rem;
+}
+
+.navbar-nav {
+    overflow: auto;
+    height: 100vh;
 }
 
 .shop-now-btn {
