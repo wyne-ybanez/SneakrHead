@@ -56,6 +56,23 @@ body {
 .navbar-nav {
     border-block-start: 2px solid grey;
     box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
+    height: 100vh;
+}
+
+.dropdown-item {
+    color: #6c757d;
+}
+
+/* Rotate Code: https://codepen.io/rezk/pen/PegNRY */
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .2s linear;
+}
+.rotate.down {
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
 }
 
 .main-logo-link {
