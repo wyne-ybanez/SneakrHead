@@ -1,15 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&display=swap');
 
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/header-img.jpeg') no-repeat center center fixed;
+    background: url('/media/header-3.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Prompt', sans-serif;
+}
+
+.hero-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-30%);
+    transform: translate(-50%,-30%);
+    font-size: 5rem;
+}
+
+.hero-text {
+    position: relative;
+    bottom: 1rem;
+    font-size: 6rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.box-shadow {
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
 }
 
 /* from Bulma */
@@ -94,9 +115,10 @@ body {
 }
 
 .shop-now-btn {
-    background: black;
+    position: relative;
+    bottom: 3rem;
     color: white;
-    min-width: 260px;
+    min-width: 200px;
 }
 
 .btn-black {
@@ -142,12 +164,9 @@ body {
     }
 }
 
-/* Ipad/Tablet Media Queries
+/* Ipad/Tablet Media Queries */
 @media only screen and (min-device-width: 768px) {
-    .ipad-margin { 
-        margin-right: 12rem !important;
-    }
-} */
+} 
 
 /* Mobiles */
 /* Media query from: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
