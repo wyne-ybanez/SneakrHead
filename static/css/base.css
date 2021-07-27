@@ -11,6 +11,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Prompt', sans-serif;
+    overflow-x: hidden;
 }
 
 p {
@@ -180,6 +181,10 @@ p {
     color: white;
 }
 
+.bg-white {
+    color:white;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -195,8 +200,7 @@ p {
 }
 
 #footer {
-    background-color: whitesmoke;
-    justify-content: space-between;
+    overflow-x: hidden;
 }
 
 .footer-text {
@@ -243,6 +247,9 @@ p {
 
 /* Ipad/Tablet Media Queries */
 @media only screen and (min-device-width: 768px) {
+    .container {
+        min-width: 80%;
+    }
 } 
 
 /* Mobiles */
