@@ -488,7 +488,7 @@ You can fork the repository through the following steps. Forking the repository 
 ### Code
 
 - Rotate Code for chevrons in navigation bar: https://codepen.io/rezk/pen/PegNRY 
-- 
+- Footer Code Snippet from: https://mdbootstrap.com/docs/standard/navigation/footer/
 
 ### Acknowledgements
 

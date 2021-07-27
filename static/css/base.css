@@ -6,11 +6,15 @@ html {
 }
 
 body {
-    background: url('/media/header-3.jpg') no-repeat center center fixed;
+    background: url('/media/header-poss-4.jpeg') no-repeat top center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Prompt', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero-container {
@@ -153,8 +157,21 @@ body {
     background-color: whitesmoke;
 }
 
+.footer-text {
+    font-family: 'Roboto', sans-serif;
+}
+
 .list-unstyled li a {
     text-decoration: none;
+}
+
+#copyright {
+    font-family: 'Roboto', sans-serif;
+}
+
+#copyright a {
+    text-decoration: none;
+    color: tomato;
 }
 
 /* -------------------------------- Media Queries */
