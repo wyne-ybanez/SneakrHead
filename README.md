@@ -489,10 +489,12 @@ You can fork the repository through the following steps. Forking the repository 
 
 - Rotate Code for chevrons in navigation bar: https://codepen.io/rezk/pen/PegNRY 
 - Footer Code Snippet from: https://mdbootstrap.com/docs/standard/navigation/footer/
+- Dividers Code from Wrennas Project: https://fpvision.herokuapp.com/
 
 ### Acknowledgements
 
 I would to express my gratitude to the Code Institute tutors and community for helping get this far.
-FP vision project 
+
+I would also like to acknowledge and praise the 'FP vision' project by Wrenna for inspiring the design of the e-commerce store
 
 

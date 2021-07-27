@@ -63,7 +63,7 @@
         <a class="text-secondary nav-link dropdown" href="#" id="product-options" data-bs-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
-            <p class="my-0 dropdown-toggle" style="font-family: 'Prompt',sans-serif;">Products</p>
+            <p class="my-0 dropdown-toggle">Products</p>
           </div>
         </a>
         {% include 'includes/products-nav.html' %}
@@ -143,130 +143,71 @@
   {% endblock %}
 
 <!-- Footer -->
-<footer id="footer" class="text-center text-secondary">
-
-  <div class="container p-4">
-    <!-- Social media -->
-    <section class="mb-4">
-      <a class="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-      <a class="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-      <a class="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button"><i class="fab fa-google"></i></a> 
-      <a class="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-      <a class="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-      <a class="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button"><i class="fab fa-github"></i></a>
-    </section>
-
-    <!-- Form -->
-    <section class="">
-      <form action="">
-        <div class="row d-flex justify-content-center">
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>* Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <div class="col-md-5 col-12">
-            <div class="form-outline form-white mb-4">
-              <input type="email" id="emailFooterInput" class="form-control" placeholder="Email Address"/>
-            </div>
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-outline-secondary mb-4">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </form>
-    </section>
-
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p class="footer-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
-      </p>
-    </section>
-
-    <!-- Section: Links -->
-    <section class="footer-links">
+<footer id="footer" class="text-secondary text-center">
+  <div class="container py-4 px-3 mb-3">
+    <!-- Footer Text -->
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-secondary">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 4</a>
-            </li>
-          </ul>
+        <div class="col-md-4 col-sm-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-dark">Who we are</h5>
+          <div class="divider"><i class="fas fa-users"></i></div>
+          <p class="footer-text">
+            We are an e-commerce store that specialises in selling popular or branded sneakers. 
+            <br><br>
+            Thank you for choosing to shop with us. Support our work on social media and sign up to our newsletter to 
+            get the most up to date deals in this space.
+          </p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-secondary">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 4</a>
-            </li>
-          </ul>
+        <div class="col-md-4 col-sm-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-dark">Newsletter</h5>
+          <div class="divider"><i class="fas fa-envelope"></i></div>
+          <p class="footer-text">
+            Enter your email to subscribe to our newsletters for special deals, discounts and
+            new released products.
+          </p>
+          <!-- Footer Form --> 
+          <form action="">
+            <div class="row d-flex justify-content-center">
+              <div class="col-12">
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="emailFooterInput" class="form-control rounded-pill" placeholder="Email Address"/>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-info btn-outline-light mb-4 rounded-pill">
+                    <i class="fas fa-rss"></i>
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- End Form -->
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-secondary">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-secondary">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-secondary">Link 4</a>
-            </li>
-          </ul>
+        <div class="col-md-4 col-sm-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-dark">Support Us</h5>
+          <div class="divider"><i class="fas fa-hands-helping"></i></div>
+          <p class="footer-text">
+            Give us a shout out, add us on social media. We are open to 
+            all customer service and collaboration opportunities!
+          </p>
+          <!-- Social media -->
+              <a class="btn btn-outline-info btn-floating m-1 rounded-circle" href="https://www.facebook.com/" 
+                target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-info btn-floating m-1 rounded-circle" href="https://twitter.com/?lang=en" 
+                target="_blank" role="button"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-info btn-floating m-1 rounded-circle" href="https://www.tiktok.com/" 
+                target="_blank" role="button"><i class="fab fa-tiktok"></i></a> 
+              <a class="btn btn-outline-info btn-floating m-1 rounded-circle" href="https://www.instagram.com/" 
+                target="_blank" role="button"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-    </section>
-  </div>
-  <!-- Copyright -->
-  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.02);">
-    <span id="copyright">© 2021 Copyright | Developed by 
-      <a href="https://github.com/wyne-ybanez" target="_blank">Wyne Ybanez</a>
-    </span>
+      <!-- Copyright -->
+    <div class="text-center text-secondary my-5">
+      <span class="mb-5" id="copyright">© 2021 Copyright | Developed by 
+        <a href="https://github.com/wyne-ybanez" target="_blank">Wyne Ybanez</a>
+      </span>
+    </div>
   </div>
 </footer>
 
