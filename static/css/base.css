@@ -15,7 +15,6 @@ body {
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
     font-weight: 150;
 }
 
@@ -207,8 +206,7 @@ p {
 /*===== Horizontal Scroll =====*/
 
 .horizontal-scroll {
-    margin-top: 500px;
-    padding-bottom: 80px;
+    padding-bottom: 8rem;
     overflow-x: auto;
 }
 
@@ -230,6 +228,19 @@ p {
     height: 48px;
     width: 50px;
 }
+
+/*===== Best Sellers =====*/
+
+.best-sellers {
+    margin-top: 500px; 
+    padding: 3rem 0 10rem 0;
+}
+
+.best-sellers .card {
+    margin: 20px 20px;
+    width: 5rem;
+}
+
   
 /*===== Footer =====*/
 
