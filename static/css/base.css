@@ -282,7 +282,7 @@ p {
 /* Ipad/Tablet Media Queries */
 @media only screen and (min-device-width: 768px) {
     .container {
-        min-width: 80%;
+        min-width: 80% !important;
     }
 } 
 

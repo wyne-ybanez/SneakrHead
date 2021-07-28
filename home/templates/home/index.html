@@ -21,19 +21,22 @@
 
 {% block content %}
     <!-- Horizontal Scroll -->
-    <div class="container-fluid mb-0">
+    <div class="container-fluid w-100 mb-0">
         <section>
             <div class="row">
                 <div class="col-12 bg-white horizontal-scroll">
                     <div class="container">
                         <div class="d-flex">
                             <h1 class="text-dark pt-5 flex-grow-1">Just In.</h1>
-                            <button id="prev-btn" class="btn btn-outline-dark mt-5 rounded-circle">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button id="next-btn" class="btn btn-outline-dark mt-5 rounded-circle" style="margin-left: 25px">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                            <!-- Buttons -->
+                            <div class="buttons d-none d-lg-block">
+                                <button id="prev-btn" class="btn btn-outline-dark mt-5 rounded-circle">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button id="next-btn" class="btn btn-outline-dark mt-5 rounded-circle" style="margin-left: 25px">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
                         </div>
                         <!-- Cards -->
                         <div id="scrolling-wrapper">
@@ -88,6 +91,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Cards end -->
                     </div>
                 </div>
             </div>
