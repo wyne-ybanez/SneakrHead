@@ -150,15 +150,16 @@
 </footer>
 
   {% block postloadjs %}
-    <script>
-      $('.nav-link').click(function () {
-          $(this).find('.rotate').toggleClass('down')
-      })
-      $('.navbar, .nav-item, .dropdown-menu, .dropdown, .nav-link').click(function(e) {
-        e.stopPropagation();
-      });
-    </script>
   {% endblock %}
+
+<script>
+  $('.nav-link').click(function () {
+      $(this).find('.rotate').toggleClass('down')
+  })
+  $('.navbar, .nav-item, .dropdown-menu, .dropdown, .nav-link').click(function(e) {
+    e.stopPropagation();
+  });
+</script>
 
 </body>
 </html>

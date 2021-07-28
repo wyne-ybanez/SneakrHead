@@ -490,6 +490,8 @@ You can fork the repository through the following steps. Forking the repository 
 - Rotate Code for chevrons in navigation bar: https://codepen.io/rezk/pen/PegNRY 
 - Footer Code Snippet from: https://mdbootstrap.com/docs/standard/navigation/footer/
 - Dividers Code from Wrennas Project: https://fpvision.herokuapp.com/
+- Horizontal Scrolling Code Solution: https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6
+- Horizontal button scrolling code solution: https://stackoverflow.com/questions/56932831/how-to-scroll-right-on-a-button-click
 
 ### Acknowledgements
 

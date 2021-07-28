@@ -171,7 +171,7 @@ p {
     min-width: 200px;
 }
 
-.btn:hover {
+.btn-main:hover {
     color: #000;
     background: tomato !important;
 }
@@ -199,6 +199,11 @@ p {
     border: 1px solid black !important;
 }
 
+.rounded-circle {
+    height: auto;
+    width: auto;
+}
+
 /*===== Horizontal Scroll =====*/
 
 .horizontal-scroll {
@@ -207,18 +212,23 @@ p {
     overflow-x: auto;
 }
 
-.scrolling-wrapper {
+#scrolling-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+}
+
+#scrolling-wrapper {
+    -webkit-overflow-scrolling: touch;
 }
 
 .card {
     display: inline-block;
 }
 
-.scrolling-wrapper {
-    -webkit-overflow-scrolling: touch;
+#next-btn, #prev-btn {
+    height: 48px;
+    width: 50px;
 }
   
 /*===== Footer =====*/
