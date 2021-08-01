@@ -497,6 +497,9 @@ You can fork the repository through the following steps. Forking the repository 
 
 I would to express my gratitude to the Code Institute tutors and community for helping get this far.
 
-I would also like to acknowledge and praise the 'FP vision' project by Wrenna for inspiring the design of the e-commerce store
+Nike's website and JD Sports Website were used as an inspiration for the design of this website. 
+
+I would also like to acknowledge and praise the 'FP vision' project by Wrenna for inspiring the design of the e-commerce store.
+
 
 

@@ -171,7 +171,6 @@ p {
 }
 
 .btn-main:hover {
-    color: #000;
     background: tomato !important;
 }
 
@@ -248,8 +247,57 @@ p {
 /*===== Collection Grid =====*/
 
 .collection-grid {
+    position: relative;
     padding-bottom: 7rem;
     box-sizing: border-box;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    width: 220px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #A9A9A9;
+}
+
+.overlay-big {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    width: 450px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #A9A9A9;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.grid-image {
+    position: relative;
+}
+
+.grid-image:hover .overlay {
+    opacity: 1;
+}
+
+.grid-image:hover .overlay-big {
+    opacity: 1;
 }
 
 .grid-image-small {
