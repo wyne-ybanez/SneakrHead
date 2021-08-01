@@ -249,27 +249,21 @@ p {
 
 .collection-grid {
     padding-bottom: 7rem;
+    box-sizing: border-box;
 }
 
 .grid-image-small {
-    height: 250px;
-    width: 218px;
+    height: 220px;
+    width: 220px;
     object-fit: cover;
-    background-repeat: no-repeat;
-}
-
-.grid-image-small-middle {
-    height: 250px;
-    width: 170px;
-    object-fit: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat fixed;
 }
 
 .grid-image-big {
-    height: 510px;
+    height: 450px;
     width: 450px;
     object-fit: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat fixed;
 }
   
 /*===== Footer =====*/
