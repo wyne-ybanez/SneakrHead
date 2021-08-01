@@ -31,7 +31,7 @@
                             <h1 class="text-dark pt-5 flex-grow-1">Best Sellers.</h1>
                         </div>
                         <!-- Products -->
-                        <div class="products-wrapper d-flex flex-wrap justify-content-between">
+                        <div class="products-wrapper d-flex flex-wrap">
                             <div class="cards text-center">
                                 <div class="card" style="width: 18rem;">
                                     <img src="media/header-main.jpeg" class="card-img-top" alt="...">
@@ -126,8 +126,8 @@
                                 <div class="card" style="width: 18rem;">
                                     <img src="media/header-main.jpeg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <h5 class="card-title text-dark">Card title</h5>
+                                        <p class="card-text text-dark text-wrap">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         <a href="#" class="btn btn-primary">Go somewhere</a>
                                     </div>
                                 </div>
@@ -179,6 +179,68 @@
             </div>
         </section>
     </div>
+
+    <!-- Grid & Flexboxes -->
+    <div class="container-fluid w-100 mb-0">
+        <section>
+            <div class="row">
+                <div class="col-12 bg-white collection-grid">
+                    <div class="container">
+                        <div class="d-flex">
+                            <h1 class="text-dark pt-5 flex-grow-1">Our collections.</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-5 col-sm-12 text-center">
+                                <div class="row">
+                                    <div class="col-lg-12 border border-5 border-white">
+                                        <img class="grid-image-big" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 border border-5 border-white">
+                                        <img class="grid-image-small" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                    <div class="col-lg-6 border border-5 border-white">
+                                        <img class="grid-image-small" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-12 text-center">
+                                <div class="row">
+                                    <div class="col-12 border border-5 border-white">
+                                        <img class="grid-image-small-middle" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                    <div class="col-12 border border-5 border-white">
+                                        <img class="grid-image-small-middle" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                    <div class="col-12 border border-5 border-white">
+                                        <img class="grid-image-small-middle" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-12 text-center">
+                                <div class="row">
+                                    <div class="col-6 border border-5 border-white">
+                                        <img class="grid-image-small" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                    <div class="col-6 border border-5 border-white">
+                                        <img class="grid-image-small" src="media/header-main.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 border border-5 border-white">
+                                        <img class="grid-image-big" src="media/bg-image.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>        
 {% endblock %}
 
 {% block postloadjs %}

@@ -198,15 +198,31 @@ p {
     border: 1px solid black !important;
 }
 
+.border-black {
+    border: white !important;
+}
+
 .rounded-circle {
     height: auto;
     width: auto;
 }
 
+/*===== Best Sellers =====*/
+
+.best-sellers {
+    margin-top: 500px; 
+    padding: 3rem 0 7rem 0;
+}
+
+.best-sellers .card {
+    margin: 20px 20px;
+    width: 5rem;
+}
+
 /*===== Horizontal Scroll =====*/
 
 .horizontal-scroll {
-    padding-bottom: 8rem;
+    padding-bottom: 7rem;
     overflow-x: auto;
 }
 
@@ -229,18 +245,32 @@ p {
     width: 50px;
 }
 
-/*===== Best Sellers =====*/
+/*===== Collection Grid =====*/
 
-.best-sellers {
-    margin-top: 500px; 
-    padding: 3rem 0 10rem 0;
+.collection-grid {
+    padding-bottom: 7rem;
 }
 
-.best-sellers .card {
-    margin: 20px 20px;
-    width: 5rem;
+.grid-image-small {
+    height: 250px;
+    width: 218px;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 
+.grid-image-small-middle {
+    height: 250px;
+    width: 170px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.grid-image-big {
+    height: 510px;
+    width: 450px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
   
 /*===== Footer =====*/
 
