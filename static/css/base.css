@@ -229,6 +229,7 @@ p {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    flex-direction: row;
 }
 
 #scrolling-wrapper {
@@ -337,7 +338,7 @@ p {
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .container {
     max-width: 80%;
   }
