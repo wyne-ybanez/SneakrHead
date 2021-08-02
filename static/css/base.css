@@ -252,7 +252,8 @@ p {
     box-sizing: border-box;
 }
 
-.overlay {
+.overlay,
+.overlay-big {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -261,19 +262,14 @@ p {
     width: 220px;
     opacity: 0;
     transition: .5s ease;
-    background-color: #A9A9A9;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 1)
+        );
 }
 
 .overlay-big {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; 
     width: 450px;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #A9A9A9;
 }
 
 .overlay-text {
