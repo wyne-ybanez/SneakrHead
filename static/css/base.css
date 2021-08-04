@@ -79,10 +79,10 @@ p {
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
-  }
+}
 
 .text-shadow-blue {
-text-shadow: 2px 2px 2px rgba(25, 181, 254, 1);
+    text-shadow: 3px 3px 3px rgba(25, 181, 254, 1);
 }
 
 /* from Bulma */
@@ -212,6 +212,11 @@ text-shadow: 2px 2px 2px rgba(25, 181, 254, 1);
 .rounded-circle {
     height: auto;
     width: 39px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
 }
 
 /*===== Products =====*/

@@ -100,86 +100,7 @@
             </div>
         </section>
     </div>
-
-    <!-- Horizontal Scroll -->
-    <div class="container-fluid w-100 mb-0">
-        <section>
-            <div class="row">
-                <!-- Just In -->
-                <div class="col-12 bg-white horizontal-scroll">
-                    <div class="container">
-                        <div class="d-flex">
-                            <h1 class="text-dark pt-5 flex-grow-1">Just In.</h1>
-                            <!-- Buttons -->
-                            <div class="buttons d-none d-lg-block">
-                                <button id="prev-btn" class="btn btn-outline-dark mt-5 rounded-circle">
-                                    <i class="fas fa-chevron-left"></i>
-                                </button>
-                                <button id="next-btn" class="btn btn-outline-dark mt-5 rounded-circle" style="margin-left: 25px">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- Cards -->
-                        <div id="scrolling-wrapper">
-                            <div class="cards">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="media/header-main.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-dark">Card title</h5>
-                                        <p class="card-text text-dark text-wrap">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="media/header-main.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="media/header-main.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="media/header-main.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="media/header-main.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                                <div class="card" style="width: 18rem;">
-                                    <img src="media/header-main.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Cards end -->
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
+    {% include 'includes/horizontal-scroll.html' %}
     <!-- Categories Grid -->
     <div class="container-fluid w-100 mb-0">
         <section>
@@ -317,35 +238,4 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script>
-    (function(w){
-        w.addEventListener('load', function(){
-            const leftBtn = document.getElementById('prev-btn'),
-                  rightBtn = document.getElementById('next-btn'),
-                  content = document.getElementById('scrolling-wrapper');
-            const content_scroll_width = content.scrollWidth;
-            let content_scroll_left = content.scrollLeft;
-                        
-            leftBtn.disabled = true;
-
-            rightBtn.addEventListener('click', () => {
-                content_scroll_left += 100;
-                if (content_scroll_left >= content_scroll_width) { 
-                    content_scroll_left = content_scroll_width; 
-                }
-                content.scrollLeft = content_scroll_left;
-                leftBtn.disabled = false;
-            });
-
-            leftBtn.addEventListener('click', () => {
-                content_scroll_left -= 100;
-                if (content_scroll_left <= 0) {
-                    content_scroll_left = 0;
-                    leftBtn.disabled = true;
-                }
-                content.scrollLeft = content_scroll_left;
-            });
-        });
-    })(window);
-</script>
 {% endblock %}

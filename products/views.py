@@ -13,5 +13,4 @@ def all_products(request):
     context = {
         'products': products
     }
-
     return render(request, url, context)
