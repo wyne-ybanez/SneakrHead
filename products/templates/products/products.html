@@ -2,20 +2,26 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="row h-100">
-        <div class="col-12 hero-container">
-            <h1 class="hero-text text-dark text-center animate__animated animate__fadeInUp animate__delay-1s">
-                <i>Sneak'r 
-                Heads </i>
-            </h1>
+    <div class="products-header">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="logo-font text-light text-shadow-blue">
+                    Our Products
+                </h2>
+                <hr class="w-100 mb-1 d-flex justify-content-center">
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <!-- Products -->
+    <div class="products-overlay"></div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
+        </div>
+        <div class="row">
+            <div class="col text-center mt-3">
                 {{ products }}
             </div>
         </div>
