@@ -71,7 +71,8 @@ p {
 }
 
 .heading-font {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 500;
     font-family: 'Prompt', sans-serif;
 }
 
@@ -93,6 +94,42 @@ p {
 
 .text-shadow-blue {
     text-shadow: 3px 3px 3px rgba(25, 181, 254, 1);
+}
+
+/* Hover Animation Code from: https://github.com/IanLunn/Hover/blob/master/css/hover.css */
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: orange;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before, 
+.hvr-underline-from-center:focus:before, 
+.hvr-underline-from-center:active:before {
+    left: 15%;
+    right: 15%;
 }
 
 /* from Bulma */
@@ -187,6 +224,10 @@ p {
     background: tomato !important;
 }
 
+.btn-info:hover {
+    background: #20c997 !important;
+}
+
 .btn-black {
     background: black;
     color: white;
@@ -227,8 +268,6 @@ p {
 /*===== Products =====*/
 
 .products-header {
-    /* background: linear-gradient(to right,#F7F7F7 0,#F5F5F5 40%,#fff 100%);
-    background-size: cover; */
     padding-top: 100px;
 }
 

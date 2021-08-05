@@ -493,6 +493,7 @@ You can fork the repository through the following steps. Forking the repository 
 - Horizontal Scrolling Code Solution: https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6
 - Horizontal button scrolling code solution: https://stackoverflow.com/questions/56932831/how-to-scroll-right-on-a-button-click
 - Overlay images hover solution: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade
+- Hover Animation on link: https://github.com/IanLunn/Hover/blob/master/css/hover.css
 
 ### Acknowledgements
 
