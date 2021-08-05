@@ -2,19 +2,19 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="row h-100">
+    <div class="row">
         <div class="col-12 hero-container">
             <h1 class="logo-font text-dark text-center animate__animated animate__fadeInUp animate__delay-1s">
                 <i>Sneak'r 
                 Heads </i>
             </h1>
-                <div class="my-5">
-                    <h4 class="text-center">
-                        <a href="{% url 'products' %}" class="shop-now-btn rounded-pill btn text-light btn-main bg-info box-shadow text-uppercase p-2">
-                            View Products
-                        </a>
-                    </h4>
-                </div>
+            <div class="my-5">
+                <h4 class="text-center">
+                    <a href="{% url 'products' %}" class="shop-now-btn rounded-pill btn text-light btn-main bg-info box-shadow text-uppercase p-2">
+                        View Products
+                    </a>
+                </h4>
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -30,7 +30,7 @@
                         <div class="d-flex">
                             <h1 class="text-dark pt-5 flex-grow-1">Best Sellers.</h1>
                         </div>
-                        <!-- Products -->
+                        <!-- Featured Products -->
                         <div class="products-wrapper d-flex flex-wrap">
                             <div class="cards text-center">
                                 <div class="card" style="width: 18rem;">

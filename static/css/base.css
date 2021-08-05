@@ -3,6 +3,7 @@
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Prompt', sans-serif;
-    overflow-x: hidden;
 }
 
 p {
@@ -62,11 +62,16 @@ p {
     font-size: 5rem;
 }
 
+.heading-font,
 .logo-font {
     position: relative;
     bottom: 1rem;
     font-size: 6rem;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', sans-serif;
+}
+
+.heading-font {
+    font-size: 5rem;
 }
 
 .box-shadow {
@@ -74,6 +79,10 @@ p {
 }
 
 .box-shadow-light {
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+}
+
+.box-shadow-very-light {
     box-shadow: 0px 8px 15px rgb(0 0 0 / 5%);
 }
 
@@ -157,17 +166,12 @@ p {
     text-decoration: none;
 }
 
-.navbar {
-    padding: 0rem .5rem;
-    height: 60px;
-}
-
 .navbar-toggler {
     padding: 0.25rem 0.25rem;
 }
 
 .navbar-nav {
-    overflow: auto;
+    overflow-x: hidden;
     height: 100vh;
 }
 
@@ -243,7 +247,7 @@ p {
 /*===== Best Sellers =====*/
 
 .best-sellers {
-    margin-top: 200px; 
+    margin-top: 100vh; 
     padding: 3rem 0 6rem 0;
 }
 
@@ -408,5 +412,9 @@ p {
   and (-webkit-min-device-pixel-ratio: 2) {
     .mobile-padding {
         margin-left: 3rem;
+    }
+
+    .heading-font {
+        font-size: 3rem;
     }
 } 

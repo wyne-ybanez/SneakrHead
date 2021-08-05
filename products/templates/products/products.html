@@ -5,7 +5,7 @@
     <div class="products-header">
         <div class="row">
             <div class="col text-center">
-                <h2 class="logo-font text-light text-shadow-blue">
+                <h2 class="heading-font text-dark text-shadow-blue">
                     Products
                 </h2>
                 <hr class="w-100 mb-1 d-flex justify-content-center">
@@ -28,11 +28,7 @@
             <div class="product-container d-lg-flex d-md-flex col-lg-9 col-md-10 col-sm-12 mt-5">
                 {% for product in products %}
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <div class="card rounded box-shadow h-100 border-0 mx-3 my-3">
-                        <!-- Product Name -->
-                        <div class="card-body pb-0">
-                            <p class="mb-2">{{ product.name }}</p>
-                        </div>
+                    <div class="card rounded box-shadow-light h-100 border-0 mx-3 my-3">
                         <!-- Product Image -->
                         {% if product.image %}
                         <a href="#">
@@ -43,6 +39,10 @@
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
+                        <!-- Product Name -->
+                        <div class="card-body pb-0">
+                            <p class="mb-2">{{ product.name }}</p>
+                        </div>
                         <!-- Product Footer -->
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
