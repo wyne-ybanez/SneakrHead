@@ -26,22 +26,70 @@
 {% block content %}
     <div class="products-overlay"></div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row products-row">
 
             <!-- Categories -->
-            <div class="categories-container col-lg-3 col-md-2 col-sm-0 mt-5">
-                
+            <div class="categories-container col-lg-3 col-md-2 col-sm-0 mt-5 pt-3">
+                <div class="container categories rounded-3 box-shadow-light py-5">
+                    <!-- Categories Checkbox -->
+                    <p class="fs-6 fw-normal text-dark text-uppercase">Categories</p> 
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sneakerCategory">
+                        <label class="form-check-label fw-light" for="sneakerCategory">
+                            Sneakers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="brandItems" checked>
+                        <label class="form-check-label fw-light" for="brandItems">
+                            Brand Items
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="discounted" checked>
+                        <label class="form-check-label fw-light" for="discounted">
+                            Discounted
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="shoeAccessories" checked>
+                        <label class="form-check-label fw-light" for="shoeAccessories">
+                            Shoe Accessories
+                        </label>
+                    </div>
+                    <!-- Stock Checkboxes -->
+                    <p class="fs-6 fw-normal text-dark text-uppercase pt-3">Stock</p> 
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="inStockItems">
+                        <label class="form-check-label fw-light" for="inStockItems">
+                            In Stock
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="outOfStockItems">
+                        <label class="form-check-label fw-light" for="outOfStockItems">
+                            Out of Stock
+                        </label>
+                    </div>
+                    <!-- Price -->
+                    <p class="fs-6 fw-normal text-dark text-uppercase pt-3">Price Range</p> 
+                    <input type="range" class="form-range" min="0" max="500" id="priceRange">
+                    <label for="priceRange" class="form-label fw-lighter">Min Price €0 - Max Price €500 </label>
+                </div>
             </div>
 
             <!-- Products -->
             <div class="product-container d-lg-flex d-md-flex col-lg-9 col-md-10 col-sm-12 mt-5">
                 {% for product in products %}
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <div class="card border rounded-3 h-100 mx-3 my-3">
+
+                    <div class="card border rounded-3 mx-3 my-3">
                         <!-- Product Image -->
                         {% if product.image %}
                         <a href="#">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid"
+                                style="height: 140px!important;"
+                                src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="#">
@@ -73,6 +121,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 {% endfor %}
             </div>

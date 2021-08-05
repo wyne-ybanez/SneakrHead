@@ -76,6 +76,10 @@ p {
     font-family: 'Prompt', sans-serif;
 }
 
+.title-font {
+    
+}
+
 .box-shadow {
     box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
 }
@@ -128,8 +132,8 @@ p {
 .hvr-underline-from-center:hover:before, 
 .hvr-underline-from-center:focus:before, 
 .hvr-underline-from-center:active:before {
-    left: 15%;
-    right: 15%;
+    left: 20%;
+    right: 20%;
 }
 
 /* from Bulma */
@@ -265,6 +269,14 @@ p {
     flex-direction: row;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
+.categories {
+    margin-left: 1rem;
+}
+
 /*===== Products =====*/
 
 .products-header {
@@ -279,6 +291,10 @@ p {
     position: fixed;
     background: white;
     z-index: -1;
+}
+
+.products-row {
+    padding-bottom: 7rem;
 }
 
 /*===== Best Sellers =====*/
@@ -395,6 +411,7 @@ p {
 
 #footer {
     overflow-x: hidden;
+    background: #FBFBFE;
 }
 
 .footer-text {
