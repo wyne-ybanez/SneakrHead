@@ -71,7 +71,8 @@ p {
 }
 
 .heading-font {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-family: 'Prompt', sans-serif;
 }
 
 .box-shadow {
@@ -226,11 +227,8 @@ p {
 /*===== Products =====*/
 
 .products-header {
-    background: linear-gradient(
-        rgba(0, 0, 0, .1), 
-        rgba(0, 0, 0, .5)
-        ), url('/media/header-poss.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    /* background: linear-gradient(to right,#F7F7F7 0,#F5F5F5 40%,#fff 100%);
+    background-size: cover; */
     padding-top: 100px;
 }
 
@@ -276,6 +274,11 @@ p {
 
 .card {
     display: inline-block;
+}
+
+.card:hover {
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 15%);
+    border: 0;
 }
 
 #next-btn, #prev-btn {
@@ -415,6 +418,6 @@ p {
     }
 
     .heading-font {
-        font-size: 3rem;
+        text-align: center;
     }
 } 
