@@ -10,7 +10,7 @@ body {
     background: url('/media/header-3.jpg') no-repeat top center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #000;
     font-family: 'Prompt', sans-serif;
 }
 
@@ -475,5 +475,9 @@ p {
 
     .heading-font {
         text-align: center;
+    }
+
+    .categories {
+        margin-left: auto;
     }
 } 
