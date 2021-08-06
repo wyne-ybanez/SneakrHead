@@ -269,6 +269,11 @@ p {
     flex-direction: row;
 }
 
+.card img {
+    height: 150px;
+    width: 200px;
+}
+
 .card:hover {
     cursor: pointer;
 }
@@ -480,4 +485,19 @@ p {
     .categories {
         margin-left: auto;
     }
+
+    .card img {
+        height: auto;
+        width: auto;
+    }
+
+    .card-horizontal .card img {
+        height: 150px;
+        width: 300px;
+    }
+
+    .card-horizontal .card {
+        height: 300px;
+        width: 250px;
+    }    
 } 

@@ -19,9 +19,11 @@
                     </div>
                     <!-- Cards -->
                     <div id="scrolling-wrapper">
-                        <div class="cards">
+                        <div class="cards d-flex flex-row">
                             {% for product in products %}
-                                {% include 'includes/card.html' %}
+                                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 card-horizontal">
+                                    {% include 'includes/card.html' %}       
+                                </div>                    
                             {% endfor %}
                         </div>
                     </div>

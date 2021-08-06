@@ -488,12 +488,20 @@ You can fork the repository through the following steps. Forking the repository 
 ### Code
 
 - Rotate Code for chevrons in navigation bar: https://codepen.io/rezk/pen/PegNRY 
+
 - Footer Code Snippet from: https://mdbootstrap.com/docs/standard/navigation/footer/
+
 - Dividers Code from Wrennas Project: https://fpvision.herokuapp.com/
+
 - Horizontal Scrolling Code Solution: https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6
+
 - Horizontal button scrolling code solution: https://stackoverflow.com/questions/56932831/how-to-scroll-right-on-a-button-click
+
 - Overlay images hover solution: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade
+
 - Hover Animation on link: https://github.com/IanLunn/Hover/blob/master/css/hover.css
+
+- JavaScript Interactive price range display: https://stackoverflow.com/questions/18544890/onchange-event-on-input-type-range-is-not-triggering-in-firefox-while-dragging
 
 ### Acknowledgements
 

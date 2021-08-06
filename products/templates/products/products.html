@@ -29,7 +29,7 @@
         <div class="row products-row">
 
             <!-- Categories -->
-            <div class="categories-container col-lg-3 col-md-2 col-sm-0 mt-5 pt-3">
+            <div class="categories-container col-md-3 col-sm-0 mt-5 pt-3">
                 <div class="container categories rounded-3 box-shadow-light py-5">
                     <!-- Categories Checkbox -->
                     <p class="fs-6 fw-normal text-dark text-uppercase">Categories</p> 
@@ -72,18 +72,22 @@
                         </label>
                     </div>
                     <!-- Price -->
-                    <p class="fs-6 fw-normal text-dark text-uppercase pt-3">Price Range</p> 
-                    <input type="range" class="form-range" min="0" max="500" id="priceRange">
+                    <p class="fs-6 fw-normal text-dark pt-3">
+                        PRICE RANGE 
+                        <span class="fw-light text-dark" id="Range"></span>
+                    </p> 
+                    <input type="range" class="form-range" min="0" max="500" id="priceRange" 
+                        oninput="showPriceRange(this.value)" onchange="showPriceRange(this.value)">
                     <label for="priceRange" class="form-label fw-lighter">Min Price €0 - Max Price €500 </label>
                 </div>
             </div>
 
             <!-- Products -->
-            <div class="product-container d-lg-flex d-md-flex col-lg-9 col-md-10 col-sm-12 mt-5">
+            <div class="product-container d-lg-flex d-md-flex d-sm-flex flex-wrap col-lg-9 col-md-9 col-sm-12 mt-5">
                 {% for product in products %}
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
                     {% include 'includes/card.html' %}
-                </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>
@@ -93,4 +97,10 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
+    <script>
+        function showPriceRange(Val){
+            document.getElementById('Range').innerHTML = ` - Max: €${Val}`
+        }
+    </script>
 {% endblock %}
