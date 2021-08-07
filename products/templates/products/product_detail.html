@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="products-header w-100">
+        <div class="row g-0">
+            <div class="col mx-5">
+                <h1 class="heading-font text-dark mt-3 pt-5 mx-5">
+                    All Products.
+                </h1>
+                <div class="d-flex flex-wrap">
+                    <a href="" class="text-decoration-none">
+                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Something</p></a>
+                        <i class="fas fa-circle fa-xs pt-3"></i>
+                    <a href="" class="text-decoration-none">
+                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center" style="font-display: none;">Something</p></a>
+                        <i class="fas fa-circle fa-xs pt-3"></i>
+                    <a href="" class="text-decoration-none">
+                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center" style="font-display: none;">Something</p></a>
+                        <i class="fas fa-circle fa-xs pt-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="products-overlay"></div>
+    <div class="container-fluid">
+        <div class="row product-row g-0">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <p class="mb-0 fw-normal fs-3">{{ product.name }}</p>
+                    <p class="lead mb-0 font-weight-bold">${{ product.price }}</p>
+                    {% if product.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                        <small class="text-muted">No Rating</small>
+                    {% endif %}
+                    <p class="mt-3">{{ product.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal Scroll -->
+    {% include 'includes/horizontal-scroll.html' %}
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}
