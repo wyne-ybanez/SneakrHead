@@ -5,8 +5,8 @@
     <div class="products-header w-100">
         <div class="row g-0">
             <div class="col mx-5">
-                <h1 class="heading-font text-dark mt-3 pt-5 mx-5">
-                    All Products.
+                <h1 class="heading-font text-dark mx-5">
+                    {{product.name}}
                 </h1>
                 <div class="d-flex flex-wrap">
                     <a href="" class="text-decoration-none">
@@ -29,6 +29,11 @@
     <div class="container-fluid">
         <div class="row product-row g-0">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="product-name">
+                    <p class="heading-font text-dark mt-3 pt-5">
+                        {{ product.name }}
+                    </p>
+                </div>
                 <div class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
@@ -43,14 +48,17 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0 fw-normal fs-3">{{ product.name }}</p>
-                    <p class="lead mb-0 font-weight-bold">${{ product.price }}</p>
+                    <div class="product-description">
+                        <p class="title-font">Description</p>
+                        <p class="mt-3 fw-light">{{ product.description }}</p>
+                        <p class="mb-0 fw-normal fs-4">${{ product.price }}</p>
+                    </div>
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="text-dark"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
-                        <small class="text-muted">No Rating</small>
+                        <small class="text-dark">No Rating</small>
                     {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
+                    <hr class="text-secondary">
                 </div>
             </div>
         </div>

@@ -76,6 +76,11 @@ p {
     font-family: 'Prompt', sans-serif;
 }
 
+.title-font {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
 .box-shadow {
     box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
 }
@@ -299,6 +304,13 @@ p {
     padding-bottom: 7rem;
 }
 
+/*===== Product Details =====*/
+
+.product-details-container {
+    padding-left: 5rem;
+}
+
+
 /*===== Best Sellers =====*/
 
 .best-sellers {
@@ -307,8 +319,7 @@ p {
 }
 
 .best-sellers .card {
-    margin: 20px 20px;
-    width: 5rem;
+    margin: 20px 20px !important;
 }
 
 /*===== Horizontal Scroll =====*/
@@ -498,7 +509,11 @@ p {
     .card-horizontal .card {
         height: 300px;
         width: 250px;
-    }    
+    }   
+    
+    .product-details-container {
+        padding-left: 0;
+    }
 } 
 
 /* pad the top a bit when navbar is collapsed on mobile */
