@@ -3,7 +3,6 @@
 
 html {
     height: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -12,6 +11,7 @@ body {
     height: calc(100vh - 164px);
     color: #000;
     font-family: 'Prompt', sans-serif;
+    overflow-x: hidden;
 }
 
 p {
@@ -76,10 +76,6 @@ p {
     font-family: 'Prompt', sans-serif;
 }
 
-.title-font {
-    
-}
-
 .box-shadow {
     box-shadow: 0px 8px 15px rgb(0 0 0 / 30%);
 }
@@ -119,7 +115,7 @@ p {
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: orange;
+    background: black;
     height: 4px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
@@ -272,6 +268,7 @@ p {
 .card img {
     height: 150px;
     width: 200px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -489,11 +486,13 @@ p {
     .card img {
         height: auto;
         width: auto;
+        object-fit: cover;
     }
 
     .card-horizontal .card img {
         height: 150px;
         width: 300px;
+        object-fit: cover;
     }
 
     .card-horizontal .card {
