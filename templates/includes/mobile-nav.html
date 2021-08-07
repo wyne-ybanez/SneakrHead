@@ -1,5 +1,6 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav border-rounded w-auto mx-auto" style="background-color:white;">
+        <!-- Sort By -->
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link text-dark mr-5 px-3 mt-3" href="#" id="all-products-link" 
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -7,15 +8,15 @@
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">A-Z</a>
-                <a href="" class="dropdown-item">Ratings</a>
-                <a href="" class="dropdown-item">Price</a>
-                <a href="" class="dropdown-item">Category</a>
+                <a href="" class="dropdown-item text-dark fw-light">A-Z</a>
+                <a href="" class="dropdown-item text-dark fw-light">Ratings</a>
+                <a href="" class="dropdown-item text-dark fw-light">Price</a>
+                <a href="" class="dropdown-item text-dark fw-light">Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
             <hr class="text-secondary">
         </li>
-
+        <!-- Brands -->
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link text-dark mr-5 px-3" href="#" id="clothing-link" 
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -23,15 +24,15 @@
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5 text-secondary" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item">Nike</a>
-                <a href="#" class="dropdown-item">Adidas</a>
-                <a href="#" class="dropdown-item">Fila</a>
-                <a href="#" class="dropdown-item">Converse</a>
-                <a href="#" class="dropdown-item">New Balance</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Nike</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Adidas</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Fila</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Converse</a>
+                <a href="#" class="dropdown-item text-dark fw-light">New Balance</a>
             </div>
             <hr class="text-secondary">
         </li>
-
+        <!-- Deals -->
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link text-dark mr-5 px-3" href="#" id="homeware-link" 
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,25 +40,25 @@
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5 text-secondary" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item">Discounted</a>
-                <a href="#" class="dropdown-item">Half Price</a>
-                <a href="#" class="dropdown-item">Kids Products</a>
-                <a href="#" class="dropdown-item">Brand Discounts</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Discounted</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Half Price</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Kids Products</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Brand Discounts</a>
             </div>
             <hr class="text-secondary">
         </li>
-        
-        <li class="nav-item dropdown">
+        <!-- Accessories -->
+        <li class="nav-item dropdown" style="margin-bottom: 5rem;">
             <a class="font-weight-bold nav-link text-dark px-3" href="#" id="specials-link" 
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item">Socks</a>
-                <a href="#" class="dropdown-item">Bags</a>
-                <a href="#" class="dropdown-item">Caps</a>
-                <a href="#" class="dropdown-item" style="margin-bottom: 4rem;">Gym Equipment</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Socks</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Bags</a>
+                <a href="#" class="dropdown-item text-dark fw-light">Caps</a>
+                <a href="#" class="dropdown-item text-dark fw-light" style="margin-bottom: 4rem;">Gym Equipment</a>
             </div>
         </li>
     </ul>

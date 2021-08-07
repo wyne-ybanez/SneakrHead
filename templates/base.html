@@ -71,7 +71,7 @@
       </div>
       <!-- Search bar -->
       <div class="col-12 col-lg-5 my-auto py-1 py-lg-0">
-        <form method="GET" action="">
+        <form method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
             <input class="form-control border product-search fs-6 fw-light" type="text" name="q" placeholder="Browse Products">
             <button class="btn text-dark" type="submit" id="button-addon2">
@@ -157,7 +157,7 @@
   $('.nav-link').click(function () {
       $(this).find('.rotate').toggleClass('down')
   })
-  $('.navbar, .nav-item, .dropdown-menu, .dropdown, .nav-link').click(function(e) {
+  $('.dropdown').click(function(e) {
     e.stopPropagation();
   });
 </script>
