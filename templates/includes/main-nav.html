@@ -1,4 +1,4 @@
-<div class="products dropdown-menu border-rounded mt-1 pb-3" aria-labelledby="product-options">
+<div class="products dropdown-menu border-rounded mt-1 pb-3" aria-labelledby="all-product-options">
     <div class="container">
         <div class="row">
           <div class="col-3 nav-item">
@@ -7,9 +7,9 @@
               <hr class="my-2">
             </p>
             <div class="sort-items">
-                <a href="#" class="dropdown-item text-dark fw-light">A-Z</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Ratings</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Price</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-dark fw-light">By Price</a>
+                <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item text-dark fw-light">By Ratings</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-dark fw-light">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item text-dark fw-light">All Products</a>
             </div>
           </div>
