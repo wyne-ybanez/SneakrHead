@@ -266,8 +266,7 @@ p {
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
 }
 
 .card img {
@@ -344,8 +343,8 @@ p {
     -webkit-overflow-scrolling: touch;
 }
 
-.card {
-    display: inline-block;
+#scrolling-wrapper .card-horizontal {
+    min-width: 220px;
 }
 
 .card:hover {
@@ -512,7 +511,7 @@ p {
 
     .card-horizontal .card {
         height: 300px;
-        width: 250px;
+        width: auto;
     }   
     
     .product-details-container {
