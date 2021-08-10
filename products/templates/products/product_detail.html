@@ -5,20 +5,24 @@
     <div class="products-header w-100">
         <div class="row g-0">
             <div class="col mx-5">
-                <h1 class="heading-font text-dark mx-5">
-                    {{product.name}}
+                <h1 class="heading-font text-dark pt-5 mx-5">
+                    {{product.name}}.
                 </h1>
+
+                <!-- Displays Categories under product name -->
                 <div class="d-flex flex-wrap">
                     <a href="" class="text-decoration-none">
-                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Something</p></a>
-                        <i class="fas fa-circle fa-xs pt-3"></i>
-                    <a href="" class="text-decoration-none">
-                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center" style="font-display: none;">Something</p></a>
-                        <i class="fas fa-circle fa-xs pt-3"></i>
-                    <a href="" class="text-decoration-none">
-                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center" style="font-display: none;">Something</p></a>
-                        <i class="fas fa-circle fa-xs pt-3"></i>
+                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center"">All Products</p>
+                    </a>
+                    <i class="fas fa-circle fa-xs pt-3"></i>
+                    {% for c in current_categories %}
+                        <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">{{ c.friendly_name }}</span>
+                            <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+                        </a>
+                    {% endfor %}
                 </div>
+
             </div>
         </div>
     </div>
@@ -50,14 +54,22 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <div class="product-description">
                         <p class="title-font">Description</p>
-                        <p class="mt-3 fw-light">{{ product.description }}</p>
+                        <p class="mt-3 fw-light fs-5">{{ product.description }}</p>
                         <p class="mb-0 fw-normal fs-4">${{ product.price }}</p>
+                        {% if product.category %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag fa-lg mr-1 text-dark"></i>
+                                    <span class="fw-light fs-5 text-dark">{{ product.category.friendly_name }}</span>
+                                </a>
+                            </p>
+                        {% endif %}     
+                        {% if product.rating %}
+                            <small class="text-dark"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        {% else %}
+                            <small class="text-dark">No Rating</small>
+                        {% endif %}
                     </div>
-                    {% if product.rating %}
-                        <small class="text-dark"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-dark">No Rating</small>
-                    {% endif %}
                     <hr class="text-secondary">
                 </div>
             </div>

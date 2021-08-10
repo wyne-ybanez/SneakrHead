@@ -7,6 +7,7 @@
               <hr class="my-2">
             </p>
             <div class="sort-items">
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-dark fw-light">By Brand</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-dark fw-light">By Price</a>
                 <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item text-dark fw-light">By Ratings</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-dark fw-light">By Category</a>
@@ -19,11 +20,11 @@
               <hr class="my-2">
             </p>
             <div class="brand-items">
-                <a href="{% url 'products' %}?category=nike,brands" class="dropdown-item text-dark fw-light">Nike</a>
-                <a href="{% url 'products' %}?category=adidas,brands" class="dropdown-item text-dark fw-light">Adidas</a>
-                <a href="{% url 'products' %}?category=fila,brands" class="dropdown-item text-dark fw-light">Fila</a>
-                <a href="{% url 'products' %}?category=converse,brands" class="dropdown-item text-dark fw-light">Converse</a>
-                <a href="{% url 'products' %}?category=newBalance,brands" class="dropdown-item text-dark fw-light">New Balance</a>
+                <a href="{% url 'products' %}?category=nike" class="dropdown-item text-dark fw-light">Nike</a>
+                <a href="{% url 'products' %}?category=adidas" class="dropdown-item text-dark fw-light">Adidas</a>
+                <a href="{% url 'products' %}?category=fila" class="dropdown-item text-dark fw-light">Fila</a>
+                <a href="{% url 'products' %}?category=converse" class="dropdown-item text-dark fw-light">Converse</a>
+                <a href="{% url 'products' %}?category=newBalance" class="dropdown-item text-dark fw-light">New Balance</a>
             </div>
           </div>             
           <div class="col-3 nav-item">
@@ -44,10 +45,11 @@
               <hr class="my-2">
             </p>
             <div class="accessories-items">
-                <a href="{% url 'products' %}?category=socks,accessories" class="dropdown-item text-dark fw-light">Socks</a>
-                <a href="{% url 'products' %}?category=bags,accessories" class="dropdown-item text-dark fw-light">Bags</a>
-                <a href="{% url 'products' %}?category=caps,accessories" class="dropdown-item text-dark fw-light">Caps</a>
-                <a href="{% url 'products' %}?category=equipment,accessories" class="dropdown-item text-dark fw-light">Gym Equipment</a>
+                <a href="{% url 'products' %}?category=socks" class="dropdown-item text-dark fw-light">Socks</a>
+                <a href="{% url 'products' %}?category=bags" class="dropdown-item text-dark fw-light">Bags</a>
+                <a href="{% url 'products' %}?category=caps" class="dropdown-item text-dark fw-light">Caps</a>
+                <a href="{% url 'products' %}?category=equipment" class="dropdown-item text-dark fw-light">Gym Equipment</a>
+                <a href="{% url 'products' %}?category=socks,bags,caps,equipment" class="dropdown-item text-dark fw-light">All Accessories</a>
             </div>
           </div>
         </div>
