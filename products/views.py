@@ -10,6 +10,7 @@ def all_products(request):
     Includes sorting and search queries.
     """
     products = Product.objects.all()
+    featured_products = Product.objects.filter(featured_product=True)
     query = None
     categories = None
     sort = None
@@ -53,6 +54,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'featured_products': featured_products
     }
     return render(request, url, context)
 

@@ -6,7 +6,7 @@
             <div class="col-12 bg-white horizontal-scroll">
                 <div class="container">
                     <div class="d-flex">
-                        <h1 class="text-dark pt-5 flex-grow-1">Just In.</h1>
+                        <h1 class="text-dark pt-5 flex-grow-1">Featured.</h1>
                         <!-- Buttons -->
                         <div class="buttons d-none d-lg-block">
                             <button id="prev-btn" class="btn btn-outline-dark mt-5 rounded-circle">
@@ -20,9 +20,8 @@
                     <!-- Cards -->
                     <div id="scrolling-wrapper">
                         <div class="cards d-flex flex-row">
-                            {% for product in products %}
-                            <!-- col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 -->
-                                <div class="card-horizontal">
+                            {% for product in featured_products %}
+                                <div class="card-horizontal mx-0">
                                     {% include 'includes/products-card.html' %}       
                                 </div>                    
                             {% endfor %}

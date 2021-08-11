@@ -10,7 +10,7 @@
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-dark fw-light">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item text-dark fw-light">By Ratings</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-dark fw-light">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item text-dark fw-light">All Products</a>
+                <a href="{% url 'products' %}?category=nike,fila,converse" class="dropdown-item text-dark fw-light">All Products</a>
             </div>
           </div>
           <div class="col-3 nav-item">
