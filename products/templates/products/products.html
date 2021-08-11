@@ -11,7 +11,7 @@
 
                 <!-- Displays Categories above the items sorted -->
                 <div class="d-flex flex-wrap">
-                    <a href="" class="text-decoration-none">
+                    <a href="{% url 'products' %}" class="text-decoration-none">
                         <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center"">All Products</p>
                     </a>
                     <i class="fas fa-circle fa-xs pt-3"></i>
@@ -35,37 +35,61 @@
 
             <!-- Categories -->
             <div class="categories-container col-lg-3 col-md-3 col-sm-12 mt-5 pt-3">
-                <div class="container categories rounded-3 box-shadow-light py-5">
+                <div class="container categories rounded-3 box-shadow-light py-5 d-xs-none">
                     <!-- Categories Checkbox -->
-                    <p class="fs-6 fw-normal text-dark text-uppercase">Categories</p> 
+                    <p class="fs-6 fw-normal text-dark text-uppercase">Sort By</p> 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="sneakerCategory">
-                        <label class="form-check-label fw-light text-secondary" for="sneakerCategory">
-                            Sneakers
+                        <input class="form-check-input" type="checkbox" value="" id="price_sort" 
+                        {% if current_sorting == 'price_asc' %}
+                            checked
+                        {% endif %}>
+                        <label class="form-check-label fw-light text-secondary" for="price_sort">
+                            Price
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="brandItems" checked>
-                        <label class="form-check-label fw-light text-secondary" for="brandItems">
-                            Brand Items
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="discounted" checked>
+                        <input class="form-check-input" type="checkbox" value="" id="discounted" 
+                        {% if current_sorting == 'rating_desc' %}
+                            checked
+                        {% endif %}>
                         <label class="form-check-label fw-light text-secondary" for="discounted">
-                            Discounted
+                            Rating
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="shoeAccessories" checked>
+                        <input class="form-check-input" type="checkbox" value="" id="sneakerCategory"
+                        {% if current_sorting == 'name_asc' %}
+                            checked
+                        {% endif %}>
+                        <label class="form-check-label fw-light text-secondary" for="sneakerCategory">
+                            Alphabetical (A-Z)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="shoeAccessories"
+                        {% if current_sorting == 'name_desc' %}
+                            checked
+                        {% endif %}>
                         <label class="form-check-label fw-light text-secondary" for="shoeAccessories">
-                            Shoe Accessories
+                            Reverse Alphabetical (Z-A)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="shoeAccessories"
+                        {% if current_sorting == 'category_asc' %}
+                            checked
+                        {% endif %}>
+                        <label class="form-check-label fw-light text-secondary" for="shoeAccessories">
+                            Category
                         </label>
                     </div>
                     <!-- Stock Checkboxes -->
                     <p class="fs-6 fw-normal text-dark text-uppercase pt-3">Stock</p> 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="inStockItems">
+                        <input class="form-check-input" type="checkbox" value="" id="inStockItems" 
+                        {% if current_sorting != 'None_None' %}
+                            checked
+                        {% endif %}>
                         <label class="form-check-label fw-light text-secondary" for="inStockItems">
                             In Stock
                         </label>
