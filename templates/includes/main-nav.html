@@ -9,7 +9,8 @@
             <div class="sort-items">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-dark fw-light">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item text-dark fw-light">By Ratings</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item text-dark fw-light">By Category</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc&category=accessories,equipment,kids" 
+                  class="dropdown-item text-dark fw-light">By Category</a>
                 <a href="{% url 'products' %}?category=nike,fila,converse" class="dropdown-item text-dark fw-light">All Products</a>
             </div>
           </div>
@@ -44,10 +45,10 @@
               <hr class="my-2">
             </p>
             <div class="accessories-items">
-                <a href="{% url 'products' %}?category=socks" class="dropdown-item text-dark fw-light">Socks</a>
-                <a href="{% url 'products' %}?category=bags" class="dropdown-item text-dark fw-light">Bags</a>
-                <a href="{% url 'products' %}?category=caps" class="dropdown-item text-dark fw-light">Caps</a>
-                <a href="{% url 'products' %}?category=equipment" class="dropdown-item text-dark fw-light">Gym Equipment</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item text-dark fw-light">Socks</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item text-dark fw-light">Bags</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item text-dark fw-light">Caps</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item text-dark fw-light">Gym Equipment</a>
                 <a href="{% url 'products' %}?category=socks,bags,caps,equipment" class="dropdown-item text-dark fw-light">All Accessories</a>
             </div>
           </div>

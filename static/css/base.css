@@ -314,14 +314,14 @@ p {
 }
 
 
-/*===== Best Sellers =====*/
+/*===== New Arrivals =====*/
 
-.best-sellers {
+.new-arrivals {
     margin-top: 100vh; 
     padding: 3rem 0 6rem 0;
 }
 
-.best-sellers .card {
+.new-arrivals .card {
     margin: 20px 20px !important;
 }
 

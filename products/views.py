@@ -65,11 +65,13 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     products = Product.objects.all()
+    featured_products = Product.objects.filter(featured_product=True)
 
     url = 'products/product_detail.html'
     context = {
         'product': product,
         'products': products,
+        'featured_products': featured_products,
     }
 
     return render(request, url, context)

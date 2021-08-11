@@ -22,19 +22,19 @@
 
 {% block content %}
 
-    <!-- Best Sellers -->
+    <!-- New Arrivals -->
     <div class="container-fluid w-100 mb-0">
         <section>
             <div class="row">
-                <div class="col-12 bg-white best-sellers">
+                <div class="col-12 bg-white new-arrivals">
                     <div class="container">
                         <div class="d-flex">
-                            <h1 class="text-dark pt-5 flex-grow-1">Best Sellers.</h1>
+                            <h1 class="text-dark pt-5 flex-grow-1">New Arrivals.</h1>
                         </div>
                         <!-- Featured Products -->
                         <div class="products-wrapper d-flex flex-wrap">
                             <div class="cards justify-content-between text-center">
-                                {% for product in products %}                                    
+                                {% for product in new_arrivals %}                                    
                                     {% include 'includes/products-card.html' %}                                   
                                 {% endfor %}
                             </div>
