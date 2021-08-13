@@ -279,8 +279,16 @@ p {
     cursor: pointer;
 }
 
-.sort-wrapper {
-    margin-left: 1rem;
+.btt-button {
+    height: 52px;
+    width: 52px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /*===== Products =====*/
@@ -301,6 +309,10 @@ p {
 
 .products-row {
     padding-bottom: 7rem;
+}
+
+.sort-wrapper {
+    margin-left: 1rem;
 }
 
 /*===== Product Details =====*/

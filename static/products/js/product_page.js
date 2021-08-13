@@ -1,3 +1,5 @@
+let backToTop = document.getElementsByClassName('.btt-link');
+
 // Sort Selector filter on change
 function updateFilter() {  
     document.querySelectorAll('.form-check-input').forEach( checkBox => {
@@ -23,6 +25,7 @@ function updateFilter() {
     })
 }
 
+// Products Stock Filter
 function updateStockFilter() {  
         document.querySelectorAll('.stock-check').forEach( checkBox => {
             checkBox.addEventListener('change', () => {
@@ -58,4 +61,8 @@ function updateStockFilter() {
 function showPriceRange(Val){
     document.getElementById('Range').innerHTML = ` - Max: €${Val}`
 }
+
+document.getElementById('btt-link').addEventListener('click', ()=> {
+    window.scrollTo(0,0)
+}) 
 
