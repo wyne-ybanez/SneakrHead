@@ -1,6 +1,6 @@
 // Sort Selector filter on change
 function updateFilter() {  
-    let checkBoxes = document.querySelectorAll('.form-check-input').forEach( checkBox => {
+    document.querySelectorAll('.form-check-input').forEach( checkBox => {
 
         checkBox.addEventListener('change', function() {
             let currentUrl = new URL(window.location);
@@ -12,7 +12,7 @@ function updateFilter() {
 
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
-                window.location.replace(currentUrl);
+                window.location.replace(currentUrl);     
             }
             else {
                 currentUrl.searchParams.delete("sort");

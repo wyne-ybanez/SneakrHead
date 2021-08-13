@@ -15,6 +15,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    stock = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -46,6 +47,14 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+        if 'stock' in request.GET: 
+            products = products.filter(stock__gte=1)
+            stock = True
+
+        if 'no_stock' in request.GET: 
+            products = products.filter(stock__lte=0)
+            stock = False
+
     current_sorting = f'{sort}_{direction}'
 
     url = 'products/products.html'
@@ -54,7 +63,8 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'featured_products': featured_products
+        'featured_products': featured_products,
+        'stock': stock,
     }
     return render(request, url, context)
 
