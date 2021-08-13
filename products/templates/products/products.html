@@ -92,10 +92,9 @@
                         <!-- Stock Checkboxes -->
                         <p class="fs-6 fw-normal text-dark text-uppercase pt-3">Stock</p> 
                         <div class="form-check">
-                            <input class="stock-check form-check-input" type="checkbox" value="in_stock" name="stock" id="inStockItems" 
-                                onchange="submit()"
+                            <input class="stock-check form-check-input" type="checkbox" value="in_stock" name="in_stock" id="inStockItems" 
+                                onclick="updateStockFilter()"
                                 {% if stock == True %}
-                                    disabled
                                     checked
                                 {% endif %}>
                             <label class="form-check-label fw-light text-secondary" for="inStockItems">
@@ -104,9 +103,8 @@
                         </div>
                         <div class="form-check">
                             <input class="stock-check form-check-input" type="checkbox" value="no_stock" name="no_stock" id="outOfStockItems"
-                                onchange="submit()"
+                                onclick="updateStockFilter()"
                                 {% if stock == False %}
-                                    disabled
                                     checked
                                 {% endif %}>
                             <label class="form-check-label fw-light text-secondary" for="outOfStockItems">
@@ -121,6 +119,16 @@
                         <input type="range" class="form-range" min="0" max="500" id="priceRange" 
                             oninput="showPriceRange(this.value)" onchange="showPriceRange(this.value)">
                         <label for="priceRange" class="form-label fw-lighter">Min Price €0 - Max Price €500 </label>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="text-center">
+                                    <a href="{% url 'products' %}" 
+                                    class="rounded-pill btn btn-main bg-dark text-light box-shadow mt-3 mb-0">
+                                        Reset Filters
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

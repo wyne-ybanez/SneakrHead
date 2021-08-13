@@ -47,7 +47,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-        if 'stock' in request.GET: 
+        if 'in_stock' in request.GET: 
             products = products.filter(stock__gte=1)
             stock = True
 
