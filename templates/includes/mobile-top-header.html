@@ -27,11 +27,11 @@
         </div>
     </li>
 
-    <!-- Shopping bag -->
+    <!-- Shopping basket -->
     <li class="list-inline-item">
         <div class="position-relative">
             <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none
-                py-0 end-0 text-center" href="">
+                py-0 end-0 text-center" href="{% url 'view_basket' %}">
                 <div class="text-center pr-3">
                     <i class="fas fa-shopping-basket fa-lg"></i>
                 </div>

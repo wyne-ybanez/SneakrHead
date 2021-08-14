@@ -104,9 +104,10 @@
               {% endif %}
             </div>
           </li>
-          <!-- Grand Total -->
+          <!-- Shopping Basket -->
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" 
+              href="{% url 'view_basket' %}">
               <div class="text-center">
                 <div><i class="fas fa-shopping-basket fa-lg pr-3"></i>{% if grand_total %}
                   €{{ grand_total|floatformat:2 }}

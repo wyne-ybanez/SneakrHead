@@ -11,7 +11,7 @@
     {% endif %}
     <!-- Product Name -->
     <div class="card-body pb-0">
-        <p class="mb-2 fw-light text-dark">{{ product.name }}</p>
+        <p class="lead mb-2 fw-light text-dark">{{ product.name }}</p>
     </div>
     <!-- Product Footer -->
     <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -34,8 +34,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <div class="stock text-dark" name="stock-amount" hidden>Stock: {{product.stock}}</div>
+            <div class="col-12 mt-2">
+                <div class="stock text-dark" name="stock-amount">
+                    {% if stock == False %}
+                        Item Unavailable
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
