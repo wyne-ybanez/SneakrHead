@@ -18,8 +18,8 @@
                     {% for c in current_categories %}
                         <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                             <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">{{ c.friendly_name }}</span>
-                            <i class="fas fa-circle text-dark fa-xs pt-3"></i>
                         </a>
+                        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
                     {% endfor %}
                 </div>   
                 <hr class="text-secondary">
