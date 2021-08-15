@@ -293,7 +293,7 @@ p {
 
 /*===== Products =====*/
 
-.products-header {
+.header-padding {
     padding-top: 100px;
 }
 
@@ -307,7 +307,8 @@ p {
     z-index: -1;
 }
 
-.products-row {
+.products-row,
+.product-row {
     padding-bottom: 7rem;
 }
 
@@ -320,11 +321,6 @@ p {
 .product-details-container {
     padding-left: 5rem;
 }
-
-.product-row {
-    padding-bottom: 4rem;
-}
-
 
 /*===== New Arrivals =====*/
 
