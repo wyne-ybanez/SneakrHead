@@ -21,6 +21,33 @@
                         </a>
                         <i class="fas fa-circle text-dark fa-xs pt-3"></i>
                     {% endfor %}
+                    {% if search_term|lower == "nike" %}
+                        <a class="text-decoration-none" href="{% url 'products' %}?q=nike">
+                            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Nike</span>
+                        </a>
+                        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+                    {% elif search_term|lower == "fila" %}
+                        <a class="text-decoration-none" href="{% url 'products' %}?q=fila">
+                            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Fila</span>
+                        </a>
+                        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+                    {% elif search_term|lower == "adidas" %}
+                        <a class="text-decoration-none" href="{% url 'products' %}?q=adidas">
+                            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Adidas</span>
+                        </a>
+                        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+                    {% elif search_term|lower == "converse" %}
+                        <a class="text-decoration-none" href="{% url 'products' %}?q=converse">
+                            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Converse</span>
+                        </a>
+                        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+                    {% elif search_term|lower == "new balance" %}
+                        <a class="text-decoration-none" href="{% url 'products' %}?q=new balance">
+                            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">New Balance</span>
+                        </a>
+                        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+                    {% else %}
+                    {% endif %}
                 </div>   
                 <hr class="text-secondary">
             </div>
