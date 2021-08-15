@@ -22,14 +22,14 @@
                         </a>
                     {% endfor %}
                 </div>   
-
+                <hr class="text-secondary">
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="products-overlay"></div>
+    <div class="secondary-overlay"></div>
     <div class="container-fluid">
         <div class="row products-row">
 
@@ -136,8 +136,7 @@
                             {% if search_term %} 
                                 found for <strong class="text-dark">
                                 "{{ search_term }}"</strong>
-                            {% endif %}
-                            
+                            {% endif %} 
                         </p>
                     </div>
                 </div>

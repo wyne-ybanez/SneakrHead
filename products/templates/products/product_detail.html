@@ -19,15 +19,19 @@
                         <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center"">{{ product.category.friendly_name }}</p>
                     </a>
                     <i class="fas fa-circle fa-xs pt-3"></i>
+                    <a href="{% url 'products' %}?q={{ product.name}}" class="text-decoration-none">
+                        <p class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center"">{{ product.name }}</p>
+                    </a>
                 </div>
-
+                
+                <hr class="text-secondary">
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="products-overlay"></div>
+    <div class="secondary-overlay"></div>
     <div class="container-fluid">
         <div class="row product-row g-0">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -67,6 +71,20 @@
                         {% else %}
                             <small class="text-dark">No Rating</small>
                         {% endif %}
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mt-2">
+                            {% if product.stock > 0 %}
+                            <div class="stock fw-light text-success" name="stock-amount">
+                                Available
+                            </div>
+                            {% endif %}                      
+                            {% if product.stock <= 0 %}
+                            <div class="stock fw-light text-danger" name="stock-amount">
+                                Unavailable
+                            </div>
+                            {% endif %}                   
+                        </div>
                     </div>
                     <hr class="text-secondary">
                 </div>
