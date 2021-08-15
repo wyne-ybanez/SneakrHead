@@ -30,30 +30,29 @@ function updateStockFilter() {
         document.querySelectorAll('.stock-check').forEach( checkBox => {
             checkBox.addEventListener('change', () => {
             let currentUrl = new URL(window.location);
-            let selectedVal = checkBox.value;
+            let stock = checkBox.value;
 
-            // In Stock
-            if(selectedVal != "no_stock"){
-                let stock = selectedVal.split("_")[0];
-
-                currentUrl.searchParams.set("in_stock", stock);
-                window.location.replace(currentUrl);
-            }
-            else {
+            if (stock == 'no_stock' || stock == 'in_stock') {
+                currentUrl.searchParams.delete("no_stock");
                 currentUrl.searchParams.delete("in_stock");
                 window.location.replace(currentUrl);
             }
-            // Not in Stock
-            if(selectedVal != "in_stock"){
-                let stock = selectedVal.split("_")[0];
 
-                currentUrl.searchParams.set("no_stock", stock);
+            // In Stock
+            if(stock != 'no_stock'){
+                let inStock = stock;
+
+                currentUrl.searchParams.set("in_stock", inStock);
                 window.location.replace(currentUrl);
             }
-            else {
-                currentUrl.searchParams.delete("no_stock");
+
+            // Not in Stock
+            if(stock != 'in_stock'){
+                let noStock = stock;
+
+                currentUrl.searchParams.set("no_stock", noStock);
                 window.location.replace(currentUrl);
-            }
+            }  
         })
     })
 }

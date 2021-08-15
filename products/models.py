@@ -26,6 +26,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True, default='media/noimage.png',)
     featured_product = models.BooleanField(default=False)
     new_product = models.BooleanField(default=False)
+    brand_item = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
