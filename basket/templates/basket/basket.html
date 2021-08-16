@@ -42,7 +42,8 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0 fs-5 fw-normal text-dark">{{ item.product.name }}</p>
-                            <p class="my-0 fs-7 text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            <p class="my-0 fs-5 fw-normal">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                            <p class="my-0 fs-6 text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price }}</p>
