@@ -226,11 +226,17 @@ p {
 }
 
 .btn-main:hover {
-    background: tomato !important;
+    background: #fff !important;
+    color: #000 !important;
 }
 
+.btn-success,
 .btn-info:hover {
     background: #20c997 !important;
+}
+
+.btn-success:hover {
+    background: green !important;
 }
 
 .btn-black {
@@ -437,6 +443,12 @@ p {
     width: 450px;
     object-fit: cover;
     background-repeat: no-repeat fixed;
+}
+
+/*===== Table =====*/
+
+.table {
+    margin-bottom: 7rem;
 }
   
 /*===== Footer =====*/

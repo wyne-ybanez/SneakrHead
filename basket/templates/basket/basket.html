@@ -5,7 +5,7 @@
     <div class="header-padding w-100">
         <div class="row g-0">
             <div class="col mx-5">
-                <h1 class="heading-font text-dark mt-3 pt-3 mx-5">
+                <h1 class="heading-font text-dark mt-3 pt-5 mx-5">
                     Shopping Basket.
                 </h1>
                 <hr class="text-secondary">
@@ -19,19 +19,89 @@
     <div class="container mb-2">
         <div class="row">
             <div class="col">
+                <!-- Table to display items in basket -->
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
-                        {{ basket_items }}
-                    </div>
-                {% else %}
-                    <p class="lead mb-5">Your basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                {% endif %}
+                <table class="table table-sm table-borderless">
+
+                    <!-- Headings -->
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Basket Item Details -->
+                    {% for item in basket_items %}
+                    <tr>
+                        <td class="py-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0 fs-5 fw-normal text-dark">{{ item.product.name }}</p>
+                            <p class="my-0 fs-7 text-muted">SKU: {{ item.product.sku|upper }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    <!-- Charges -->
+                    <tr class="text-lg-end">
+                        <td colspan="5" class="pt-5">
+                            <p class="fs-5">Basket: ${{ total|floatformat:2 }}</p>
+                            <p class="fs-5">Delivery: ${{ delivery|floatformat:2 }}</p>
+                            <p class="mt-1 fw-normal fs-5 pb-0 mb-0">Grand Total: 
+                                <span class="fw-normal">${{ grand_total|floatformat:2 }}</span>
+                            </p>
+                            {% if free_delivery_delta > 0 %}
+                                <p class="mb-1 text-dark">
+                                    You could get free delivery by spending just ${{ free_delivery_delta }} more!
+                                </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <!-- Action Buttons -->
+                    <tr class="text-lg-end text-center">
+                        <td colspan="5" class="bottom-0 end-0">
+                            <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-pill btn-md mt-3">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <a href="" class="btn btn-success rounded-pill btn-md mt-3">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            {% else %}
+            <p class="lead mb-5">Your basket is empty.</p>
+            <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
+
             </div>
         </div>
     </div>
