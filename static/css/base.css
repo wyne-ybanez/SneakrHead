@@ -291,6 +291,14 @@ p {
     cursor: pointer;
 }
 
+.text-tomato {
+    color: tomato;
+}
+
+.text-tomato:hover {
+    color: #20c997 !important;
+}
+
 /*===== Products =====*/
 
 .header-padding {
