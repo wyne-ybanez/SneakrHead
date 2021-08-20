@@ -169,5 +169,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-    <script type="text/javascript" src="{% static 'js/quantity_input_script.js' %}"></script>
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
