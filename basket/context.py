@@ -34,7 +34,7 @@ def basket_contents(request):
         else: 
             # Else there is a size, data is kept as a dictionary, iterate through dictionary.
             product = get_object_or_404(Product, pk=item_id)
-            for size, quantity in item_data['item_by_size'].items():
+            for size, quantity in item_data['items_by_size'].items():
                 total += quantity * product.price
                 product_count += quantity
                 basket_items.append({

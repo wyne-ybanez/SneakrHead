@@ -503,6 +503,8 @@ You can fork the repository through the following steps. Forking the repository 
 
 - JavaScript Interactive price range display: https://stackoverflow.com/questions/18544890/onchange-event-on-input-type-range-is-not-triggering-in-firefox-while-dragging
 
+- Solution for registering template tag particularly for basket tools: https://stackoverflow.com/questions/68149422/templatesyntaxerror-apptags-is-not-a-registered-tag-library
+
 ### Acknowledgements
 
 I would to express my gratitude to the Code Institute tutors and community for helping get this far.
