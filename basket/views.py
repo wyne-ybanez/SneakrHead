@@ -16,6 +16,7 @@ def add_to_basket(request, item_id):
     Stores shopping basket data in a 'session'.
     Get 'basket' in session or create basket object if it doesn't exist.
     """
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
@@ -36,6 +37,7 @@ def add_to_basket(request, item_id):
             basket[item_id] += quantity
         else:
             basket[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your bag ')
     
     request.session['basket'] = basket
     return redirect(redirect_url)

@@ -313,8 +313,37 @@ p {
     color: tomato;
 }
 
+.bg-tomato {
+    background: tomato !important;
+}
+
+.text-success {
+    color: #20c997 !important;
+}
+
+.bg-success {
+    background: #20c997 !important;
+}
+
 .text-tomato:hover {
     color: #20c997 !important;
+}
+
+/*===== Toasts =====*/
+
+.message-container {
+    position: fixed;
+    top: 55px;
+    right: 0px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /*===== Products =====*/
@@ -488,7 +517,7 @@ p {
     color: tomato;
 }
 
-/* -------------------------------- Media Queries */
+/*===== Media Queries =====*/
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1300px) {
@@ -519,7 +548,7 @@ p {
     }
 } 
 
-/* Mobiles */
+/*===== Mobiles =====*/
 /* Media query from: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 @media only screen 
   and (min-device-width: 320px) 
