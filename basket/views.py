@@ -7,7 +7,8 @@ def view_basket(request):
     """
     A view to return the shopping basket.
     """
-    return render(request, 'basket/basket.html')
+    url = 'basket/basket.html'
+    return render(request, url)
 
 
 def add_to_basket(request, item_id):

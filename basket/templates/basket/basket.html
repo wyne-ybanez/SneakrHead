@@ -37,58 +37,58 @@
 
                     <!-- Basket Item Details -->
                     {% for item in basket_items %}
-                    <tr>
-                        <td class="py-3 w-25">
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0 fs-5 fw-normal text-dark">{{ item.product.name }}</p>
-                            <p class="my-0 fs-5 fw-normal">Size: {% if item.product.has_sizes %}{{ item.size }}{% else %}N/A{% endif %}</p>
-                            <p class="my-0 fs-6 text-muted">SKU: {{ item.product.sku|upper }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
-                            <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-dark rounded-left" 
-                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
+                        <tr>
+                            <td class="py-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0 fs-5 fw-normal text-dark">{{ item.product.name }}</p>
+                                <p class="my-0 fs-5 fw-normal">Size: {% if item.product.has_sizes %}{{ item.size }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0 fs-6 text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-dark rounded-left" 
+                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="20"
+                                                data-item_id="{{ item.item_id }}"
+                                                id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-dark rounded-right"
+                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            {% if item.product.has_sizes %}
+                                                <input type="hidden" name="product_size" value="{{ item.size }}">
+                                            {% endif %}
                                         </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="20"
-                                            data-item_id="{{ item.item_id }}"
-                                            id="id_qty_{{ item.item_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-dark rounded-right"
-                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        {% if item.product.has_sizes %}
-                                            <input type="hidden" name="product_size" value="{{ item.size }}">
-                                        {% endif %}
                                     </div>
-                                </div>
-                            </form>
-                            <a class="update-link text-info text-decoration-none ps-2"><small>Update</small></a>
-                            <a class="remove-item text-danger float-end text-decoration-none pe-2" 
-                                id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">
-                                <small>Remove</small></a>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity  }}</p>
-                        </td>
-                    </tr>
+                                </form>
+                                <a class="update-link text-info text-decoration-none ps-2"><small>Update</small></a>
+                                <a class="remove-item text-danger float-end text-decoration-none pe-2" 
+                                    id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">
+                                    <small>Remove</small></a>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity  }}</p>
+                            </td>
+                        </tr>
                     {% endfor %}
 
                     <!-- Charges -->
@@ -116,7 +116,7 @@
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <a href="" class="btn btn-success rounded-pill btn-md mt-3">
+                            <a href="{% url 'basket' %}"  class="btn btn-success rounded-pill btn-md mt-3">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
