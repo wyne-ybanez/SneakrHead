@@ -326,7 +326,7 @@ p {
     background: #20c997 !important;
 }
 
-.text-tomato:hover {
+.hover-success:hover {
     color: #20c997 !important;
 }
 
@@ -538,12 +538,13 @@ p {
     background-repeat: no-repeat fixed;
 }
 
-/*===== Table =====*/
+/*===== Table & Checkout =====*/
 
-.table {
+.table,
+.checkout {
     margin-bottom: 7rem;
 }
-  
+
 /*===== Footer =====*/
 
 #footer {

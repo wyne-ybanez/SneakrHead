@@ -505,6 +505,10 @@ You can fork the repository through the following steps. Forking the repository 
 
 - Solution for registering template tag particularly for basket tools: https://stackoverflow.com/questions/68149422/templatesyntaxerror-apptags-is-not-a-registered-tag-library
 
+- Core logic/payment flow for this comes from here: https://stripe.com/docs/payments/accept-a-payment
+
+- Stripe CSS from here: https://stripe.com/docs/stripe-js
+
 ### Acknowledgements
 
 I would to express my gratitude to the Code Institute tutors and community for helping get this far.
