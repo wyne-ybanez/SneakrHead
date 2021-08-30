@@ -94,9 +94,9 @@
                     <!-- Charges -->
                     <tr class="text-lg-end">
                         <td colspan="5" class="pt-5">
-                            <p class="fs-5">Basket: ${{ total|floatformat:2 }}</p>
-                            <p class="fs-5">Delivery: ${{ delivery|floatformat:2 }}</p>
-                            <p class="mt-1 fw-normal fs-5 pb-0 mb-0">Grand Total: 
+                            <p class="fs-5 mb-0">Basket: ${{ total|floatformat:2 }}</p>
+                            <p class="fs-5 mb-0">Delivery: ${{ delivery|floatformat:2 }}</p>
+                            <p class="mt fw-normal fs-5 pb-0 mb-0">Grand Total: 
                                 <span class="fw-normal">${{ grand_total|floatformat:2 }}</span>
                             </p>
                             {% if free_delivery_delta > 0 %}
