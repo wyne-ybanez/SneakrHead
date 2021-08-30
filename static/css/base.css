@@ -282,13 +282,17 @@ p {
     width: 39px;
 }
 
+.featured .card {
+    margin: 0 10px;
+}
+
 .card {
     display: inline-block;
 }
 
 .card img {
     height: 150px;
-    width: 200px;
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -328,6 +332,11 @@ p {
 
 .hover-success:hover {
     color: #20c997 !important;
+}
+
+/*===== Home =====*/
+.products-wrapper .cards{
+    /* width: 50vh; */
 }
 
 /*===== Toasts =====*/
@@ -574,9 +583,9 @@ p {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1300px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -599,6 +608,11 @@ p {
     .container {
         min-width: 80% !important;
     }
+
+    .card img {
+        height: 150px;
+        width: 20vw;
+    }
 } 
 
 /*===== Mobiles =====*/
@@ -617,12 +631,6 @@ p {
 
     .categories {
         margin-left: auto;
-    }
-
-    .card img {
-        height: auto;
-        width: auto;
-        object-fit: cover;
     }
 
     .card-horizontal .card img {
