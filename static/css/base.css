@@ -111,8 +111,11 @@ p {
     border-bottom-left-radius: 50px;
 }
 
-/* Hover Animation Code from: https://github.com/IanLunn/Hover/blob/master/css/hover.css */
+.hover-tomato:hover {
+    background: tomato;
+}
 
+/* Hover Animation Code from: https://github.com/IanLunn/Hover/blob/master/css/hover.css */
 .hvr-underline-from-center {
     display: inline-block;
     vertical-align: middle;
@@ -332,6 +335,16 @@ p {
     max-width: 250px;
 }
 
+/* .display-4.logo-font.text-dark {
+    font-size: 2rem;
+}
+*/
+
+#delivery-banner h4 {
+    font-size: .9rem;
+} 
+
+
 /*===== Toasts =====*/
 
 .message-container {
@@ -398,6 +411,10 @@ p {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.dropdown-item:focus {
+    background: none;
 }
 
 /*===== Products =====*/
