@@ -57,7 +57,7 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    url = 'products/products.html'
+    template = 'products/products.html'
     context = {
         'products': products,
         'search_term': query,
@@ -66,7 +66,7 @@ def all_products(request):
         'featured_products': featured_products,
         'stock': stock,
     }
-    return render(request, url, context)
+    return render(request, template, context)
 
 
 def product_detail(request, product_id):
