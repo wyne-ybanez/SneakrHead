@@ -282,14 +282,6 @@ p {
     width: 39px;
 }
 
-.featured .card {
-    margin: 0 10px;
-}
-
-.card {
-    display: inline-block;
-}
-
 .card img {
     height: 150px;
     width: 100vw;
@@ -334,9 +326,10 @@ p {
     color: #20c997 !important;
 }
 
-/*===== Home =====*/
-.products-wrapper .cards{
-    /* width: 50vh; */
+.card {
+    display: inline-block;
+    min-width: 220px;
+    max-width: 250px;
 }
 
 /*===== Toasts =====*/
@@ -468,7 +461,7 @@ p {
 }
 
 #scrolling-wrapper .card-horizontal {
-    min-width: 220px;
+    max-width: 220px;
 }
 
 .card:hover {
