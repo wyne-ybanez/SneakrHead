@@ -326,7 +326,8 @@ p {
 }
 
 .hover-success:hover {
-    color: #20c997 !important;
+    background: #20c997 !important;
+    border-color: transparent;
 }
 
 .card {
@@ -334,11 +335,6 @@ p {
     min-width: 220px;
     max-width: 250px;
 }
-
-/* .display-4.logo-font.text-dark {
-    font-size: 2rem;
-}
-*/
 
 #delivery-banner h4 {
     font-size: .9rem;
@@ -486,7 +482,7 @@ input[name='q']::placeholder {
 	color: #000;
 }
 
-.form-check-label {
+.allauth-form-inner-content .form-check-label {
     padding-top: 5px;
 }
 

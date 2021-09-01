@@ -1,5 +1,23 @@
+.profiles-row {
+    margin-bottom: 7rem;
+}
+
+.order-history {
+    max-height: 416px; 
+    overflow-y: auto;
+}
+
+#id_default_country,
 #profile-update-form .form-control {
-    color: #000;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid whitesmoke;
+    border-radius: 75px;
+    background-color: white;
+    box-shadow: 0 3px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 #profile-update-form input::placeholder {
