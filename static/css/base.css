@@ -423,14 +423,25 @@ input[name='q']::placeholder {
 
 /*===== Allauth form formatting =====*/
 
+.allauth-form-inner-content {
+    margin-bottom: 5rem;
+}
+
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem; 
+    color: #6c757d;
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px 12px;
+    border: 1px solid whitesmoke;
+    border-radius: 75px;
+    background-color: white;
+    box-shadow: 0 3px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -453,8 +464,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #0dcaf0;
+    border: 0;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -472,7 +483,11 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #000;
+}
+
+.form-check-label {
+    padding-top: 5px;
 }
 
 /*===== Products =====*/
