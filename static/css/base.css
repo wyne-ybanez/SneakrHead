@@ -707,7 +707,7 @@ input[name='q']::placeholder {
 
     .card img {
         height: 150px;
-        width: 20vw;
+        width: 100%;
     }
 } 
 
