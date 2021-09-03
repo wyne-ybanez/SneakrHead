@@ -321,6 +321,10 @@ p {
     background: #20c997 !important;
 }
 
+.hover-text-success:hover {
+    color: #20c997 !important;
+}
+
 .hover-success:hover {
     background: #20c997 !important;
     border-color: transparent;
@@ -331,8 +335,8 @@ p {
     border-color: transparent;
 }
 
-.hover-text-success:hover {
-    color: #20c997 !important;
+.hover-text-tomato:hover {
+    color: tomato !important;
 }
 
 .card {
@@ -631,11 +635,15 @@ input[name='q']::placeholder {
     background-repeat: no-repeat fixed;
 }
 
-/*===== Table & Checkout =====*/
+/*===== Basket Table & Checkout =====*/
 
 .table,
 .checkout {
     margin-bottom: 7rem;
+}
+
+.remove-item {
+    padding-right: 5rem;
 }
 
 /*===== Footer =====*/
@@ -684,6 +692,10 @@ input[name='q']::placeholder {
 
     .header-container {
         padding-top: 164px;
+    }
+
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        width: 100px !important;
     }
 }
 

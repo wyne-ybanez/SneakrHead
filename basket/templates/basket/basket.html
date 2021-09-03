@@ -30,7 +30,7 @@
                             <th scope="col">Product Info</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
+                            <th scope="col">Quantity</th>
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
@@ -39,12 +39,16 @@
                     {% for item in basket_items %}
                         <tr>
                             <td class="py-3 w-25">
-                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            {% if item.product.image %}
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            {% endif %}
                             </td>
-                            <td class="py-3">
-                                <p class="my-0 fs-5 fw-normal text-dark">{{ item.product.name }}</p>
-                                <p class="my-0 fs-5 fw-normal">Size: {% if item.product.has_sizes %}{{ item.size }}{% else %}N/A{% endif %}</p>
-                                <p class="my-0 fs-6 text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            <td class="py-3 w-25">
+                                <p class="my-0 fw-normal text-dark">{{ item.product.name }}</p>
+                                <p class="my-0 fw-normal small">Size: {% if item.product.has_sizes %}{{ item.size }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0 text-muted small">SKU: {{ item.product.sku|upper }}</p>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">${{ item.product.price }}</p>
@@ -81,7 +85,7 @@
                                     </div>
                                 </form>
                                 <a class="update-link text-info text-decoration-none ps-2"><small>Update</small></a>
-                                <a class="remove-item text-danger float-end text-decoration-none pe-2" 
+                                <a class="remove-item text-tomato hover-text-tomato float-end text-decoration-none" 
                                     id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">
                                     <small>Remove</small></a>
                             </td>
