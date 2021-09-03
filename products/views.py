@@ -50,11 +50,11 @@ def all_products(request):
             products = products.filter(queries)
 
         if 'in_stock' in request.GET: 
-            products = products.filter(stock__gte=1)
+            products = products.filter(stock=True)
             stock = True
 
         if 'no_stock' in request.GET: 
-            products = products.filter(stock__lte=0)
+            products = products.filter(stock=False)
             stock = False
 
     current_sorting = f'{sort}_{direction}'
@@ -91,8 +91,17 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ 
-    Add a product to the store 
+    Add a product to the store.
+    Displays number of products. 
     """
+    products = Product.objects.all()
+    in_stock = Product.objects.filter(stock=True)
+    out_of_stock = Product.objects.filter(stock=False)
+    featured = Product.objects.filter(featured_product=True)
+    new_arrivals = Product.objects.filter(new_product=True)
+    brand_item = Product.objects.filter(brand_item=True)
+    five_star_product = Product.objects.filter(rating__gte=5)
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -107,6 +116,13 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+        'products': products,
+        'products_in_stock': in_stock,
+        'products_out_of_stock': out_of_stock,
+        'featured': featured,
+        'new_arrivals': new_arrivals,
+        'brand_item': brand_item,
+        'five_star_product': five_star_product,
     }
 
     return render(request, template, context)
