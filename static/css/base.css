@@ -526,6 +526,12 @@ input[name='q']::placeholder {
     padding-left: 5rem;
 }
 
+/*===== Edit Details =====*/
+
+.description-container {
+    padding: 0 25px;
+}
+
 /*===== New Arrivals =====*/
 
 .new-arrivals {

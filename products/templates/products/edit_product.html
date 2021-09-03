@@ -19,6 +19,70 @@
     <div class="secondary-overlay"></div>
     <div class="container">
         <div class="row" style="margin-bottom: 6rem;">
+
+            <!-- Product Description -->
+            <div class="col-12 col-md-6 fs-6">
+                <div class="description-container">
+
+                    <div class="product-name">
+                        <p class="text-dark">
+                            <strong>Name:</strong>
+                            {{ product.name }}
+                        </p>
+                    </div>
+
+                    <div class="image-container">
+                        {% if product.image %}
+                            Image:
+                            <a href="{{ product.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid product-detail-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    <div class="details-container mt-3">
+                        Description:
+                        <p class="fw-light">{{ product.description }}</p>
+                        <div class="product-details">
+                            Details:
+                            <p class="mb-0 fw-normal fs-4">${{ product.price }}</p>
+                            {% if product.stock > 0 %}
+                                <p class="stock fw-light text-success">
+                                    Available
+                                </p>
+                            {% endif %}                      
+                            {% if product.stock <= 0 %}
+                                <p class="stock fw-light text-danger">
+                                    Unavailable
+                                </p>
+                            {% endif %}    
+                            {% if product.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag fa-lg text-dark me-2"></i>
+                                        <span class="fw-light fs-5 text-dark">{{ product.category.friendly_name }}</span>
+                                    </a>
+                                </p>
+                            {% endif %}     
+                            {% if product.rating %}
+                                <p class="text-dark fw-normal mt-2">
+                                    <i class="fas fa-star fa-lg me-1"></i>
+                                    {{ product.rating }} / 5
+                                </p>
+                            {% else %}
+                                <p class="text-dark">No Rating</p>
+                            {% endif %}
+                        </div>   
+                    </div>  
+                
+                </div>
+            </div>
+
+            <!-- Edit Form -->
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
