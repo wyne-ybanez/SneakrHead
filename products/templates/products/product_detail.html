@@ -53,7 +53,18 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
-                <div class="product-details-container mb-5 mt-md-5">
+                <div class="product-details-container mb-5">
+
+                    <!-- Admin Product Options -->
+                    {% if request.user.is_superuser %}
+                        <div class="my-3">
+                            <p class="title-font">Administrator Options:</p>
+                            <a class="btn rounded-pill btn-outline-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            <a class="btn btn-outline-dark rounded-pill hover-success" href="{% url 'edit_product' product.id %}">Update</a> 
+                        </div>
+                        <hr class="text-secondary">
+                    {% endif %}
+
                     <div class="product-details">
                         <p class="title-font">Details.</p>
                         <p class="mb-0 fw-normal fs-4">${{ product.price }}</p>

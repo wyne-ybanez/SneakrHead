@@ -520,12 +520,6 @@ input[name='q']::placeholder {
     margin-left: 1rem;
 }
 
-/*===== Product Details =====*/
-
-.product-details-container {
-    padding-left: 5rem;
-}
-
 /*===== Edit Details =====*/
 
 .description-container {
@@ -715,6 +709,12 @@ input[name='q']::placeholder {
         height: 150px;
         width: 100%;
     }
+
+    /*===== Product Details =====*/
+
+    .product-details-container {
+        padding-left: 3rem;
+    }
 } 
 
 /*===== Mobiles =====*/
@@ -745,10 +745,6 @@ input[name='q']::placeholder {
         height: 300px;
         width: auto;
     }   
-    
-    .product-details-container {
-        padding-left: 0;
-    }
 } 
 
 /* pad the top a bit when navbar is collapsed on mobile */

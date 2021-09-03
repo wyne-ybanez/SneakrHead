@@ -26,14 +26,14 @@
 
                     <div class="product-name">
                         <p class="text-dark">
-                            <strong>Name:</strong>
+                            <strong class="fs-5">Name:</strong>
                             {{ product.name }}
                         </p>
                     </div>
 
                     <div class="image-container">
                         {% if product.image %}
-                            Image:
+                            <p class="fs-5 fw-normal mb-0">Image:</p>
                             <a href="{{ product.image.url }}" target="_blank">
                                 <img class="card-img-top img-fluid product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
@@ -45,11 +45,11 @@
                     </div>
 
                     <div class="details-container mt-3">
-                        Description:
+                        <p class="fs-5 fw-normal mb-0">Description:</p>
                         <p class="fw-light">{{ product.description }}</p>
                         <div class="product-details">
-                            Details:
-                            <p class="mb-0 fw-normal fs-4">${{ product.price }}</p>
+                            <p class="fs-5 fw-normal mb-0">Details:</p>
+                            <p class="mb-0">${{ product.price }}</p>
                             {% if product.stock > 0 %}
                                 <p class="stock fw-light text-success">
                                     Available
