@@ -7,6 +7,8 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+from decimal import Decimal
+
 
 def all_products(request):
     """ A View to show all products.
@@ -15,6 +17,7 @@ def all_products(request):
     products = Product.objects.all()
     featured_products = Product.objects.filter(featured_product=True)
     query = None
+    price_range = None
     categories = None
     sort = None
     direction = None
@@ -58,12 +61,17 @@ def all_products(request):
             products = products.filter(stock=False)
             stock = False
 
+        if 'price_range' in request.GET:
+            price_range = request.GET['price_range']
+            products = products.filter(price__lte=Decimal(price_range))
+
     current_sorting = f'{sort}_{direction}'
 
     template = 'products/products.html'
     context = {
         'products': products,
         'search_term': query,
+        'price_range': price_range,
         'current_categories': categories,
         'current_sorting': current_sorting,
         'featured_products': featured_products,

@@ -57,10 +57,32 @@ function updateStockFilter() {
     })
 }
 
-function showPriceRange(Val){
-    document.getElementById('Range').innerHTML = ` - Max: €${Val}`
+function filterPriceRange(Val){
+    let priceVal = Val;
+    const currentUrl = new URL(window.location);
+
+    if(priceVal != "" || undefined || null){
+        currentUrl.searchParams.set("price_range", priceVal);
+        window.location.replace(currentUrl);  
+    }
+    else {
+        currentUrl.searchParams.delete("price_range");
+        window.location.replace(currentUrl);
+    }
 }
 
+// Display price range on page
+function showPriceRange(Val) {
+    let params  = new URLSearchParams(window.location.search);
+    Val = params.get('price_range').split('price_range');
+
+    document.getElementById('Range').innerHTML = ` - Max: €${Val}`;
+    document.getElementById('priceRange').value = Val;
+}
+
+showPriceRange()
+
+// Back to top function
 document.getElementById('btt-link').addEventListener('click', ()=> {
     window.scrollTo(0,0)
 }) 
