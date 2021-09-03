@@ -97,7 +97,7 @@
             <div class="user-options dropdown-menu border-rounded" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-              <a href="" class="dropdown-item">Product Management</a>
+              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
               {% endif %}
               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -109,7 +109,7 @@
           </li>
           <!-- Shopping Basket -->
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-tomato hover-success {% else %}text-dark{% endif %} nav-link" 
+            <a class="{% if grand_total %}text-tomato hover-text-success {% else %}text-dark{% endif %} nav-link" 
               href="{% url 'view_basket' %}">
               <div class="text-center">
                 <div><i class="fas fa-shopping-basket fa-lg pr-3"></i>{% if grand_total %}

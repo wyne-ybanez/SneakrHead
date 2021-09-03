@@ -276,10 +276,6 @@ p {
     border: 1px solid black !important;
 }
 
-.border-black {
-    border: white !important;
-}
-
 .rounded-circle {
     height: auto;
     width: 39px;
@@ -328,6 +324,15 @@ p {
 .hover-success:hover {
     background: #20c997 !important;
     border-color: transparent;
+}
+
+.hover-tomato:hover {
+    background: tomato !important;
+    border-color: transparent;
+}
+
+.hover-text-success:hover {
+    color: #20c997 !important;
 }
 
 .card {
