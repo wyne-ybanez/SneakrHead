@@ -22,6 +22,7 @@ def all_products(request):
     sort = None
     direction = None
     stock = None
+    brands = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -43,6 +44,11 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(',')
+            products = products.filter(brand__name__in=brands)
+            brands = Brand.objects.filter(name__in=brands)
 
         if 'q' in request.GET: 
             query = request.GET['q']
@@ -73,6 +79,7 @@ def all_products(request):
         'search_term': query,
         'price_range': price_range,
         'current_categories': categories,
+        'brands': brands,
         'current_sorting': current_sorting,
         'featured_products': featured_products,
         'stock': stock,
