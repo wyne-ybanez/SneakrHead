@@ -608,9 +608,13 @@ input[name='q']::placeholder {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
+ 
 .grid-image {
     position: relative;
+}
+.grid-image img {
+    background: url('/media/bg-image.jpeg') no-repeat top center;
+    background-size: cover;
 }
 
 .grid-image:hover .overlay {
