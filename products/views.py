@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Brand
 from .forms import ProductForm
 
 from decimal import Decimal
@@ -82,6 +82,7 @@ def all_products(request):
         'current_sorting': current_sorting,
         'featured_products': featured_products,
         'stock': stock,
+        'brands': brands,
     }
     return render(request, template, context)
 
