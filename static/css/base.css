@@ -525,6 +525,10 @@ input[name='q']::placeholder {
     margin-left: 1rem;
 }
 
+.sort-container {
+    margin-top: 1.5rem;
+}
+
 /*===== Edit Details =====*/
 
 .description-container {
@@ -767,12 +771,8 @@ input[name='q']::placeholder {
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .mobile-padding {
-        margin-left: 3rem;
-    }
-
-    .heading-font {
-        text-align: center;
+    .arrow-up {
+        right: 21px;
     }
 
     .categories {
@@ -790,6 +790,14 @@ input[name='q']::placeholder {
         width: auto;
     }  
 
+    .card {
+        max-width: 100%;
+    }
+
+    .card img {
+        height: 40vh;
+    }
+
     .grid-image-small,
     .grid-image-big {
         height: 60vh;
@@ -801,26 +809,26 @@ input[name='q']::placeholder {
         margin-bottom: 8px;
     }
 
+    .heading-font {
+        text-align: center;
+    }
+
+    .mobile-padding {
+        margin-left: 3rem;
+    }
+
     .overlay, .overlay-big {
         width: 105%;
-    }
-
-    .card {
-        max-width: 100%;
-    }
-
-    .card img {
-        height: 40vh;
     }
 
     #profile-update-form {
         margin-left: 0!important;
     }
 
-    .arrow-up {
-        right: 21px;
+    .sort-container {
+        margin-top: 0 !important;
     }
-} 
+}
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
