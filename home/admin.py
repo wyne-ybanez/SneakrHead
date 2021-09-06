@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Newsletter
+from .models import Subscriber
 
 
 class Email_Subscription(admin.ModelAdmin):
@@ -13,4 +13,4 @@ class Email_Subscription(admin.ModelAdmin):
         'subscribed',)
 
 
-admin.site.register(Newsletter, Email_Subscription)
+admin.site.register(Subscriber, Email_Subscription)

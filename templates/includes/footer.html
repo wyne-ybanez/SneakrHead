@@ -19,11 +19,12 @@
             new released products.
           </p>
           <!-- Footer Form --> 
-          <form action="">
+          <form method="POST" action="{% url 'home' %}">
             <div class="row d-flex justify-content-center">
               <div class="col-12">
                 <div class="form-outline form-white mb-4">
-                  <input type="email" id="emailFooterInput" class="form-control rounded-pill" placeholder="Email Address"/>
+                  {% csrf_token %}
+                  {{ subscriber_form }}
                 </div>
               </div>
               <div class="row d-flex justify-content-center">

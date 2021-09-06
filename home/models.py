@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Newsletter(models.Model):
+class Subscriber(models.Model):
     user_email = models.EmailField(max_length=100)
     subscribed = models.BooleanField(default=True)
 
