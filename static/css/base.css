@@ -700,6 +700,16 @@ input[name='q']::placeholder {
     .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
         width: 100px !important;
     }
+
+    .allauth-form-inner-content input {
+        width: 50vw;
+        margin: 0 20vw;
+    }
+
+    #id_remember {
+        width: auto;
+        margin: 4px 0;
+    }
 }
 
 /* Ipad/Tablet Media Queries */
@@ -727,6 +737,10 @@ input[name='q']::placeholder {
     .grid-image-big {
         height: 60vh;
         width: 70vw;
+    }
+
+    .allauth-form-inner-content {
+        margin: 6rem 0;
     }
 }
 
@@ -788,6 +802,11 @@ input[name='q']::placeholder {
 
     .arrow-up {
         right: 21px;
+    }
+
+    .allauth-form-inner-content > .logo-font {
+        margin-top: 7rem;
+        font-size: 4em;
     }
 } 
 
