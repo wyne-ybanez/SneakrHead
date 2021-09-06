@@ -495,6 +495,11 @@ input[name='q']::placeholder {
     padding-top: 5px;
 }
 
+.allauth-form-inner-content > .display-1 {
+    margin-top: 7rem;
+    font-size: 4em;
+}
+
 /*===== Products =====*/
 
 .header-padding {
@@ -726,6 +731,10 @@ input[name='q']::placeholder {
     .product-details-container {
         padding-left: 3rem;
     }
+
+    .allauth-form-inner-content > .display-1 {
+        margin-top: 0;
+    }
 } 
 
 @media only screen 
@@ -802,11 +811,6 @@ input[name='q']::placeholder {
 
     .arrow-up {
         right: 21px;
-    }
-
-    .allauth-form-inner-content > .logo-font {
-        margin-top: 7rem;
-        font-size: 4em;
     }
 } 
 
