@@ -8,10 +8,10 @@
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item text-dark fw-light">A-Z</a>
-                <a href="" class="dropdown-item text-dark fw-light">Ratings</a>
-                <a href="" class="dropdown-item text-dark fw-light">Price</a>
-                <a href="{% url 'products' %}" class="dropdown-item text-dark fw-light">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item text-dark fw-light">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item text-dark fw-light">By Ratings</a>
+                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item text-dark fw-light">By Name</a>
+                <a href="{% url 'products' %}?sort=stock&direction=desc" class="dropdown-item text-dark fw-light">All Products</a>
             </div>
             <hr class="text-secondary">
         </li>
@@ -23,11 +23,11 @@
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5 text-secondary" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item text-dark fw-light">Nike</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Adidas</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Fila</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Converse</a>
-                <a href="#" class="dropdown-item text-dark fw-light">New Balance</a>
+                <a href="{% url 'products' %}?brand=nike" class="dropdown-item text-dark fw-light">Nike</a>
+                <a href="{% url 'products' %}?brand=adidas" class="dropdown-item text-dark fw-light">Adidas</a>
+                <a href="{% url 'products' %}?brand=fila" class="dropdown-item text-dark fw-light">Fila</a>
+                <a href="{% url 'products' %}?brand=converse" class="dropdown-item text-dark fw-light">Converse</a>
+                <a href="{% url 'products' %}?brand=new balance" class="dropdown-item text-dark fw-light">New Balance</a>
             </div>
             <hr class="text-secondary">
         </li>
@@ -35,14 +35,14 @@
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link text-dark mr-5 px-3" href="#" id="homeware-link" 
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Deals
+                Categories
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5 text-secondary" aria-labelledby="homeware-link">
-                <a href="#" class="dropdown-item text-dark fw-light">Discounted</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Half Price</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Kids Products</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Brand Discounts</a>
+                <a href="{% url 'products' %}?category=men" class="dropdown-item text-dark fw-light">Men</a>
+                <a href="{% url 'products' %}?category=women" class="dropdown-item text-dark fw-light">Women</a>
+                <a href="{% url 'products' %}?category=kids" class="dropdown-item text-dark fw-light">Kids</a>
+                <a href="{% url 'products' %}?category=discounted" class="dropdown-item text-dark fw-light">Discounted</a>
             </div>
             <hr class="text-secondary">
         </li>
@@ -54,10 +54,11 @@
                 <i class="fas fa-chevron-right rotate"></i>
             </a>
             <div class="dropdown-menu border-0 px-5" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item text-dark fw-light">Socks</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Bags</a>
-                <a href="#" class="dropdown-item text-dark fw-light">Caps</a>
-                <a href="#" class="dropdown-item text-dark fw-light" style="margin-bottom: 4rem;">Gym Equipment</a>
+                <a href="{% url 'products' %}?category=accessories,socks" class="dropdown-item text-dark fw-light">Socks</a>
+                <a href="{% url 'products' %}?category=accessories,bags" class="dropdown-item text-dark fw-light">Bags</a>
+                <a href="{% url 'products' %}?category=accessories,caps" class="dropdown-item text-dark fw-light">Caps</a>
+                <a href="{% url 'products' %}?category=accessories,equipment" class="dropdown-item text-dark fw-light" 
+                    style="margin-bottom: 4rem;">Gym Equipment</a>
             </div>
         </li>
     </ul>
