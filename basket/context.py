@@ -32,7 +32,7 @@ def basket_contents(request):
                 'product': product,
             })
         else: 
-            # Else there is a size, data is kept as a dictionary, iterate through dictionary.
+            # Else there is a size, data is kept as a dictionary
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
                 total += quantity * product.price
@@ -50,7 +50,6 @@ def basket_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
     grand_total = delivery + total
 
     context = {
@@ -65,3 +64,4 @@ def basket_contents(request):
     }
 
     return context
+    
