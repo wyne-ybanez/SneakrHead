@@ -613,7 +613,6 @@ input[name='q']::placeholder {
     position: relative;
 }
 .grid-image img {
-    background: url('/media/bg-image.jpeg') no-repeat top center;
     background-size: cover;
 }
 
@@ -748,7 +747,22 @@ input[name='q']::placeholder {
     .card-horizontal .card {
         height: 300px;
         width: auto;
-    }   
+    }  
+
+    .grid-image-small,
+    .grid-image-big {
+        height: 60vh;
+        width: 90vw;
+        transform: translateX(-10px);
+    }
+
+    .grid-image .grid-image-big {
+        margin-bottom: 8px;
+    }
+
+    .overlay, .overlay-big {
+        width: 105%;
+    }
 } 
 
 /* pad the top a bit when navbar is collapsed on mobile */
