@@ -31,7 +31,7 @@ Password: 0891
     * [Differences to Wireframes](#Differences-to-Wireframes)
 * [Features](#Features)
     * [Existing Features](#Existing-Features)
-    * [Future Features](#Features-Left-to-Implement)
+    * [Future Features](#Features-for-improvement)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
     * [Test Strategy](#Test-Strategy)
@@ -128,7 +128,7 @@ The store will utilise and effective navigation and search functionality so as t
 
 ### **The Structure Plane**
 
-### User stories
+### User stories: Shoppers
 
 #### User Story:
 > As a shopper, I would like to view a list of Products
@@ -141,6 +141,8 @@ The store will utilise and effective navigation and search functionality so as t
 
 The site will display the products through products.html. The site also incoporates numerous ways for the customer to find popular and new brands through the sorting menu, through products.html or through the horizontal scroll at the bottom of the page.
 
+<hr>
+
 #### User Story:
 > As a shopper, I would like to view a specific category of products
 
@@ -152,6 +154,8 @@ The site will display the products through products.html. The site also incopora
 
 The site allows shoppers to categorise products through the main navigational menu. This is accessible on both short, medium and large screens and there are 4 choices: men's, women's, kids' and discounted items. 
 
+<hr>
+
 #### User Story:
 > As a shopper, I would view individual product details
 
@@ -161,6 +165,8 @@ The site allows shoppers to categorise products through the main navigational me
 #### Implementation:
 
 The site allows the shopper to view product description by clicking on the product's image/card. This will then lead them to the product details page which will display the item's price, rating, category, brand, description and availability.
+
+<hr>
 
 #### User Story:
 > As a shopper, I would like to quickly identify deals and special offers
@@ -172,83 +178,20 @@ The site allows the shopper to view product description by clicking on the produ
 
 The website utilises a category called 'Discounted' to navigate to discounted products on the online store.
 
+<hr>
 
-The following main pages will be implemented:
+#### User Story:
+> As a shopper, I would like to easily view the total of my purchases at any time
 
-- Base Page - base.html
-    - Will contain components such as navigation bar, headers
-    - allAuth
-- Sign Up Page - register.html
-- Sign In Page - login.html
-- Home page - index.html
-    - Displays all products - products.html
-- Product Details - product_detail.html
-- Member Profile Page - profile.html
-- User's basket - basket.html
-    - Requires templatetags - baskettools
-- Admin Product Management
-    - Add Product Page - add_product.html
-    - Edit Product Page - edit_product.html
-- Checkout Page - checkout.html
-    - With order summary if checkout successful - checkout_success.html
-- Error 404 - 404.html (error 404 handling)
-- Error 500 - 500.html (error 500 handling)
+#### Criteria:
+- There should be a button or a link that allows the shopper to view the products they would like to purchase 
+- This page should display a list of the products, their details and the total price for the order
 
-User Story:
-> 
+#### Implementation:
 
-Criteria:
-- 
+There is a basket app and a basket icon in the navigation bar. This allows the shopper to view the items in their basket, the title of the products, the details such as size, quantity and price.
 
-Implementation:
-
-
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
-
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
-
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
-
-
-User Story:
-> 
-
-Criteria:
-- 
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
-
+<hr>
 
 #### Admin User Stories
 
@@ -303,6 +246,27 @@ Implementation:
 - Add Product/Remove Product: <br>
 ![Add_Post](readme_Img/wireframes/)
 
+<strong>The following main pages will be implemented:</strong>
+
+- Base Page - base.html
+    - Will contain components such as navigation bar, headers
+    - allAuth
+- Sign Up Page - register.html
+- Sign In Page - login.html
+- Home page - index.html
+    - Displays all products - products.html
+- Product Details - product_detail.html
+- Member Profile Page - profile.html
+- User's basket - basket.html
+    - Requires templatetags - baskettools
+- Admin Product Management
+    - Add Product Page - add_product.html
+    - Edit Product Page - edit_product.html
+- Checkout Page - checkout.html
+    - With order summary if checkout successful - checkout_success.html
+- Error 404 - 404.html (error 404 handling)
+- Error 500 - 500.html (error 500 handling)
+
 #### Database Design (SQLite 3)
 
 Sample Object Format:
@@ -341,13 +305,15 @@ All images used within the website were all taken from [unsplash](https://unspla
 
 - 
 
-### Features Left to Implement
+### Features for Improvement
 
 - The Categories/Products grid was initially utilised to assist customers/users with accessing certain products through an image grid. For this purpose of this project, the grid was focused primarily on front-end and did not contain any backend. Hence, it has been removed for assessment and will be refined and re-added.
 
 - In future I would like to allow customers to contact the store owners through a contact form. 
 
 - I would like to add more content such as products and images in the AWS S3 bucket for the use of this project.
+
+- The basket page does not look appealing on mobiles phones or on small devices. In future, I would like to refactor the code on this page so as to improve the look and style of the mobile display for the page.
 
 ****
 ## Technologies
