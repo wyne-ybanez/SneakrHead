@@ -10,6 +10,12 @@
         </a>
         <i class="fas fa-circle text-dark fa-xs pt-3"></i>
     {% endfor %}
+    {% for b in brands %}
+        <a class="text-decoration-none" href="{% url 'products' %}?brand={{ b.name }}">
+            <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">{{ b.friendly_name }}</span>
+        </a>
+        <i class="fas fa-circle text-dark fa-xs pt-3"></i>
+    {% endfor %}
     {% if search_term|lower == "nike" %}
         <a class="text-decoration-none" href="{% url 'products' %}?q=nike">
             <span class="text-dark px-5 fs-3 fw-normal hvr-underline-from-center">Nike</span>

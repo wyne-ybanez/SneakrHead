@@ -314,6 +314,11 @@ All images used within the website were all taken from [unsplash](https://unspla
 
 ### Features Left to Implement
 
+- The Categories/Products grid was initially utilised to assist customers/users with accessing certain products through an image grid. For this purpose of this project, the grid was focused primarily on front-end and did not contain any backend. Hence, it has been removed for assessment and will be refined and re-added.
+
+- In future I would like to allow customers to contact the store owners through a contact form. 
+
+- I would like to add more content such as products and images in the AWS S3 bucket for the use of this project.
 
 ****
 ## Technologies
@@ -341,7 +346,7 @@ All images used within the website were all taken from [unsplash](https://unspla
     - Django was the web framework used for rapid development, security and scalability.
 
 - [Google Fonts](https://fonts.google.com/)
-    - 
+    - Roboto was the main font used for this project, and this derived from Google Fonts
 
 - [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
     - This was used to inspect the website and help debug styling issues and test for grid layouts.
@@ -353,13 +358,16 @@ All images used within the website were all taken from [unsplash](https://unspla
     - Git was used for version control during development where code was committed and pushed to the project's Github repository.
 
 - [Heroku](https://dashboard.heroku.com/apps)
-    - 
+    - Heroku was used in this project to deploy the project and use postgresSQL to manipulate and interpret the data.
 
 - [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
     - This was used to create wireframes prior to the project having been developed.
 
 - [TinyPNG](https://tinypng.com/)
     - This was used to reduce the file sizes of the images used in the project.
+
+- [AWS: Amazon Web Services](https://aws.amazon.com/)
+    - Used the S3 bucket to contain, serve and keep static images durable.
 
 ****
 ## Testing
@@ -472,7 +480,7 @@ You can fork the repository through the following steps. Forking the repository 
 
 1. Log in to GitHub and locate the GitHub Repository. Here is a link for the [repository](https://github.com/wyne-ybanez/SneakrHead)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu. Looking towards the right of the page. Locate the button "Fork" then click 
-3. You should now have a copy of the original repository in your GitHub account
+3. You should now have a copy of the original repository in your GitHub account.
 
 ****
 ## Credits
@@ -509,13 +517,19 @@ You can fork the repository through the following steps. Forking the repository 
 
 - Stripe CSS from here: https://stripe.com/docs/stripe-js
 
+- Kotaro Tanaka's Eagle Golf Newsletter code and Shoe Brands Logic code repurposed for this project: https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf
+
+- ReadME structure from MS3 Data Centric Project: https://github.com/wyne-ybanez/PaperCut/tree/main
+
 ### Acknowledgements
 
 I would to express my gratitude to the Code Institute tutors and community for helping get this far.
 
 Nike's website and JD Sports Website were used as an inspiration for the design of this website. 
 
-I would also like to acknowledge and praise the 'FP vision' project by Wrenna for inspiring the design of the e-commerce store.
+I would also like to acknowledge the 'FP vision' project by Wrenna for inspiring the design of the e-commerce store. I would also like to highlight Code Institute's 'Boutique Ado' project which was used as a foundation tutorial for this project.
+
+Finally, I would like to thank my Mother and Girlfriend for supporting me and keeping me focused during the development of this project.
 
 
 

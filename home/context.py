@@ -1,6 +1,6 @@
-from django.contrib import messages
 from .models import Subscriber
 from .forms import SubscriberForm
+from django.contrib import messages
 
 
 def subscriber_form_context(request):
