@@ -56,13 +56,13 @@ Password: 0891
 The main target audience of the website are online shoppers particularly those who are into sports brands, trainers and sneakers. 
 The site will implement a header image of a popular sports brand's trainers and this will communicate what the site is about, an e-commerce store for sneakers. The website allows like minded sneaker fans to search, purchase and create an account. 
 
-The store will utilise and effective navigation and search functionality so as to assist potential buyers with viewing and browsing. This strategy will also allow established users to easily view products they may want to purchase. The site will also utilise a shopping cart functionality. Where the user will be notified every time they add an item to their cart. This cart will also be easily accessible so as to allow the user to find out what they have placed in their cart and encourage them to checkout. 
+The store will utilise and effective navigation and search functionality so as to assist potential buyers with viewing and browsing. This strategy will also allow established users to easily view products they may want to purchase. The site will also utilise a shopping basket functionality. Where the user will be notified every time they add an item to their basket. This basket will also be easily accessible so as to allow the user to find out what they have placed in their basket and encourage them to checkout. 
 
 #### Site Goals
 
 - To bring together 'Sneaker Heads', shoppers and users who are fanatic about getting branded and popular trainers/sneakers.
-- To help these users/shoppers browse for and purchase sneakers.
-- To allow the shop owner to gain profits, edit their listings and scale their business.
+- To allow these shoppers to create a profile, track their orders and purchase remotely. 
+- To allow the shop owner to scale their business easily and earn profits.
 
 ### User stories
 
@@ -71,8 +71,8 @@ The store will utilise and effective navigation and search functionality so as t
 
 - As a shopper, I would like to view a list of Products
 - As a shopper, I would like to view a specific category of products
-- As a shopper, I would view inidividual product details
-- As a shopper, I would like to quickly identify deals, clearance items and special offers
+- As a shopper, I would view individual product details
+- As a shopper, I would like to quickly identify deals and special offers
 - As a shopper, I would like to easily view the total of my purchases at any time
 
 ##### Sorting and Searching
@@ -128,25 +128,49 @@ The store will utilise and effective navigation and search functionality so as t
 
 ### **The Structure Plane**
 
-#### User stories
+### User stories
 
-User Story:
-> 
+#### User Story:
+> As a shopper, I would like to view a list of Products
 
-Criteria:
-- 
+#### Criteria:
+- Products are should be displayed clearly for the customers and named appropriately.
+- Products should be easily categorised and sorted.
 
-Implementation:
+#### Implementation:
 
+The site will display the products through products.html. The site also incoporates numerous ways for the customer to find popular and new brands through the sorting menu, through products.html or through the horizontal scroll at the bottom of the page.
 
+#### User Story:
+> As a shopper, I would like to view a specific category of products
 
-User Story:
-> 
+#### Criteria:
+- The site should categorise its products so as the filter the products shown on the page.
+- Categorising products should be simple and it should be easy to categorise products.
 
-Criteria:
-- 
+#### Implementation:
 
-Implementation:
+The site allows shoppers to categorise products through the main navigational menu. This is accessible on both short, medium and large screens and there are 4 choices: men's, women's, kids' and discounted items. 
+
+#### User Story:
+> As a shopper, I would view individual product details
+
+#### Criteria:
+- The shopper should be able to access the description and details of their desired product.
+
+#### Implementation:
+
+The site allows the shopper to view product description by clicking on the product's image/card. This will then lead them to the product details page which will display the item's price, rating, category, brand, description and availability.
+
+#### User Story:
+> As a shopper, I would like to quickly identify deals and special offers
+
+#### Criteria:
+- The shopper should be able to search for discounted items easily.
+
+#### Implementation:
+
+The website utilises a category called 'Discounted' to navigate to discounted products on the online store.
 
 
 The following main pages will be implemented:
@@ -160,11 +184,11 @@ The following main pages will be implemented:
     - Displays all products - products.html
 - Product Details - product_detail.html
 - Member Profile Page - profile.html
-    - Edit User's Profile Page - edit_profile.html
-- User's bag - bag.html
-    - Requires templatetags - bagtools
-- Add Product Page - add_product.html
-- Remove Product Page - remove_product.html
+- User's basket - basket.html
+    - Requires templatetags - baskettools
+- Admin Product Management
+    - Add Product Page - add_product.html
+    - Edit Product Page - edit_product.html
 - Checkout Page - checkout.html
     - With order summary if checkout successful - checkout_success.html
 - Error 404 - 404.html (error 404 handling)

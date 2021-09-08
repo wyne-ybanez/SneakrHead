@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background: url('/media/header-3.jpg') no-repeat top center fixed;
+    background: url('/media/header.jpg') no-repeat top center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #000;
