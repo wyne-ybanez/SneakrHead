@@ -361,7 +361,7 @@ p {
 
 .custom-toast {
     overflow: visible;
-    opacity: 100;
+    z-index: 100;
 }
 
 .toast-capper {
