@@ -6,6 +6,11 @@ The project aims to build a website on the Django Framework for improved securit
 
 ** <strong>Educational Purposes Only</strong> **
 
+<strong>Admin Login Details: </strong>
+
+Username: wyneyban
+Password: 0891
+
 ## Table of Contents
 
 * [User Experience Design (UX)](#User-Experience-Design)
@@ -519,7 +524,7 @@ You can fork the repository through the following steps. Forking the repository 
 
 - Kotaro Tanaka's Eagle Golf Newsletter code and Shoe Brands Logic code repurposed for this project: https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf
 
-- ReadME structure from MS3 Data Centric Project: https://github.com/wyne-ybanez/PaperCut/tree/main
+- ReadME structure used from my MS3 Data Centric Project: https://github.com/wyne-ybanez/PaperCut/tree/main
 
 ### Acknowledgements
 
