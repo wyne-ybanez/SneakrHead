@@ -4,12 +4,12 @@
 
 The project aims to build a website on the Django Framework for improved security and speedy development. It allows user's to register an account and log in to review their orders. Additionally, the website will record the the customer's cart so as to allow them to view their next potential purchases. Furthermore, the site will also utilise the stripe API in order to assist customer's with finalising their purchase and securely save their payment information for future orders.
 
-** <strong>Educational Purposes Only</strong> **
-
 <strong>Admin Login Details: </strong>
 
-Username: wyneyban
-Password: 0891
+<strong>Username:</strong> wyneyban <br>
+<strong>Password:</strong> 0891
+
+** <strong>Educational Purposes Only</strong> **
 
 ## Table of Contents
 
@@ -79,7 +79,6 @@ The store will utilise and effective navigation and search functionality so as t
 
 - As a shopper, I would like to sort the list of available products 
 - As a shopper, I would like to sort a specific category of products
-- As a shopper, I would like to sort multiple categories of products simultaneously
 - As a shopper, I would like to search for a product by name or description 
 - As a shopper, I would like to easily see what I’ve searched for and the number of results
 
@@ -128,7 +127,7 @@ The store will utilise and effective navigation and search functionality so as t
 
 ### **The Structure Plane**
 
-### User stories: Shoppers
+### User stories: Shopper View & Navigation
 
 #### User Story:
 > As a shopper, I would like to view a list of Products
@@ -191,7 +190,53 @@ The website utilises a category called 'Discounted' to navigate to discounted pr
 
 There is a basket app and a basket icon in the navigation bar. This allows the shopper to view the items in their basket, the title of the products, the details such as size, quantity and price.
 
+### User stories: Sorting and Searching
+
+#### User Story:
+> As a shopper, I would like to sort the list of available products 
+
+#### Criteria:
+- The shopper must have the ability to filter/sort the products according to a certain rule. For example, sort the products in alphabetical order.
+
+#### Implementation:
+
+The website utilises a sorting display feature through a sort display menu. It will have numerous options such as filtering the products alphabetically, reverse alphabetically, by price (lowest to highest) and by rating.
+
 <hr>
+
+#### User Story:
+> As a shopper, I would like to sort a specific category of products
+
+#### Criteria:
+- Once a category is chosen by the shopper, they should be able to sort the list of products with the active category filter
+
+#### Implementation:
+
+The user can choose a specific category on the navigation menu, then, should the shopper prefer to sort the products a cetain way, the category filter remains and the products sort accordingly.
+
+<hr>
+
+#### User Story:
+> As a shopper, I would like to search for a product by name or description 
+
+#### Criteria:
+- The shopper should be able to query the website for a product, searching its name or a text which resides in its description
+
+#### Implementation:
+
+The website utilises a search bar feature which allows the shopper to search for a specific product either searching the product name or description.
+
+<hr>
+
+#### User Story:
+> As a shopper, I would like to easily see what I’ve searched for and the number of results
+
+#### Criteria:
+- The shopper needs to see what their search criteria was and the total products that can be displayed through their search
+
+#### Implementation:
+
+Once a search query is presented by the user, the site will display the total number of products found that matches the shopper's query and text entered for their query.
 
 #### Admin User Stories
 
@@ -482,11 +527,13 @@ You can fork the repository through the following steps. Forking the repository 
 
 ### Content
 
-- 
+- Content from the footer of 'FP Vision' was used and repurposed for project- [Link](https://fpvision.herokuapp.com/)
+- Content from the Nike e-commerce store was used in the project with their respective images - [Link](https://www.nike.com/ie/)
 
 ### Media 
 
-- 
+- Nike Store - Here is a link to [the store](https://www.nike.com/ie/)
+- An Unsplash sneaker image was used for the home page background image - Here is a link to [Unsplash](https://unsplash.com/)
 
 ### Code
 
