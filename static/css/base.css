@@ -349,6 +349,12 @@ p {
     font-size: .9rem;
 } 
 
+.white-space-pre-line {
+    white-space: pre-line;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 
 /*===== Toasts =====*/
 

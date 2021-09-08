@@ -20,7 +20,7 @@ def subscriber_form_context(request):
                 subscriber_form.save()
                 subscriber_form = SubscriberForm()
                 messages.success(request,
-                                 'Thank youfor subscribing \
+                                 'Thank you for subscribing \
                                         to our newsletter')
     else:
         subscriber_form = SubscriberForm()

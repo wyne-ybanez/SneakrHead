@@ -47,8 +47,6 @@ The project aims to build a website on the Django Framework for improved securit
   * [Code](#Code)
   * [Acknowledgements](#Acknowledgements)
 
-****
-
 ## User Experience Design
 
 ### **The Strategy Plane**
@@ -125,9 +123,11 @@ The store will utilise and effective navigation and search functionality so as t
 - Checkout functionality 
 - Contact form
 
+
 ### **The Structure Plane**
 
 ### User stories: Shopper View & Navigation
+-
 
 **User Story:**
 > As a shopper, I would like to view a list of Products
@@ -191,6 +191,7 @@ The website utilises a category called 'Discounted' to navigate to discounted pr
 There is a basket app and a basket icon in the navigation bar. This allows the shopper to view the items in their basket, the title of the products, the details such as size, quantity and price.
 
 ### User stories: Sorting and Searching
+-
 
 **User Story:**
 > As a shopper, I would like to sort the list of available products 
@@ -239,6 +240,7 @@ The website utilises a search bar feature which allows the shopper to search for
 Once a search query is presented by the user, the site will display the total number of products found that matches the shopper's query and text entered for their query.
 
 ### User stories: Shopper Purchasing & Checkout
+-
 
 **User Story:**
 > As a shopper, I would like to easily select the size and quantity of a product when purchasing it
@@ -253,6 +255,62 @@ The site incorporates a product detail page as well as a basket page where the s
 <hr>
 
 **User Story:**
+> As a shopper, I would like to view items in my bag to be purchased
+
+**Criteria:**
+- The shopper should have complete freedom to check the items they have placed in their shopping basket at any point in time
+
+**Implementation:**
+
+Through the shopping basket functionality, user's can always view the items within their basket, this is situated at the top right of the screen. It leads to the basket page and displays the totals, quantity and prices of the products they wish to purchase prior to checkout.
+
+<hr>
+
+**User Story:**
+> As a shopper, I would like to adjust the quantity of individual items in my bag
+
+**Criteria:**
+- The shopper must have complete freedom to edit the quantities for all items in their basket
+
+**Implementation:**
+
+The basket page allows the shopper to edit the quantities of all their items. It will have up and down arrows within the input box, it allows the shopper to type the quantity and it also allows the shopper to increase or decrease the value using the append and prepend buttons.
+
+<hr>
+
+**User Story:**
+> As a shopper, I would like to easily enter my payment information
+
+**Criteria:**
+- The user should be able to go to checkout easily and continue with their purchase, the should be able to add their payment information once they are certain they would like to buy an item.
+
+**Implementation:**
+
+The site utilises a checkout functionality which allows the shopper to add their card details and make a purchase. This will appear in the form of a toast with a secure checkout option, or by clicking the basket icon and continuing to the checkout page.
+
+<hr>
+
+**User Story:**
+> As a shopper, I would like to feel my personal and payment information is safe and secure
+
+**Criteria:**
+- The shopper's payment information must be secure and confidential at all times. Appropriate payment validation logic must be present to detect safe and secure purchases.
+
+**Implementation:**
+
+The site takes advantage of Stripes API and uses payment intent to determine if a card's purchase is successful or if it was not successful. If a purchase is unsuccessful due to glitches, the card is not charged. The site always responds with a status message for successful or failed payments. Stripe will also ensure that the shopper's card physically exists and will require the card owner's details prior to a payment.
+
+<hr>
+
+**User Story:**
+> As a shopper, I would like to view an order confirmation after checkout
+
+**Criteria:**
+- An order confirmation should be sent to the shopper once they have successful made a payment and have went through the checkout process completely
+
+**Implementation:**
+
+An order confirmation page is implemented within the site's functionalities and will appear displaying the shopper's purchase details such as order number, product type and details, quantities, date of purchase, personal details of the shopper used for payment.
 
 #### Admin User Stories
 
