@@ -8,12 +8,12 @@
 <ul class="mb-1">
     <!-- Account Drop down -->
     <li class="list-inline-item dropdown sticky-top">
-        <a class="text-dark nav-link d-block d-lg-none px-0" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="text-dark nav-link d-block d-lg-none px-0" href="#" id="user-mobile-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <i class="fas fa-user-circle fa-lg"></i>
             </div>
         </a>
-        <div class="dropdown-menu border-0 mt-2" aria-labelledby="user-options" style="transform: translateX(-97px);">
+        <div class="dropdown-menu border-0 mt-2" aria-labelledby="user-mobile-options" style="transform: translateX(-97px);">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item text-dark fw-light">Product Management</a>

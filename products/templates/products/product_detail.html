@@ -81,24 +81,34 @@
                                 Unavailable
                             </p>
                         {% endif %}    
-                        {% if product.category %}
+
+                        <!-- Category and Brand -->
+                        {% if product.category and product.brand %} 
+                            {% if product.brand.name != 'None' %} 
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}&brand={{ product.brand.name }}">
+                                        <i class="fas fa-tags fa-lg text-dark me-2"></i>
+                                        <span class="fw-light fs-5 text-dark">{{ product.category.friendly_name }}, {{ product.brand.friendly_name }}</span>
+                                    </a>
+                                </p>
+                            {% else %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag fa-lg text-dark me-2"></i>
+                                        <span class="fw-light fs-5 text-dark">{{ product.category.friendly_name }}</span>
+                                    </a>
+                                </p>
+                            {% endif %}
+                        {% elif product.category %}
                             <p class="small mt-1 mb-0">
                                 <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">
                                     <i class="fas fa-tag fa-lg text-dark me-2"></i>
                                     <span class="fw-light fs-5 text-dark">{{ product.category.friendly_name }}</span>
                                 </a>
                             </p>
-                        {% endif %}   
-                        {% if product.brand %} 
-                            {% if product.brand.name != 'None' %}                        
-                                <p class="small mt-1 mb-0">
-                                    <a class="text-muted text-decoration-none" href="{% url 'products' %}?brand={{ product.brand.name }}">
-                                        <i class="fas fa-tag fa-lg text-dark me-2"></i>
-                                        <span class="fw-light fs-5 text-dark">{{ product.brand.friendly_name }}</span>
-                                    </a>
-                                </p>
-                            {% endif %}  
-                        {% endif %} 
+                        {% endif %}
+
+                        <!-- Rating -->
                         {% if product.rating %}
                             <p class="text-dark fw-normal mt-2">
                                 <i class="fas fa-star fa-lg me-1"></i>

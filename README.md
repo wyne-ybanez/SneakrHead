@@ -31,7 +31,7 @@ The project aims to build a website on the Django Framework for improved securit
     * [Differences to Wireframes](#Differences-to-Wireframes)
 * [Features](#Features)
     * [Existing Features](#Existing-Features)
-    * [Future Features](#Features-for-improvement)
+    * [Future Features](#Room-for-improvement)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
     * [Test Strategy](#Test-Strategy)
@@ -129,114 +129,130 @@ The store will utilise and effective navigation and search functionality so as t
 
 ### User stories: Shopper View & Navigation
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to view a list of Products
 
-#### Criteria:
+**Criteria:**
 - Products are should be displayed clearly for the customers and named appropriately.
 - Products should be easily categorised and sorted.
 
-#### Implementation:
+**Implementation:**
 
 The site will display the products through products.html. The site also incoporates numerous ways for the customer to find popular and new brands through the sorting menu, through products.html or through the horizontal scroll at the bottom of the page.
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to view a specific category of products
 
-#### Criteria:
+**Criteria:**
 - The site should categorise its products so as the filter the products shown on the page.
 - Categorising products should be simple and it should be easy to categorise products.
 
-#### Implementation:
+**Implementation:**
 
 The site allows shoppers to categorise products through the main navigational menu. This is accessible on both short, medium and large screens and there are 4 choices: men's, women's, kids' and discounted items. 
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would view individual product details
 
-#### Criteria:
+**Criteria:**
 - The shopper should be able to access the description and details of their desired product.
 
-#### Implementation:
+**Implementation:**
 
 The site allows the shopper to view product description by clicking on the product's image/card. This will then lead them to the product details page which will display the item's price, rating, category, brand, description and availability.
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to quickly identify deals and special offers
 
-#### Criteria:
+**Criteria:**
 - The shopper should be able to search for discounted items easily.
 
-#### Implementation:
+**Implementation:**
 
 The website utilises a category called 'Discounted' to navigate to discounted products on the online store.
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to easily view the total of my purchases at any time
 
-#### Criteria:
+**Criteria:**
 - There should be a button or a link that allows the shopper to view the products they would like to purchase 
 - This page should display a list of the products, their details and the total price for the order
 
-#### Implementation:
+**Implementation:**
 
 There is a basket app and a basket icon in the navigation bar. This allows the shopper to view the items in their basket, the title of the products, the details such as size, quantity and price.
 
 ### User stories: Sorting and Searching
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to sort the list of available products 
 
-#### Criteria:
+**Criteria:**
 - The shopper must have the ability to filter/sort the products according to a certain rule. For example, sort the products in alphabetical order.
 
-#### Implementation:
+**Implementation:**
 
 The website utilises a sorting display feature through a sort display menu. It will have numerous options such as filtering the products alphabetically, reverse alphabetically, by price (lowest to highest) and by rating.
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to sort a specific category of products
 
-#### Criteria:
+**Criteria:**
 - Once a category is chosen by the shopper, they should be able to sort the list of products with the active category filter
 
-#### Implementation:
+**Implementation:**
 
 The user can choose a specific category on the navigation menu, then, should the shopper prefer to sort the products a cetain way, the category filter remains and the products sort accordingly.
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to search for a product by name or description 
 
-#### Criteria:
+**Criteria:**
 - The shopper should be able to query the website for a product, searching its name or a text which resides in its description
 
-#### Implementation:
+**Implementation:**
 
 The website utilises a search bar feature which allows the shopper to search for a specific product either searching the product name or description.
 
 <hr>
 
-#### User Story:
+**User Story:**
 > As a shopper, I would like to easily see what I’ve searched for and the number of results
 
-#### Criteria:
+**Criteria:**
 - The shopper needs to see what their search criteria was and the total products that can be displayed through their search
 
-#### Implementation:
+**Implementation:**
 
 Once a search query is presented by the user, the site will display the total number of products found that matches the shopper's query and text entered for their query.
+
+### User stories: Shopper Purchasing & Checkout
+
+**User Story:**
+> As a shopper, I would like to easily select the size and quantity of a product when purchasing it
+
+**Criteria:**
+- The shopper should be able to choose the size and quantity of the product prior to purchasing and order creation
+
+**Implementation:**
+
+The site incorporates a product detail page as well as a basket page where the shopper can outline the size and quantity for their desired product, factors of which are customizeable at any time prior to the checkout process.
+
+<hr>
+
+**User Story:**
 
 #### Admin User Stories
 
@@ -350,7 +366,7 @@ All images used within the website were all taken from [unsplash](https://unspla
 
 - 
 
-### Features for Improvement
+### Room for Improvement
 
 - The Categories/Products grid was initially utilised to assist customers/users with accessing certain products through an image grid. For this purpose of this project, the grid was focused primarily on front-end and did not contain any backend. Hence, it has been removed for assessment and will be refined and re-added.
 
@@ -359,6 +375,8 @@ All images used within the website were all taken from [unsplash](https://unspla
 - I would like to add more content such as products and images in the AWS S3 bucket for the use of this project.
 
 - The basket page does not look appealing on mobiles phones or on small devices. In future, I would like to refactor the code on this page so as to improve the look and style of the mobile display for the page.
+
+- In future I would like to fine tune this project even further and ensure that it passes Pep8/Flake 8, W3C HTML, CSS and JS Hint validators. At the moment the project still has many errors regarding best practices and validation.
 
 ****
 ## Technologies
