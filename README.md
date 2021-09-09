@@ -109,10 +109,6 @@ The store will utilise and effective navigation and search functionality so as t
 - As the site owner, I would like to delete a product 
 - As the site owner, I would like to have the ability to delete a user's account
 
-### **The Structure Plane**
-
-The website incorporates a minimal design and a multi-page experience. The user will be enticed to explore the e-commerce website as if it was a real life store, conveying products from the get go. Every section will lead to a relevant, clear and complimentary section which is designed to maintain the user's interest, inform them of their position in the purchase process. Most importantly, it should capture their interest at every stage. The experience should be seamless and at no point in time should the user feel lost.
-
 ### **The Scope Plane**
 
 **Features planned:**
@@ -128,6 +124,10 @@ The website incorporates a minimal design and a multi-page experience. The user 
 - Product details 
 - Checkout functionality 
 - Contact form
+
+### **The Structure Plane**
+
+The website incorporates a minimal design and a multi-page experience. The user will be enticed to explore the e-commerce website as if it was a real life store, conveying products from the get go. Every section will lead to a relevant, clear and complimentary section which is designed to maintain the user's interest, inform them of their position in the purchase process. Most importantly, it should capture their interest at every stage. The experience should be seamless and at no point in time should the user feel lost.
 
 ### **The Skeleton Plane**
 #### Wireframes/Web Design
@@ -168,7 +168,7 @@ Here is a link to Dmitriy's design - [Design](https://dribbble.com/shots/1486623
 - Error 404 - 404.html (error 404 handling)
 - Error 500 - 500.html (error 500 handling)
 
-#### Database Design 
+### Database Design 
 
 ![Database Design](media/readme/database_schema.png)
 
@@ -253,9 +253,15 @@ Here is a link to Dmitriy's design - [Design](https://dribbble.com/shots/1486623
 
 #### Database Security
 
-EDIT! - Speak about superuser, sql, csrf tokens
+The website takes advantage of Django's security features to protect all data that is inputted and stored within the site. It does so through the features of a superuser, who can manipulate data through the administrator's page. 
 
-Database security is maintained through the "env.py" file which ensures that the configuration files are not stored in github via .gitignore. For production, the configuration details are placed into the app settings within...
+It utilises CSRF protection so as to ensure that forms are validated and secure. It checks for a secret within each POST request. Thus, ensures that a malicious actor can't POST to the site and have another logged in user unwittingly submit that form.
+
+The site also uses Host header validation: Django validates Host headers against the ALLOWED_HOSTS setting in the django.http.HttpRequest.get_host() method. (https://docs.djangoproject.com/en/3.2/topics/security/)
+
+Additionally, the site exploits Amazon's AWS S3 which provides server-side encryption (SSE) for uploaded static images within the site.
+
+Database security is also maintained through the workspace environment through the following command `export VARIABLE = VARIABLE VALUE` or by going to gitpod and changing the environment variables manually. During development, these variables are then accessed through the local environment which ensures that the configuration files are not stored in github. For production, the configuration details are placed into the app settings and Heroku variables instead.
 
 ### **The Surface Plane**
 ### Design
