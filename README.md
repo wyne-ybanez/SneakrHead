@@ -29,8 +29,6 @@ The website is deployed here: https://wyne-sneakrhead.herokuapp.com/
         * [Design](#Design)
             * [Colour Scheme](#Colour-Scheme)
             * [Typography](#Typography)
-            * [Imagery](#Imagery)
-    * [Differences to Wireframes](#Differences-to-Wireframes)
 * [Features](#Features)
     * [Existing Features](#Existing-Features)
     * [Future Features](#Room-for-improvement)
@@ -268,20 +266,38 @@ Database security is also maintained through the workspace environment through t
 
 #### Colour Scheme
 
-EDIT!- remember to Add image for color scheme
+#212529 - Bootstrap Dark
+
+#F8F9FA - Bootstrap Light
+
+#0DCAF0 - Bootstrap Info 
+
+#FF6347 - Tomato
+
+#20C997 - Light Green
 
 #### Typography
 
-## Differences to Wireframes
+The main typography used for the website is 'Caveat' for the home/landing page. 'Prompt' for headings and 'Roboto' for other minor texts. These all derive from Google Fonts. 
 
-- 
-
-****
 ## Features
 
 ### Existing Features
 
-- 
+- Home page/Landing Page which contains a hero image, the New Arrivals with product cards and an action button to quickly go shopping
+- Registration feature which allows users to sign up and create an account
+- Log in Feature which allows users to sign into their account
+- Search functionality which is on the navbar on medium to large screens. This is also available to smaller devices in the products.html page
+- Products research - the site allows shoppers to view the product description prior to purchasing
+- Category and Brands search functionality which allows users to search for products based on the Brand and Category
+- Profile page which shows user's orders and delivery information
+- Products modification - the website allows the site owner to add, update or delete products
+- Responsive on different media screens.
+- Admin dashboard provided by Django which allows the admin to view website statistics and manipulate site data
+- Horizontal Product display feature which shows the designated featured products as chosen by the site owner.
+- Website and Data security with every form submission.
+- A shopping basket feature which stores the shopper's desired products and respective quantities prior to completing the checkout process. 
+- Checkout level which assists user's with payments and keeping their billing information secure.
 
 ### Future Implementations & Room for Improvement
 
@@ -355,7 +371,7 @@ EDIT!- remember to Add image for color scheme
 
 ### Test Strategy
 #### **Summary**
-Testing is to be made to ensure all features of the website is working as intended and that the links lead to the appropriate pages. Tests must be made to judge the websites responsiveness. Additionally, that all inputs done through the forms will submit the data to the appropriate collections. It is also there to ensure the project's code structure abides the universal best practices for programming. 
+Testing is to be made to ensure all features of the website is working as intended and that the links lead to the appropriate pages. Tests must be made to judge the websites responsiveness. Additionally, that all inputs done through the forms must submit the data to the appropriate collections. It is also there to ensure the project's code structure abides the universal best practices for programming. The following validators are planned to be used.
 
 HTML Code must pass through the [W3C HTML Validator](https://validator.w3.org/#validate_by_uri).
 

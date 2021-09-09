@@ -256,7 +256,7 @@ The site utilises django and an allauth template to also send the user an email 
 
 **Implementation:**
 
-Once the shopper creates a profile account. The site records the shoppers orders once they make an order. The site also saves the shoppers personal details after the checkout process should the shopper choose to save their information for future orders. Records of their recent orders and their billing information are stored in profile.html.
+Once the shopper creates a profile account in profile.html. The site records the shoppers orders once they make an order. The site also saves the shoppers delivery details after the checkout process should the shopper choose to save their information for future orders.
 
 #### Admin User Stories
 
