@@ -62,7 +62,7 @@ The store will utilise and effective navigation and search functionality so as t
 - To allow these shoppers to create a profile, track their orders and purchase remotely. 
 - To allow the shop owner to scale their business easily and earn profits.
 
-### User stories
+### User stories: **The Structure Plane**
 
 #### Shopper
 ##### View and Navigation
@@ -122,224 +122,6 @@ The store will utilise and effective navigation and search functionality so as t
 - Product details 
 - Checkout functionality 
 - Contact form
-
-
-### **The Structure Plane**
-
-### User stories: Shopper View & Navigation
--
-
-**User Story:**
-> As a shopper, I would like to view a list of Products
-
-**Criteria:**
-- Products are should be displayed clearly for the customers and named appropriately.
-- Products should be easily categorised and sorted.
-
-**Implementation:**
-
-The site will display the products through products.html. The site also incoporates numerous ways for the customer to find popular and new brands through the sorting menu, through products.html or through the horizontal scroll at the bottom of the page.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to view a specific category of products
-
-**Criteria:**
-- The site should categorise its products so as the filter the products shown on the page.
-- Categorising products should be simple and it should be easy to categorise products.
-
-**Implementation:**
-
-The site allows shoppers to categorise products through the main navigational menu. This is accessible on both short, medium and large screens and there are 4 choices: men's, women's, kids' and discounted items. 
-
-<hr>
-
-**User Story:**
-> As a shopper, I would view individual product details
-
-**Criteria:**
-- The shopper should be able to access the description and details of their desired product.
-
-**Implementation:**
-
-The site allows the shopper to view product description by clicking on the product's image/card. This will then lead them to the product details page which will display the item's price, rating, category, brand, description and availability.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to quickly identify deals and special offers
-
-**Criteria:**
-- The shopper should be able to search for discounted items easily.
-
-**Implementation:**
-
-The website utilises a category called 'Discounted' to navigate to discounted products on the online store.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to easily view the total of my purchases at any time
-
-**Criteria:**
-- There should be a button or a link that allows the shopper to view the products they would like to purchase 
-- This page should display a list of the products, their details and the total price for the order
-
-**Implementation:**
-
-There is a basket app and a basket icon in the navigation bar. This allows the shopper to view the items in their basket, the title of the products, the details such as size, quantity and price.
-
-### User stories: Sorting and Searching
--
-
-**User Story:**
-> As a shopper, I would like to sort the list of available products 
-
-**Criteria:**
-- The shopper must have the ability to filter/sort the products according to a certain rule. For example, sort the products in alphabetical order.
-
-**Implementation:**
-
-The website utilises a sorting display feature through a sort display menu. It will have numerous options such as filtering the products alphabetically, reverse alphabetically, by price (lowest to highest) and by rating.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to sort a specific category of products
-
-**Criteria:**
-- Once a category is chosen by the shopper, they should be able to sort the list of products with the active category filter
-
-**Implementation:**
-
-The user can choose a specific category on the navigation menu, then, should the shopper prefer to sort the products a cetain way, the category filter remains and the products sort accordingly.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to search for a product by name or description 
-
-**Criteria:**
-- The shopper should be able to query the website for a product, searching its name or a text which resides in its description
-
-**Implementation:**
-
-The website utilises a search bar feature which allows the shopper to search for a specific product either searching the product name or description.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to easily see what I’ve searched for and the number of results
-
-**Criteria:**
-- The shopper needs to see what their search criteria was and the total products that can be displayed through their search
-
-**Implementation:**
-
-Once a search query is presented by the user, the site will display the total number of products found that matches the shopper's query and text entered for their query.
-
-### User stories: Shopper Purchasing & Checkout
--
-
-**User Story:**
-> As a shopper, I would like to easily select the size and quantity of a product when purchasing it
-
-**Criteria:**
-- The shopper should be able to choose the size and quantity of the product prior to purchasing and order creation
-
-**Implementation:**
-
-The site incorporates a product detail page as well as a basket page where the shopper can outline the size and quantity for their desired product, factors of which are customizeable at any time prior to the checkout process.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to view items in my bag to be purchased
-
-**Criteria:**
-- The shopper should have complete freedom to check the items they have placed in their shopping basket at any point in time
-
-**Implementation:**
-
-Through the shopping basket functionality, user's can always view the items within their basket, this is situated at the top right of the screen. It leads to the basket page and displays the totals, quantity and prices of the products they wish to purchase prior to checkout.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to adjust the quantity of individual items in my bag
-
-**Criteria:**
-- The shopper must have complete freedom to edit the quantities for all items in their basket
-
-**Implementation:**
-
-The basket page allows the shopper to edit the quantities of all their items. It will have up and down arrows within the input box, it allows the shopper to type the quantity and it also allows the shopper to increase or decrease the value using the append and prepend buttons.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to easily enter my payment information
-
-**Criteria:**
-- The user should be able to go to checkout easily and continue with their purchase, the should be able to add their payment information once they are certain they would like to buy an item.
-
-**Implementation:**
-
-The site utilises a checkout functionality which allows the shopper to add their card details and make a purchase. This will appear in the form of a toast with a secure checkout option, or by clicking the basket icon and continuing to the checkout page.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to feel my personal and payment information is safe and secure
-
-**Criteria:**
-- The shopper's payment information must be secure and confidential at all times. Appropriate payment validation logic must be present to detect safe and secure purchases.
-
-**Implementation:**
-
-The site takes advantage of Stripes API and uses payment intent to determine if a card's purchase is successful or if it was not successful. If a purchase is unsuccessful due to glitches, the card is not charged. The site always responds with a status message for successful or failed payments. Stripe will also ensure that the shopper's card physically exists and will require the card owner's details prior to a payment.
-
-<hr>
-
-**User Story:**
-> As a shopper, I would like to view an order confirmation after checkout
-
-**Criteria:**
-- An order confirmation should be sent to the shopper once they have successful made a payment and have went through the checkout process completely
-
-**Implementation:**
-
-An order confirmation page is implemented within the site's functionalities and will appear displaying the shopper's purchase details such as order number, product type and details, quantities, date of purchase, personal details of the shopper used for payment.
-
-#### Admin User Stories
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
-
-User Story:
-> 
-
-Criteria:
-- 
-
-Implementation:
-
 
 ### **The Skeleton Plane**
 #### Wireframes
@@ -424,7 +206,7 @@ All images used within the website were all taken from [unsplash](https://unspla
 
 - 
 
-### Room for Improvement
+### Future Implementations & Room for Improvement
 
 - The Categories/Products grid was initially utilised to assist customers/users with accessing certain products through an image grid. For this purpose of this project, the grid was focused primarily on front-end and did not contain any backend. Hence, it has been removed for assessment and will be refined and re-added.
 
@@ -435,6 +217,12 @@ All images used within the website were all taken from [unsplash](https://unspla
 - The basket page does not look appealing on mobiles phones or on small devices. In future, I would like to refactor the code on this page so as to improve the look and style of the mobile display for the page.
 
 - In future I would like to fine tune this project even further and ensure that it passes Pep8/Flake 8, W3C HTML, CSS and JS Hint validators. At the moment the project still has many errors regarding best practices and validation.
+
+- Refine the sizing logic and parameters for certain products such as socks or shoes e.g size UK 9.5. 
+
+- Have a model for stock and refine stock logic, decreasing stock for every successful checkout.
+
+- Images should be added for the README.md displaying the look of certain pages as described in the user stories and implementation.
 
 ****
 ## Technologies
@@ -604,7 +392,8 @@ You can fork the repository through the following steps. Forking the repository 
 ### Content
 
 - Content from the footer of 'FP Vision' was used and repurposed for project- [Link](https://fpvision.herokuapp.com/)
-- Content from the Nike e-commerce store was used in the project with their respective images - [Link](https://www.nike.com/ie/)
+- Descriptive sneaker content and images from the Nike e-commerce store was used in the project - [Nike](https://www.nike.com/ie/)
+- Descriptive Content and images from Foot Asylum website was also used for the project - [Foot Asylum](https://www.footasylum.com/ie/)
 
 ### Media 
 
