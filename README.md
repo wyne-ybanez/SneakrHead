@@ -130,28 +130,22 @@ The website incorporates a minimal design and a multi-page experience. The user 
 - Contact form
 
 ### **The Skeleton Plane**
-#### Wireframes
+#### Wireframes/Web Design
 
-- Main/Home Page: <br>
-![Home](readme_Img/wireframes/)<br>
+The design for the website derived from Dribble. Particularly the design 'Shoe.' by Dmitriy Kharaberyush. 
+Here is a link to Dmitriy's design - [Design](https://dribbble.com/shots/14866237-Shoe-Ecommerce-Sneakers-Shop)
 
-- Register: <br>
-![Register](readme_Img/wireframes/)
+- Products Page: <br>
+![Products](media/readme/wireframes/index.png) <br>
+![Products_Mobile_View](media/readme/wireframes/mobile.png) <br>
+![Products_Wireframe](media/readme/wireframes/products_wf.png)
 
-- Log In: <br>
-![LogIn](readme_Img/wireframes/) 
+- Product Details Page: <br>
+![Product_Detail](media/readme/wireframes/product_detail.png) <br>
+![Product_Detail_Wireframe](media/readme/wireframes/product_detail_wf.png) <br>
 
-- User Profile: <br>
-![Profile](readme_Img/wireframes/)
-
-- Stripe Form: <br>
-![Update_Profile](readme_Img/wireframes/)
-
-- Product Details: <br>
-![Latest_Posts](readme_Img/wireframes/)
-
-- Add Product/Remove Product: <br>
-![Add_Post](readme_Img/wireframes/)
+- Home/Landing Page Original conception: <br>
+![Landing_Page](media/readme/wireframes/landing_page_wf.png) 
 
 <strong>The following main pages will be implemented:</strong>
 
@@ -178,83 +172,81 @@ The website incorporates a minimal design and a multi-page experience. The user 
 
 ![Database Design](media/readme/database_schema.png)
 
-
-**Table UserProfile** {
-  id int [pk] // auto-increment
-  default_phone_number varchar
-  default_street_address1 varchar
-  default_street_address2  varchar
-  default_postcode varchar
-  default_town_or_city varchar
-  default_county varchar
-  default_country default_country
+**Table UserProfile** { <br>
+  id int [pk] <br>
+  default_phone_number **varchar** <br>
+  default_street_address1 **varchar** <br>
+  default_street_address2  **varchar** <br>
+  default_postcode **varchar** <br>
+  default_town_or_city **varchar** <br>
+  default_county **varchar** <br>
+  default_country **country** <br>
 }
 
-**Table Subscriber** {
-  id int [pk]
-  user_email user_email
-  subscribed boolean
+**Table Subscriber** { <br>
+  id int [pk] <br>
+  user_email **user_email** <br>
+  subscribed **boolean** <br>
 }
 
-
-**Table Category** {
-  id int [pk]
-  name varchar
-  friendly_name varchar
+**Table Category** { <br>
+  id int [pk] <br>
+  name **varchar** <br>
+  friendly_name **varchar** <br>
 }
 
-**Table Product** {
-  id int [pk]
-  category Category [ref: > Category.id]
-  brand Brand [ref: > Brand.id]
-  sku varchar
-  name varchar
-  description text
-  has_sizes boolean
-  stock boolean
-  price decimal
-  rating decimal
-  image_url url
-  image image
-  featured_product boolean
-  new_prodcut boolean
-  brand_item boolean
+**Table Product** { <br>
+  id int [pk] <br>
+  category **Category [ref: > Category.id]** <br>
+  brand Brand **[ref: > Brand.id]** <br>
+  sku **varchar** <br>
+  name **varchar** <br>
+  description **text** <br>
+  has_sizes **boolean** <br>
+  stock **boolean** <br>
+  price **decimal** <br>
+  rating **decimal** <br>
+  image_url **url** <br>
+  image **image** <br>
+  featured_product **boolean** <br>
+  new_prodcut **boolean** <br>
+  brand_item **boolean** <br>
 }
 
-**Table Brand** {
-  id int [pk]
-  name varchar
-  friendly_name varchar
+**Table Brand** { <br>
+  id int [pk] <br>
+  name **varchar** <br>
+  friendly_name **varchar** <br>
 }
 
-**Table Order** {
-  id int [pk]
-  order_number varchar
-  user_profile UserProfile [ref: > UserProfile.id]
-  full_name varchar
-  email email
-  phone_number varchar
-  country country
-  postcode varchar
-  town_or_city varchar
-  street_address1 varchar
-  street_address2 varchar
-  county varchar
-  date datetime
-  delivery_cost decimal
-  order_total decimal
-  grand_total decimal
-  original_basket text
-  stripe_pid varchar
+**Table Order** { <br>
+  id int [pk] <br>
+  order_number **varchar** <br>
+  user_profile **UserProfile [ref: > UserProfile.id]** <br>
+  full_name **varchar** <br>
+  email **email** <br>
+  phone_number **varchar** <br>
+  country **country** <br>
+  postcode **varchar** <br>
+  town_or_city **varchar** <br>
+  street_address1 **varchar** <br>
+  street_address2 **varchar** <br>
+  county **varchar** <br>
+  date **datetime** <br>
+  delivery_cost **decimal** <br>
+  order_total **decimal**<br>
+  grand_total **decimal** <br>
+  original_basket **text** <br>
+  stripe_pid **varchar** <br>
 }
 
-**Table OrderLineItem** {
-  id int [pk]
-  order Order [ref: > UserProfile.id]
-  product Product [ref: > Product.id]
-  product_size varchar
-  quantity int  
-  lineitem_total decimal
+**Table OrderLineItem** { <br>
+  id int [pk] <br>
+  order **Order [ref: > UserProfile.id]** <br>
+  product **Product [ref: > Product.id]** <br>
+  product_size **varchar** <br>
+  quantity **int** <br>
+  lineitem_total **decimal** <br>
 }
 
 ** Created from dbdiagram.io **
@@ -273,12 +265,6 @@ Database security is maintained through the "env.py" file which ensures that the
 EDIT!- remember to Add image for color scheme
 
 #### Typography
-
-
-
-#### Imagery
-
-All images used within the website were all taken from [unsplash](https://unsplash.com/).
 
 ## Differences to Wireframes
 
@@ -482,7 +468,8 @@ You can fork the repository through the following steps. Forking the repository 
 
 ### Media 
 
-- Nike Store - Here is a link to [the store](https://www.nike.com/ie/)
+- Nike Store shoes - Here is a link to [Nike](https://www.nike.com/ie/)
+- FootAsylum product images from online store - [FootAsylum](https://www.footasylum.com/ie/)
 - An Unsplash sneaker image was used for the home page background image - Here is a link to [Unsplash](https://unsplash.com/)
 
 ### Code
