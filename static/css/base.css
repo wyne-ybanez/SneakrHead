@@ -342,7 +342,7 @@ p {
 .card {
     display: inline-block;
     min-width: 220px;
-    max-width: 250px;
+    max-width: 220px;
 }
 
 #delivery-banner h4 {
@@ -536,6 +536,12 @@ input[name='q']::placeholder {
     margin-top: 1.5rem;
 }
 
+.card-body p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*===== Edit Details =====*/
 
 .description-container {
@@ -569,10 +575,6 @@ input[name='q']::placeholder {
 
 #scrolling-wrapper {
     -webkit-overflow-scrolling: touch;
-}
-
-#scrolling-wrapper .card-horizontal {
-    max-width: 220px;
 }
 
 .card:hover {
