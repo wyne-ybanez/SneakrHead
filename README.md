@@ -259,7 +259,7 @@ The site also uses Host header validation: Django validates Host headers against
 
 Additionally, the site exploits Amazon's AWS S3 which provides server-side encryption (SSE) for uploaded static images within the site.
 
-Database security is also maintained through the workspace environment through the following command `export VARIABLE = VARIABLE VALUE` or by going to gitpod and changing the environment variables manually. During development, these variables are then accessed through the local environment which ensures that the configuration files are not stored in github. For production, the configuration details are placed into the app settings and Heroku variables instead.
+Database security is also maintained through the workspace environment through the following command `export VARIABLE = VARIABLE VALUE` or by going to gitpod and changing the environment variables manually. During development, these variables are then accessed through the local environment which ensures that the configuration files are not stored in github. Also, a .gitignore file was used to ensure database information would not be pushed to github. For production, the configuration details are placed into the app settings and Heroku variables instead.
 
 ### **The Surface Plane**
 ### Design
@@ -404,7 +404,21 @@ Test Results are documented through [this link](TESTING.md)
 
 To deploy the project locally, the following commands were used:
 
-1. 
+1. Create a Gitpod workspace and then in the terminal type `pip3 install django`
+
+2. Then in terminal, type `django-admin startproject sneakrhead .` This creates the project in the current directory
+
+3. You'll need to create a .gitignore file which then you add your *.sqlite3 into. This ensures that this information is ignored everytime we push to github.
+
+4. Run the project by typing `python3 manage.py runserver` and expose port 8000.
+
+5. Run initial migrations by typing `python3 manage.py migrate`
+
+6. Finally create a super user using the command `python3 manage.py createsuperuser`
+
+7. Provide for your super user account an email, username and password so as to access the administrator's dashboard.
+
+8. Check your current github repository using `git remote -v` and then finally, if you're happy with the current repository, excute the commands `git add .` then `git commit -m "initial commit"`, after this `git push`.
 
 ### Version Control 
 
@@ -418,12 +432,20 @@ In the terminal, I utilised the following commands in the following order:
 **Create application:**
 
 1. I signed into Heroku 
-2. I created a new app by clicking the "new" button.
-3. Select the new app 
-4. Create an app project name 
-5. Selected Europe as the region
 
-**Set up connection to Github Repository:**
+2. I created a new app by clicking the "new" button.
+
+3. Select the new app 
+
+4. Create an app project name, for this project I selected Europe as the region
+
+5. In the resources tab, provision a new Postgres database.
+
+6. Use the free plan
+
+7. To use Postgres, in the gitpod terminal install dj_database_url (pip3 install dj_database_url) and psycopg2 (pip3 install psycopg2-binary)
+
+**Set up connection to Postgres Heroku Database:**
 
 1. A requirements.txt needs to be created, this can be done through the following terminal command
     >  pip3 freeze --local > requirements.txt
@@ -431,20 +453,35 @@ In the terminal, I utilised the following commands in the following order:
 2. Then a Procfile for Heroku is needs to be created, here is the terminal command used
     >  echo web: python app.py > Procfile
 
-3. Ensure there the Procfile begins with a capital letter 'P' and that there are no unecessary spaces 
+3. Go to settings.py. And importing dj_database_url.
 
-4. Click the deploy tab and select Github - connect to Github
+4. Replace the default database with a call to `dj_database_url.parse(<YOUR DATABASE URL> from Heroku)` (preferably contain your database URL within your environment variables and access through the os environment)
 
-5. There will be an empty input field where you can type the name of your repository. Write the repo name there and 
-    click search
+5. Log into Heroku using `heroku login -i` 
 
-6. Once the repository has been found, click the connect button
+6. Migrate your data as you now have a new database, you'll need to run migrations again: `heroku run python3 manage.py makemigrations` and `heroku run python3 manage.py migrate`
+
+7. To. load Data use `python3 manage.py load data <DATA FIXTURES>`.
+
+8. Finally, provide a super user to log in with. Using `python3 manage.pycreate superuser`
+
+**Set up Github connection:**
+
+1. Install gunicorn `pip3 install gunicorn` and freeze it into requirements `pip3 freeze > requirments.txt`
+
+2. Create a Procfile which tells Heroku to create a web dyno. This runs gunicorn and serve the django app
+
+3. This is an optional stage, you can request Heroku to refuse the collection of static files during deployment by setting DISABLE_COLLECTSTATIC to 1. Add the hostname of our Heroku app to allowed hosts in settings.py
+
+4. Go to the app in Heroku. On the deploy tab set it to connect to github
+
+5. Search for the desired repository and click connect
+
+6. Enable automatic deploys - optional
 
 **Set environment variables:**
 
-- 
-
-<strong>Example:</strong>
+- Replace the secret key setting with a call to obtain it from the environment. Go to settings.py and set `SECRET_KEY = os.environ.get('SECRET_KEY', '')`. This way the secret key is always protected and will only be called from the environment during development.
 
 - 
 
