@@ -428,69 +428,98 @@ In the terminal, I utilised the following commands in the following order:
 - git commit -m <em>commit message</em> - command to commit the changes locally with a message to describe the changes briefly
 - git push - command to push changes to remote Github repository
 
-### Deployment to Heroku
-**Create application:**
+### Deployment - Heroku & AWS
+**Create Heroku application:**
 
 1. I signed into Heroku 
-
 2. I created a new app by clicking the "new" button.
-
 3. Select the new app 
-
 4. Create an app project name, for this project I selected Europe as the region
-
 5. In the resources tab, provision a new Postgres database.
-
 6. Use the free plan
-
 7. To use Postgres, in the gitpod terminal install dj_database_url (pip3 install dj_database_url) and psycopg2 (pip3 install psycopg2-binary)
 
 **Set up connection to Postgres Heroku Database:**
 
 1. A requirements.txt needs to be created, this can be done through the following terminal command
     >  pip3 freeze --local > requirements.txt
-
 2. Then a Procfile for Heroku is needs to be created, here is the terminal command used
     >  echo web: python app.py > Procfile
-
 3. Go to settings.py. And importing dj_database_url.
-
 4. Replace the default database with a call to `dj_database_url.parse(<YOUR DATABASE URL> from Heroku)` (preferably contain your database URL within your environment variables and access through the os environment)
-
 5. Log into Heroku using `heroku login -i` 
-
 6. Migrate your data as you now have a new database, you'll need to run migrations again: `heroku run python3 manage.py makemigrations` and `heroku run python3 manage.py migrate`
-
 7. To. load Data use `python3 manage.py load data <DATA FIXTURES>`.
-
 8. Finally, provide a super user to log in with. Using `python3 manage.pycreate superuser`
 
 **Set up Github connection:**
 
 1. Install gunicorn `pip3 install gunicorn` and freeze it into requirements `pip3 freeze > requirments.txt`
-
 2. Create a Procfile which tells Heroku to create a web dyno. This runs gunicorn and serve the django app
-
 3. This is an optional stage, you can request Heroku to refuse the collection of static files during deployment by setting DISABLE_COLLECTSTATIC to 1. Add the hostname of our Heroku app to allowed hosts in settings.py
-
 4. Go to the app in Heroku. On the deploy tab set it to connect to github
-
 5. Search for the desired repository and click connect
-
 6. Enable automatic deploys - optional
 
-**Set environment variables:**
+**Setup AWS S3 Bucket:**
+
+1. Create an AWS account
+2. Go to AWS management console 
+3. Search for S3 in services menu and create a bucket
+4. Name the bucket appropriately, Its recommended to name the bucket with the same app name as the heroku app name
+5. Select closest region
+6. Allow public access to bucket
+7. In properties tab turn on static website hosting
+8. In permissions tabm paste in a CORS configuration which is going to set up the required access between the Heroku app and the s3 bucket. 
+9. Create security policy for the s3 bucket using policy generator
+10. Set Action as "GetObject" and copy paste the ARN
+11. Copy generated policy into the bucket policy editor, add a `/*` at the end of the resource key - This allows access to all resources in the bucket.
+12. Go to access control tab and under the public access section, allow List Objects access to everyone
+
+**AWS Groups, Policies and Users:**
+
+1. Go to the services menu and open IAM
+2. Create a group for the user to live in, give the group access to the newly created s3 bucket - click groups then create a new group, call it whatever name is preferred for the website e.g. <manage-sneakrheads>
+3. Assign a policy for this group, click policies and then create policy
+4. Go to the JSON tab and select import managed policy
+5. Import one that AWS has pre-built for full access to s3. Search S3 and import the s3 full access policy
+6. Add ARN into policy under the Resource Key from the JSON Object and add ARN again with the additional at the end `/*`
+7. Click review policy, giving it a name and description, then create policy
+8. Attach the policy to the group created, go to groups, click <GROUP-NAME> group and click attach policy
+9. Search the newly created policy and click Attach Policy
+10. On the user's page click Add User - name the user as you wish
+11. Enable them to have programmatic access
+12. Click Next and it is now possible to add the user to the newly created group with the attached policy
+13. Click Create User and download the CSV file which will contain this users access key and secret access key
+
+**Connect Django to S3:**
+
+1. Install packages django-storages and boto-3 `pip3 install django-storages` `pip3 instal boto-3`
+2. Freeze these into requirements.txt and add storages to installed apps in settings.py
+3. Ensure the in the configuration variable for heroku in the settings, there is `USE_AWS` which is set to `True`
+4. Set <AWS_SECRET_ACCESS_KEY> and <AWS_ACCESS_KEY_ID> in the heroku environment also, the values for these would have been provided on the csv file.
+5. Ensure that these are called from the environment and not pushed to github
+6. Remove the DISABLE_COLLECTSTATIC variable from heroku settings as django will collect static files automatically and upload them to s3
+7. In settings.py outline where the static files will be coming from in production.
+    > AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+8. Create file called custom_storages.py
+9. In this file import django settings and S3Boto3Storage
+10. For static and media file storage - use and edit settings.py storage classes, outlining the default file storage
+    >STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    >STATICFILES_LOCATION = 'static'
+    >DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    >MEDIAFILES_LOCATION = 'media'
+11. Commit changes to github
+
+**Importance of setting environment variables:**
+
+- Instead of directly placing the database url into the settings.py code, you can add it instead to the config variables in the heroku app settings. Commanding the app to call the database url from the environment rather than applying it by code directly - thus protecting your data. 
+
+Example: `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}`
 
 - Replace the secret key setting with a call to obtain it from the environment. Go to settings.py and set `SECRET_KEY = os.environ.get('SECRET_KEY', '')`. This way the secret key is always protected and will only be called from the environment during development.
 
-- 
-
-**Enable Automatic Deployment & Manual Deployment:**
-
-- Ensure your Procfile and requirements.txt are in your repository as Heroku will not be able to deploy without these
-- Click the Deploy tab
-- Click Enable Automatic deploys in 'Automatic Deploys' section
-- Choose the branch you would like to deploy and click "Deploy Branch"
+- You will then need to configure the secret key variable in your heroku cofiguration variables which can be found in settings. This just adds an extra layer of protection for your app.
 
 ### Local Clone
 
