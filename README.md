@@ -174,11 +174,90 @@ The website incorporates a minimal design and a multi-page experience. The user 
 - Error 404 - 404.html (error 404 handling)
 - Error 500 - 500.html (error 500 handling)
 
-#### Database Design (SQLite 3)
+#### Database Design 
 
-Sample Object Format:
+![Database Design](media/readme/database_schema.png)
 
-EDIT!
+
+**Table UserProfile** {
+  id int [pk] // auto-increment
+  default_phone_number varchar
+  default_street_address1 varchar
+  default_street_address2  varchar
+  default_postcode varchar
+  default_town_or_city varchar
+  default_county varchar
+  default_country default_country
+}
+
+**Table Subscriber** {
+  id int [pk]
+  user_email user_email
+  subscribed boolean
+}
+
+
+**Table Category** {
+  id int [pk]
+  name varchar
+  friendly_name varchar
+}
+
+**Table Product** {
+  id int [pk]
+  category Category [ref: > Category.id]
+  brand Brand [ref: > Brand.id]
+  sku varchar
+  name varchar
+  description text
+  has_sizes boolean
+  stock boolean
+  price decimal
+  rating decimal
+  image_url url
+  image image
+  featured_product boolean
+  new_prodcut boolean
+  brand_item boolean
+}
+
+**Table Brand** {
+  id int [pk]
+  name varchar
+  friendly_name varchar
+}
+
+**Table Order** {
+  id int [pk]
+  order_number varchar
+  user_profile UserProfile [ref: > UserProfile.id]
+  full_name varchar
+  email email
+  phone_number varchar
+  country country
+  postcode varchar
+  town_or_city varchar
+  street_address1 varchar
+  street_address2 varchar
+  county varchar
+  date datetime
+  delivery_cost decimal
+  order_total decimal
+  grand_total decimal
+  original_basket text
+  stripe_pid varchar
+}
+
+**Table OrderLineItem** {
+  id int [pk]
+  order Order [ref: > UserProfile.id]
+  product Product [ref: > Product.id]
+  product_size varchar
+  quantity int  
+  lineitem_total decimal
+}
+
+** Created from dbdiagram.io **
 
 #### Database Security
 
