@@ -736,7 +736,7 @@ input[name='q']::placeholder {
     }  
 
     .card {
-        max-width: 100%;
+        min-width: 100%;
     }
 
     .card img {
@@ -793,6 +793,11 @@ input[name='q']::placeholder {
 
     .update-form {
         padding: 0 5px;
+    }
+
+    .new-arrivals .card {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 

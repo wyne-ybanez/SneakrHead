@@ -9,6 +9,8 @@ The project aims to build a website on the Django Framework for improved securit
 <strong>Username:</strong> wyneyban <br>
 <strong>Password:</strong> 0891
 
+The website is deployed here: https://wyne-sneakrhead.herokuapp.com/
+
 ** <strong>Educational Purposes Only</strong> **
 
 ## Table of Contents
@@ -62,7 +64,7 @@ The store will utilise and effective navigation and search functionality so as t
 - To allow these shoppers to create a profile, track their orders and purchase remotely. 
 - To allow the shop owner to scale their business easily and earn profits.
 
-### User stories: **The Structure Plane**
+### User stories: 
 
 #### Shopper
 ##### View and Navigation
@@ -106,6 +108,10 @@ The store will utilise and effective navigation and search functionality so as t
 - As the site owner, I would like to edit/update a product
 - As the site owner, I would like to delete a product 
 - As the site owner, I would like to have the ability to delete a user's account
+
+### **The Structure Plane**
+
+The website incorporates a minimal design and a multi-page experience. The user will be enticed to explore the e-commerce website as if it was a real life store, conveying products from the get go. Every section will lead to a relevant, clear and complimentary section which is designed to maintain the user's interest, inform them of their position in the purchase process. Most importantly, it should capture their interest at every stage. The experience should be seamless and at no point in time should the user feel lost.
 
 ### **The Scope Plane**
 

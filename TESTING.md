@@ -258,31 +258,50 @@ The site utilises django and an allauth template to also send the user an email 
 
 Once the shopper creates a profile account. The site records the shoppers orders once they make an order. The site also saves the shoppers personal details after the checkout process should the shopper choose to save their information for future orders. Records of their recent orders and their billing information are stored in profile.html.
 
-
 #### Admin User Stories
 
-User Story:
-> 
+**User Story:**
+> As the site owner, I would like to add products to the store
 
-Criteria:
-- 
+**Criteria:**
+- As a site owner, the seller should have the ability to add new products to the store at any point in time.
 
-Implementation:
+**Implementation:**
 
+The site owner has the functinality to add a product to the store through the 'Product Management" option in the navbar. This will lead them to the add_product.html template which provides them a form of which to add the new products details and will be displayed in the products page.
 
-User Story:
-> 
+<hr>
 
-Criteria:
-- 
+**User Story:**
+> As the site owner, I would like to edit/update a product
 
-Implementation:
+**Criteria:**
+- The site owner should have the ability to update a specific product should they wish to do so
 
+**Implementation:**
 
-User Story:
-> 
+The site owner has the functinality to edit a product within the online store by clicking on a product and visiting its product_detail.html page. If the site owner is logged in, administrator options should be available so as to edit/update the product in edit_product.html. The page will display the product's current information, there will also be a form to update the details of the specific product which will be saved in the database and reflect on the website.
 
-Criteria:
-- 
+<hr>
 
-Implementation:
+**User Story:**
+> As the site owner, I would like to delete a product 
+
+**Criteria:**
+- The site owner should have the ability to delete a specific product should they wish to do so
+
+**Implementation:**
+
+The site owner has the functinality to delete a product by clicking on a product and visiting its product_detail.html page. If the site owner is logged in, administrator options should be available so as to edit/update & delete the product. This will instantly delete the product's data and remove the item from the store.
+
+<hr>
+
+**User Story:**
+> As the site owner, I would like to have the ability to delete a user's account
+
+**Criteria:**
+- The site owner should have the power to remove a user's profile should they wish to do so
+
+**Implementation:**
+
+Currently, the site does not have a dedicated template/page to remove a user's profile. However, if the seller wishes to do so, they can go to https://wyne-sneakrhead.herokuapp.com/admin/. Log in using the administrator details, find the user's profile and delete their data thus, deleting their account.
