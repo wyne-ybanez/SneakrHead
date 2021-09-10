@@ -451,6 +451,7 @@ In the terminal, I utilised the following commands in the following order:
 6. Migrate your data as you now have a new database, you'll need to run migrations again: `heroku run python3 manage.py makemigrations` and `heroku run python3 manage.py migrate`
 7. To. load Data use `python3 manage.py load data <DATA FIXTURES>`.
 8. Finally, provide a super user to log in with. Using `python3 manage.pycreate superuser`
+9. Confirm email address in the postgres database through the website admin, as allauth cannot automatically confirm the superuser
 
 **Set up Github connection:**
 
@@ -510,6 +511,19 @@ In the terminal, I utilised the following commands in the following order:
     >DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     >MEDIAFILES_LOCATION = 'media'
 11. Commit changes to github
+
+**AWS Caching Media Files:**
+
+1. Go to AWS S3 and create a folder named 'media'
+2. Grant public read access to the objects
+
+**Set up Stripe in Heroku and AWS:**
+1. Get Stripe keys and place them into the Heroku config variables in settings
+2. Go to Stripe menu and create a new webhook endpoint
+3. Go to webhooks in developer menu
+4. Click add end point and add the Heroku deployed project's URL followed by `checkout/wh/`
+5. Select receive all events and add endpoint
+6. Add Stripe WH Secret to heroku config variables
 
 **Importance of setting environment variables:**
 
