@@ -37,10 +37,11 @@ The website is deployed here: https://wyne-sneakrhead.herokuapp.com/
     * [Test Strategy](#Test-Strategy)
     * [Test Results](#Test-Results)
 * [Deployment](#Deployment)
-    * [Deployment to Heroku](#Project-Creation)
-    * [GitHub Pages](#Deployment-To-Heroku)
+    * [Project Creation](#Project-creation)
+    * [Local Deployment](#Local-deployment)
+    * [Version Control](#Version-control)
+    * [Heroku & AWS](#Deployment-heroku-&-aws)
     * [Local Clone](#Local-Clone)
-    * [Fork Project](#Fork-Project)
 * [Credits](#Credits)
   * [Content](#Content)
   * [Media](#Media)
@@ -366,7 +367,7 @@ The main typography used for the website is 'Caveat' for the home/landing page. 
 - [AWS: Amazon Web Services](https://aws.amazon.com/)
     - Used the S3 bucket to contain, serve and keep static images durable.
 
-****
+
 ## Testing
 
 ### Test Strategy
@@ -559,7 +560,7 @@ You can fork the repository through the following steps. Forking the repository 
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu. Looking towards the right of the page. Locate the button "Fork" then click 
 3. You should now have a copy of the original repository in your GitHub account.
 
-****
+
 ## Credits
 
 ### Content
