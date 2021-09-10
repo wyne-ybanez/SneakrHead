@@ -199,6 +199,7 @@ An order confirmation page is implemented within the site's functionalities and 
 An order confirmation email is sent to the user outlining the order number, date and total costs. This order confirmation email is sent directly to the customer's chosen email after a successful creation of an order.
 
 ### User stories: Site User
+-
 
 **User Story:**
 > As a User, I would like to easily register for an account
@@ -258,7 +259,8 @@ The site utilises django and an allauth template to also send the user an email 
 
 Once the shopper creates a profile account in profile.html. The site records the shoppers orders once they make an order. The site also saves the shoppers delivery details after the checkout process should the shopper choose to save their information for future orders.
 
-#### Admin User Stories
+### Admin User Stories
+-
 
 **User Story:**
 > As the site owner, I would like to add products to the store
@@ -305,3 +307,7 @@ The site owner has the functinality to delete a product by clicking on a product
 **Implementation:**
 
 Currently, the site does not have a dedicated template/page to remove a user's profile. However, if the seller wishes to do so, they can go to https://wyne-sneakrhead.herokuapp.com/admin/. Log in using the administrator details, find the user's profile and delete their data thus, deleting their account.
+
+## Validators
+
+Unfortunately, this project has not been validated yet using any of the code validators as outlined in the testing strategy section of the project. This is something I will be looking forward to do as a future implementation and an opportunity for improvement.
