@@ -310,4 +310,4 @@ Currently, the site does not have a dedicated template/page to remove a user's p
 
 ## Validators
 
-Unfortunately, this project has not been validated yet using any of the code validators as outlined in the testing strategy section of the project. This is something I will be looking forward to do as a future implementation and an opportunity for improvement.
+Unfortunately, this project's code has not been refactored yet after using the code validators as outlined in the testing strategy section of the project. This is something I will be looking forward to do as a future implementation and view as an opportunity for improvement.

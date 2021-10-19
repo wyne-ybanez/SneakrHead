@@ -74,7 +74,7 @@ function filterPriceRange(Val){
 // Display price range on page
 function showPriceRange(Val) {
     let params  = new URLSearchParams(window.location.search);
-    Val = params.get('price_range').split('price_range');
+    Val = params.get('price_range');
 
     document.getElementById('Range').innerHTML = ` - Max: €${Val}`;
     document.getElementById('priceRange').value = Val;
