@@ -76,11 +76,10 @@ function showPriceRange(Val) {
     let params  = new URLSearchParams(window.location.search);
     Val = params.get('price_range');
 
-    if (Val != null || Val != "") { 
+    if (Val != null) { 
         document.getElementById('Range').innerHTML = ` - Max: €${Val}`;
+        document.getElementById('priceRange').value = Val;
     }
-
-    document.getElementById('priceRange').value = Val;
 }
 
 showPriceRange()
