@@ -665,6 +665,12 @@ input[name='q']::placeholder {
     .arrow-up {
         display: none;
     }
+
+    #Product {
+        width: max-content;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 /* Ipad/Tablet Media Queries */
