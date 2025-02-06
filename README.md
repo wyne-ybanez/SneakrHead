@@ -9,9 +9,8 @@ The project aims to build a website on the Django Framework for improved securit
 <strong>Username:</strong> wyneyban <br>
 <strong>Password:</strong> 0891
 
-The website is deployed here: https://wyne-sneakrhead.herokuapp.com/
 
-** <strong>Educational Purposes Only</strong> **
+<strong>NOTICE: This project is for educational purposes only and is not being maintained.</strong>
 
 ## Table of Contents
 
